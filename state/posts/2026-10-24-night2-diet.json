@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "rejected",
  "created_at": "2026-10-24T23:50:00+09:00",
  "publish_at": "2026-10-25T00:00:00+09:00",
  "topic": "다이어트 식단이라는데 냉동실 상태 ㄷㄷ (160kg→112.8kg 감량 중)",
@@ -18,5 +18,7 @@
   "jobs/2026-10-24-night2-diet/out/04.jpg",
   "jobs/2026-10-24-night2-diet/out/05.jpg"
  ],
- "preview": "jobs/2026-10-24-night2-diet/out/preview.jpg"
+ "preview": "jobs/2026-10-24-night2-diet/out/preview.jpg",
+ "decided_note": "2026-10-24 23:47 KST 운영판 앱 거절",
+ "decided_at": "2026-10-24T23:47:13.622874+09:00"
 }
