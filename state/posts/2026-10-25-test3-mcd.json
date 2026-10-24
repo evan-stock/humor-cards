@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-10-25T00:05:00+09:00",
  "publish_at": "2026-10-25T00:30:00+09:00",
  "topic": "서울역 맥날 주문번호 클라스 ㄷㄷ (9999 찍고 다시 104번)",
@@ -19,5 +19,8 @@
  ],
  "preview": "jobs/2026-10-25-test3-mcd/out/preview.jpg",
  "decided_note": "2026-10-25 00:00 KST 운영판 앱 승인",
- "decided_at": "2026-10-25T00:00:58.919899+09:00"
+ "decided_at": "2026-10-25T00:00:58.919899+09:00",
+ "ig_media_id": "18097245755387593",
+ "permalink": "https://www.instagram.com/p/De4fR0fFhDB/",
+ "published_at": "2026-10-25T00:47:31.595003+09:00"
 }
