@@ -21,6 +21,15 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import instagram  # noqa: E402
+import telegram as tg  # noqa: E402
+
+
+def notify(text):
+    if tg.enabled():
+        try:
+            tg.send_text(text)
+        except Exception as e:
+            print("텔레그램 알림 실패:", e)
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 KST = dt.timezone(dt.timedelta(hours=9))
@@ -69,6 +78,7 @@ def main():
             result = {"status": "failed", "error": f"이미지 주소를 열 수 없음(공개 주소인지 확인): {bad[0]}", "at": now.isoformat()}
             json.dump(result, open(os.path.join(jd, "publish_error.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
             print(result["error"])
+            notify(f"⚠️ ㅋㅋ상회 게시 실패: {jid}\n{result['error']}")
             continue
         if a.dry_run:
             continue
@@ -78,6 +88,7 @@ def main():
             json.dump({"status": "failed", "error": str(e)[:800], "at": now.isoformat()},
                       open(os.path.join(jd, "publish_error.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
             print("게시 실패:", e)
+            notify(f"⚠️ ㅋㅋ상회 게시 실패: {jid}\n{str(e)[:300]}")
             continue
         json.dump({"media_id": mid, "permalink": link, "published_at": dt.datetime.now(KST).isoformat()},
                   open(os.path.join(jd, "published.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -85,6 +96,7 @@ def main():
         if os.path.exists(err):
             os.remove(err)
         print(f"게시 완료: {link}")
+        notify(f"🎉 ㅋㅋ상회 게시 완료: {jid}\n{link}")
 
 
 if __name__ == "__main__":

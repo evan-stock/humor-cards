@@ -35,6 +35,8 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           MEDIA_BASE_URL: ${{ vars.MEDIA_BASE_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if git diff --name-only HEAD~1 HEAD 2>/dev/null | grep -q "requests/publish-check.txt"; then
             # 점검 요청: 토큰 계정 확인 + 올릴 게시물 점검(게시 안 함) → 결과를 저장소에 남긴다
