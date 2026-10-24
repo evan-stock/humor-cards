@@ -1,0 +1,36 @@
+name: scout
+# 인기글 서칭: 매일 19:00 KST 자동 + 수동 실행 + requests/scout.txt를 바꿔 올리면 즉시 실행
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+  push:
+    paths: ["requests/scout.txt"]
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests beautifulsoup4 pillow
+      - run: python3 scripts/scout.py --limit 25
+        working-directory: ${{ github.workspace }}
+      - name: commit
+        run: |
+          git config user.name "humor-cards-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add scout
+          git diff --cached --quiet && exit 0
+          git commit -m "scout: $(TZ=Asia/Seoul date +%F_%H%M)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
