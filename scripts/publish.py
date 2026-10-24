@@ -21,15 +21,11 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import instagram  # noqa: E402
-import telegram as tg  # noqa: E402
 
 
 def notify(text):
-    if tg.enabled():
-        try:
-            tg.send_text(text)
-        except Exception as e:
-            print("텔레그램 알림 실패:", e)
+    """결과 알림 자리(지금은 로그만). 운영판이 state/posts 로 결과를 보여준다."""
+    print(text)
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 KST = dt.timezone(dt.timedelta(hours=9))
@@ -67,6 +63,8 @@ def main():
         if os.path.exists(os.path.join(jd, "published.json")):
             continue
         post = json.load(open(pj, encoding="utf-8"))
+        if post.get("rejected"):
+            continue
         if not due(post, now):
             print(f"{jid}: 아직 아님(approved={post.get('approved')}, publish_at={post.get('publish_at')})")
             continue

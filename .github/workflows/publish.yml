@@ -1,8 +1,8 @@
 name: publish
-# 인스타 자동 게시: jobs/<id>/post.json(approved: true)을 올리면 바로 확인, 예약 건은 30분마다 확인
+# 인스타 자동 게시: jobs/<id>/post.json(approved: true)이나 운영판 승인(state/posts/<id>.json status approved)을 올리면 바로 확인, 예약 건은 30분마다 확인
 on:
   push:
-    paths: ["jobs/*/post.json", "requests/publish-check.txt"]
+    paths: ["jobs/*/post.json", "state/posts/*.json", "requests/publish-check.txt"]
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
@@ -35,8 +35,6 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           MEDIA_BASE_URL: ${{ vars.MEDIA_BASE_URL }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if git diff --name-only HEAD~1 HEAD 2>/dev/null | grep -q "requests/publish-check.txt"; then
             # 점검 요청: 토큰 계정 확인 + 올릴 게시물 점검(게시 안 함) → 결과를 저장소에 남긴다
@@ -46,11 +44,13 @@ jobs:
             cat state/publish_check.txt
             exit 0
           fi
+          python3 scripts/sync_state.py   # 운영판 승인·거절 → post.json
           case "${{ github.event.inputs.mode }}" in
             check) python3 scripts/publish.py --check ;;
             dry)   python3 scripts/publish.py --dry-run ;;
             *)     python3 scripts/publish.py ;;
           esac
+          python3 scripts/sync_state.py   # 게시 결과 → state/posts (운영판 표시)
       - name: commit
         run: |
           git config user.name "humor-cards-bot"
