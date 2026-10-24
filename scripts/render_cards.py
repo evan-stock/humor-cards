@@ -322,7 +322,74 @@ def channel_tag(img, ch, base):
     return img
 
 
-RENDERERS = {"cover": None, "story": None, "news_cover": render_news_cover, "photo": render_photo}
+# ---------- 커뮤 댓글창 틀: type "thread" (2026.10.25) ----------
+# 원글 캡처 대신, 커뮤 댓글창처럼 생긴 우리 틀에 우리 말로 다시 쓴 글·댓글을 넣는다.
+ANON_COLORS = [(104, 190, 120), (120, 160, 230), (240, 160, 90), (200, 120, 200), (90, 190, 200), (230, 110, 110)]
+
+
+def _avatar(d, x, y, r, label, color):
+    d.ellipse((x, y, x + r, y + r), fill=color)
+    d.text((x + r / 2, y + r / 2), label, font=font("bold", int(r * 0.45)), fill="white", anchor="mm")
+
+
+def render_thread(s, ch, base):
+    img = Image.new("RGB", (W, H), (242, 243, 245))
+    d = ImageDraw.Draw(img)
+    X, CW = 40, W - 80
+    y = 110
+    post = s.get("post")
+    if post:  # 글 본문 상자
+        tf, bf = font("headline", s.get("post_size", 50)), font("regular", 38)
+        tl = wrap(post["title"], tf, CW - 60, d)
+        bl = wrap(post.get("body", ""), bf, CW - 60, d) if post.get("body") else []
+        h = 40 + len(tl) * 66 + (16 + len(bl) * 54 if bl else 0) + 70
+        d.rounded_rectangle((X, y, X + CW, y + h), radius=22, fill="white")
+        yy = y + 32
+        for l in tl:
+            d.text((X + 30, yy), l, font=tf, fill=(20, 20, 20)); yy += 66
+        yy += 10
+        for l in bl:
+            d.text((X + 30, yy), l, font=bf, fill=(60, 60, 60)); yy += 54
+        d.text((X + 30, y + h - 52), post.get("meta", "익명 · 조회 1.2만 · 댓글 128"), font=font("regular", 28), fill=(150, 150, 150))
+        y += h + 22
+    size = s.get("comment_size", 40)
+    names = {}
+    for c in s.get("comments", []):
+        nf, tf2, mf = font("bold", 32), font("regular", size), font("regular", 26)
+        lines = wrap(c["text"], font("bold", size) if c.get("bold") else tf2, CW - 150, d)
+        lh = round(size * 1.42)
+        h = 34 + 44 + len(lines) * lh + 46
+        if y + h > H - 40:
+            print("  ! 댓글이 넘침: 댓글을 줄이세요")
+            break
+        d.rounded_rectangle((X + (60 if c.get("reply") else 0), y, X + CW, y + h), radius=20, fill="white")
+        x0 = X + 24 + (60 if c.get("reply") else 0)
+        op = c.get("op")
+        if c["name"] not in names:
+            names[c["name"]] = ANON_COLORS[len(names) % len(ANON_COLORS)]
+        _avatar(d, x0, y + 26, 64, "글" if op else "익", (40, 170, 90) if op else names[c["name"]])
+        tx = x0 + 84
+        d.text((tx, y + 28), c["name"], font=nf, fill=(40, 170, 90) if op else (30, 30, 30))
+        yy = y + 28 + 46
+        for l in lines:
+            d.text((tx, yy), l, font=font("bold", size) if c.get("bold") else tf2, fill=(25, 25, 25)); yy += lh
+        meta = c.get("time", "3시간 전") + (f"   ♥ {c['likes']}" if c.get("likes") else "")
+        d.text((tx, yy + 8), meta, font=mf, fill=(150, 150, 150))
+        y += h + 16
+    # 내용을 세로 가운데로 옮긴다(아래가 비지 않게)
+    used = y - 16 - 110
+    bottom_pad = 230 if s.get("caption") else 60
+    top = max(110, 110 + (H - bottom_pad - 110 - used) // 2)
+    if top > 110:
+        block = img.crop((0, 110, W, 110 + used))
+        img = Image.new("RGB", (W, H), (242, 243, 245))
+        img.paste(block, (0, top))
+    if s.get("caption"):
+        img = caption_bar(img, s["caption"], s.get("caption_size", 40))
+    return channel_tag(img, ch, base) if s.get("tag", True) else img
+
+
+RENDERERS = {"cover": None, "story": None, "news_cover": render_news_cover, "photo": render_photo, "thread": render_thread}
 
 
 def main(spec_path):
