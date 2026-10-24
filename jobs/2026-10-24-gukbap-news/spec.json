@@ -2,16 +2,19 @@
  "out_dir": "out",
  "slides": [
   {
-   "type": "news_cover",
+   "type": "cover",
    "image": "../2026-10-24-dc-review/src/25.jpg",
    "crop": [
     0,
     0,
     1,
-    0.72
+    0.8
    ],
-   "fy": 0.2,
-   "title": "8천원 국밥 시켰더니\n옵션만 4,500원 붙은\n배달앱 근황 ㄷㄷ"
+   "fy": 0.15,
+   "title": "8천원 국밥 시켰더니\n옵션만 4,500원 ㄷㄷ",
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.05
   },
   {
    "type": "photo",
