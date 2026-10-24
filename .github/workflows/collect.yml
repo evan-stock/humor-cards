@@ -2,7 +2,7 @@ name: collect
 # 원글 이미지 수집: jobs/<id>/collect.json을 올리면 jobs/<id>/src/에 이미지를 받아 커밋
 on:
   push:
-    paths: ["jobs/*/collect.json"]
+    paths: ["jobs/*/collect.json", "scripts/collect.py", "scripts/fetch_util.py"]
   workflow_dispatch:
 
 concurrency:

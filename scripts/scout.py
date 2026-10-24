@@ -12,6 +12,7 @@ import re
 import time
 from urllib.parse import urljoin
 
+import fetch_util
 from fetch_util import read_post, soup
 
 KST = dt.timezone(dt.timedelta(hours=9))
@@ -107,6 +108,7 @@ def main():
         prev = (it.get("text") or it.get("error") or "").replace("\n", " ")[:220]
         md += [head, f"{info} · {it['url']}", "", f"> {prev}", ""]
     open(os.path.join(outdir, f"{day}.md"), "w", encoding="utf-8").write("\n".join(md))
+    open(os.path.join(outdir, "_last_log.txt"), "w", encoding="utf-8").write("\n".join(fetch_util.LOG) + "\n")
     print(f"저장: scout/{day}.json, .md ({len(all_items)}개)")
 
 

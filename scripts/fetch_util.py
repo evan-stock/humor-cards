@@ -9,7 +9,10 @@ from bs4 import BeautifulSoup
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36")
 S = requests.Session()
-S.headers.update({"User-Agent": UA, "Accept-Language": "ko-KR,ko;q=0.9"})
+S.headers.update({"User-Agent": UA, "Accept-Language": "ko-KR,ko;q=0.9",
+                  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"})
+LOG = []  # 진단용: (상태, 주소) — 액션 로그를 못 볼 때 저장소에 남긴다
+LAST_HTML = {}  # 주소 → 마지막으로 받은 HTML(실패 분석용)
 
 # 사이트별 본문 영역 (앞에서부터 찾는다)
 CONTENT_SEL = [
@@ -25,10 +28,13 @@ def get(url, referer=None, tries=3):
     for i in range(tries):
         try:
             r = S.get(url, timeout=20, headers={"Referer": referer or f"{urlparse(url).scheme}://{urlparse(url).netloc}/"})
+            LOG.append(f"{r.status_code} {len(r.content)}B {url}")
             if r.status_code == 200:
                 return r
             print(f"  {r.status_code} {url}")
+            LAST_HTML[url] = r.text[:200000]
         except requests.RequestException as e:
+            LOG.append(f"오류 {type(e).__name__} {url}")
             print(f"  오류 {e} {url}")
         time.sleep(1.5 * (i + 1))
     return None
@@ -82,6 +88,7 @@ def read_post(url):
     sp, raw = soup(url)
     if not sp:
         return None
+    LAST_HTML[url] = raw
     title = ""
     for sel in ("span.title_subject", "h1", "h2.title", "h4", ".ed.title"):
         n = sp.select_one(sel)

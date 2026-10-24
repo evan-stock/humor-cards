@@ -18,6 +18,7 @@ import sys
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
+import fetch_util
 from fetch_util import get, read_post
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
@@ -90,8 +91,15 @@ def run(job_dir):
         print(f"  {name} {rgb.size} {fmt}")
 
     json.dump(index, open(os.path.join(src, "index.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    open(os.path.join(src, "log.txt"), "w", encoding="utf-8").write("\n".join(fetch_util.LOG) + "\n")
+    if n == 0:  # 하나도 못 받았으면 원글 HTML을 남겨 원인을 본다
+        for i, page in enumerate(cfg.get("pages", [])):
+            html = fetch_util.LAST_HTML.get(page)
+            if html:
+                open(os.path.join(src, f"_debug_page{i+1}.html"), "w", encoding="utf-8").write(html)
     sheet(saved, os.path.join(src, "candidates.jpg"))
-    open(hp, "w").write(h)
+    if n:
+        open(hp, "w").write(h)  # 실패하면 다음 푸시 때 다시 시도
     print(f"{job_dir}: {n}장 저장")
 
 
