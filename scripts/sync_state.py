@@ -15,7 +15,7 @@ import os
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 KST = dt.timezone(dt.timedelta(hours=9))
-SLOTS = {"noon": ("lunch", "점심"), "night": ("evening", "저녁")}
+SLOTS = {"morning": ("morning", "아침"), "noon": ("lunch", "점심"), "night": ("evening", "저녁")}  # 하루 3개: 09·12·21시
 
 
 def load(p):
@@ -83,7 +83,7 @@ def main():
         else:
             status = "pending"
         slot = next((v for k, v in SLOTS.items() if f"-{k}-" in jid), None) or \
-            (SLOTS["noon"] if when.astimezone(KST).hour < 17 else SLOTS["night"])
+            (SLOTS["morning"] if when.astimezone(KST).hour < 11 else SLOTS["noon"] if when.astimezone(KST).hour < 17 else SLOTS["night"])
         files = sorted(os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(jd, "out", "[0-9][0-9].jpg")))
         new = {
             "id": jid,
