@@ -295,7 +295,31 @@ def render_photo(s, ch, base):
         img = Image.blend(img, Image.new("RGB", (W, H), (20, 20, 20)), 0.6)
         fg = ImageOps.contain(src, (W, H - s.get("reserve", 0)), Image.LANCZOS)
         img.paste(fg, ((W - fg.width) // 2, (H - s.get("reserve", 0) - fg.height) // 2))
-    return caption_bar(img, s.get("caption", ""), s.get("caption_size", 40))
+    img = caption_bar(img, s.get("caption", ""), s.get("caption_size", 40))
+    return channel_tag(img, ch, base) if s.get("tag", True) else img
+
+
+DEFAULT_CHANNEL = {"name": "ㅋㅋ상회", "handle": "@kk.sanghoe", "avatar": "brand/logo.png"}
+
+
+def channel_tag(img, ch, base):
+    """사진 장 왼쪽 위에 작은 채널 딱지(로고 + 아이디)."""
+    d = ImageDraw.Draw(img)
+    f = font("bold", 30)
+    t = ch.get("handle", "")
+    r = 46
+    tw = d.textlength(t, font=f)
+    x0, y0 = 36, 36
+    ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(ov).rounded_rectangle((x0, y0, x0 + r + 26 + tw + 24, y0 + r + 12), radius=(r + 12) // 2, fill=(0, 0, 0, 150))
+    img = Image.alpha_composite(img.convert("RGBA"), ov).convert("RGB")
+    av = load_img(ch.get("avatar"), base)
+    av = cover_fit(av, r, r, 0.5, 0.5)
+    m = Image.new("L", (r, r), 0)
+    ImageDraw.Draw(m).ellipse((0, 0, r - 1, r - 1), fill=255)
+    img.paste(av, (x0 + 6, y0 + 6), m)
+    ImageDraw.Draw(img).text((x0 + r + 18, y0 + (r + 12) / 2), t, font=f, fill="white", anchor="lm")
+    return img
 
 
 RENDERERS = {"cover": None, "story": None, "news_cover": render_news_cover, "photo": render_photo}
@@ -307,7 +331,9 @@ def main(spec_path):
     out = spec.get("out_dir", "out")
     out = out if os.path.isabs(out) else os.path.join(base, out)
     os.makedirs(out, exist_ok=True)
-    ch = spec.get("channel", {})
+    ch = {**DEFAULT_CHANNEL, **spec.get("channel", {})}
+    if not os.path.isabs(ch.get("avatar", "")):
+        ch["avatar"] = os.path.relpath(os.path.join(HERE, "..", ch["avatar"]), base) if ch.get("avatar") == DEFAULT_CHANNEL["avatar"] else ch.get("avatar")
     files = []
     for i, s in enumerate(spec["slides"], 1):
         r = RENDERERS.get(s.get("type")) or (render_cover if s.get("type") == "cover" else render_story)
