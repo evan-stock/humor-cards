@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-10-25T01:00:00+09:00",
  "publish_at": "2026-10-25T09:00:00+09:00",
  "topic": "인사담당자 멘붕, 요즘 신입 전화 안 받음 ㄷㄷ (원글 댓글 캡처)",
@@ -19,5 +19,7 @@
   "jobs/2026-10-25-phone-calls/out/05.jpg",
   "jobs/2026-10-25-phone-calls/out/06.jpg"
  ],
- "preview": "jobs/2026-10-25-phone-calls/out/preview.jpg"
+ "preview": "jobs/2026-10-25-phone-calls/out/preview.jpg",
+ "decided_note": "2026-10-25 00:52 KST 운영판 앱 승인",
+ "decided_at": "2026-10-25T00:52:20.989534+09:00"
 }
