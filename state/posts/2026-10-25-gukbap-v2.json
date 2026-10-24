@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-10-25T00:55:00+09:00",
  "publish_at": "2026-10-25T21:00:00+09:00",
  "topic": "8천원 국밥 시켰더니 옵션만 4,500원 ㄷㄷ (새 틀 재제작)",
@@ -18,5 +18,7 @@
   "jobs/2026-10-25-gukbap-v2/out/04.jpg",
   "jobs/2026-10-25-gukbap-v2/out/05.jpg"
  ],
- "preview": "jobs/2026-10-25-gukbap-v2/out/preview.jpg"
+ "preview": "jobs/2026-10-25-gukbap-v2/out/preview.jpg",
+ "decided_note": "2026-10-25 00:52 KST 운영판 앱 승인",
+ "decided_at": "2026-10-25T00:52:50.439123+09:00"
 }
