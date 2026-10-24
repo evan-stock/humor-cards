@@ -265,10 +265,32 @@ def render_news_cover(s, ch, base):
     return img
 
 
-def caption_bar(img, text, size=40):
-    """사진 아래쪽 가운데 검정 자막 상자."""
+CAPTION_STYLE = "title"  # 2026.10.25: 자막도 표지와 같은 주아체 흰 글씨 + 검정 외곽선("box"면 예전 검정 상자)
+
+
+def caption_title(img, text, size=58, dark=False):
+    """사진 아래쪽 가운데, 표지와 같은 주아체 흰 글씨·검정 외곽선 자막."""
+    d = ImageDraw.Draw(img)
+    f = font("title", size)
+    lines = wrap(text, f, W - 120, d)
+    lh = round(size * 1.3)
+    stroke = max(5, round(size * 0.085))
+    y = H - 70 - lh * len(lines)
+    for i, l in enumerate(lines):
+        if dark:  # 흰 바탕 캡처 장: 검정 글씨만
+            d.text((W / 2, y + i * lh + lh / 2), l, font=f, fill=(20, 20, 20), anchor="mm")
+        else:
+            d.text((W / 2, y + i * lh + lh / 2), l, font=f, fill="white", anchor="mm",
+                   stroke_width=stroke, stroke_fill="black")
+    return img
+
+
+def caption_bar(img, text, size=40, style=None, dark=False):
+    """사진 아래쪽 가운데 자막. 기본은 표지 글씨체, style="box"면 검정 자막 상자."""
     if not text:
         return img
+    if (style or CAPTION_STYLE) == "title":
+        return caption_title(img, text, round(size * 1.4), dark)
     d = ImageDraw.Draw(img)
     f = font("bold", size)
     lines = wrap(text, f, W - 160, d)
@@ -300,7 +322,7 @@ def render_photo(s, ch, base):
         img = Image.blend(img, Image.new("RGB", (W, H), (20, 20, 20)), 0.6)
         fg = ImageOps.contain(src, (W, H - s.get("reserve", 0)), Image.LANCZOS)
         img.paste(fg, ((W - fg.width) // 2, (H - s.get("reserve", 0) - fg.height) // 2))
-    img = caption_bar(img, s.get("caption", ""), s.get("caption_size", 40))
+    img = caption_bar(img, s.get("caption", ""), s.get("caption_size", 40), s.get("caption_style"), s.get("bg") == "white")
     return channel_tag(img, ch, base) if s.get("tag", True) else img
 
 
