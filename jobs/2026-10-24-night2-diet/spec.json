@@ -1,0 +1,35 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-24-night2-review/src/17.jpg",
+   "fy": 0.35,
+   "title": "다이어트 식단이라는데\n냉동실 상태 ㄷㄷ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-24-night2-review/src/11.jpg",
+   "caption": "칸마다 고단백 베이글이 꽉꽉",
+   "caption_size": 44
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-24-night2-review/src/15.jpg",
+   "caption": "아래 칸은 오리로스가 한가득",
+   "caption_size": 44
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-24-night2-review/src/14.jpg",
+   "caption": "훈제인 줄 알고 잘못 시켰다가\n이만큼 쌓여버림 ㅋㅋ",
+   "caption_size": 44
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-24-night2-review/src/13.jpg",
+   "caption": "그래도 160kg → 112.8kg\n감량 중이라고 함 ㄷㄷ",
+   "caption_size": 44
+  }
+ ]
+}
