@@ -10,7 +10,7 @@ import json
 import os
 import re
 import time
-from urllib.parse import urljoin
+from urllib.parse import urljoin  # noqa
 
 import fetch_util
 from fetch_util import read_post, soup
@@ -66,6 +66,41 @@ def dogdrip(limit):
     return items, raw
 
 
+# 링크 주소 패턴으로 인기글 목록을 뽑는 사이트들(2026.10.24 추가: 더쿠·인스티즈·네이트판·루리웹)
+LINK_SITES = [
+    # (이름, 목록 주소, 글 주소 정규식(1번 그룹=글 번호), 글 주소 틀)
+    ("더쿠 HOT", "https://theqoo.net/hot", r"theqoo\.net/hot/(\d{6,})|^/hot/(\d{6,})", "https://theqoo.net/hot/{}"),
+    ("인스티즈 이슈", "https://www.instiz.net/hot.htm", r"instiz\.net/(pt|name_enter|name|clip)/(\d{4,})|^/(pt|name_enter|name|clip)/(\d{4,})", None),
+    ("네이트판 톡커들의 선택", "https://pann.nate.com/talk/ranking", r"pann\.nate\.com/talk/(\d{6,})|^/talk/(\d{6,})", "https://pann.nate.com/talk/{}"),
+    ("루리웹 유머 베스트", "https://bbs.ruliweb.com/best/humor", r"ruliweb\.com/best/board/(\d+)/read/(\d+)|^/best/board/(\d+)/read/(\d+)", None),
+]
+
+
+def link_site(name, url, pat, tmpl, limit):
+    sp, raw = soup(url)
+    items, seen = [], set()
+    if not sp:
+        return items, raw
+    for a in sp.find_all("a", href=True):
+        h = a["href"].split("?")[0].split("#")[0]
+        m = re.search(pat, h)
+        t = a.get_text(" ", strip=True)
+        if not m or len(t) < 6:
+            continue
+        full = urljoin(url, h)
+        if tmpl:
+            num = next(g for g in m.groups() if g)
+            full = tmpl.format(num)
+        if full in seen:
+            continue
+        seen.add(full)
+        t = re.sub(r"\s*\[?\(?\d+\)?\]?$", "", t)  # 끝의 댓글 수 제거
+        items.append({"site": name, "title": t, "url": full})
+        if len(items) >= limit:
+            break
+    return items, raw
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=25)
@@ -76,12 +111,19 @@ def main():
     os.makedirs(outdir, exist_ok=True)
 
     all_items = []
-    for fn in (dc_best, dogdrip):
-        items, raw = fn(args.limit)
-        print(f"{fn.__name__}: {len(items)}개")
+    sources = [("dc_best", lambda: dc_best(args.limit))]
+    for i, (name, url, pat, tmpl) in enumerate(LINK_SITES):
+        sources.append((f"site{i}", lambda n=name, u=url, p=pat, t=tmpl: link_site(n, u, p, t, 15)))
+    for key, fn in sources:
+        try:
+            items, raw = fn()
+        except Exception as e:
+            print(f"{key}: 오류 {e}")
+            items, raw = [], None
+        print(f"{key}: {len(items)}개")
         if not items and raw:  # 구조가 바뀌었을 때 고칠 수 있게 원본 저장
             os.makedirs(os.path.join(outdir, "_debug"), exist_ok=True)
-            open(os.path.join(outdir, "_debug", f"{fn.__name__}.html"), "w", encoding="utf-8").write(raw)
+            open(os.path.join(outdir, "_debug", f"{key}.html"), "w", encoding="utf-8").write(raw)
         all_items += items
 
     for i, it in enumerate(all_items):

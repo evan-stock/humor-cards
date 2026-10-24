@@ -18,7 +18,10 @@ LAST_HTML = {}  # 주소 → 마지막으로 받은 HTML(실패 분석용)
 CONTENT_SEL = [
     "div.write_div",            # 디시인사이드
     "div.rhymix_content",       # 개드립
-    "div.xe_content",           # 개드립(구버전)·XE 계열
+    "div.xe_content",           # 개드립(구버전)·더쿠(XE 계열)
+    "div#memo_content_1", "div.memo_content",  # 인스티즈
+    "div#contentArea", "div.posting",          # 네이트판
+    "div.view_content", "article.board_main_view",  # 루리웹
     "article",
     "div#content", "div.content",
 ]
@@ -90,7 +93,7 @@ def read_post(url):
         return None
     LAST_HTML[url] = raw
     title = ""
-    for sel in ("span.title_subject", "h1", "h2.title", "h4", ".ed.title"):
+    for sel in ("span.title_subject", "h1", "h2.title", "h4", ".ed.title", "span.subject_inner_text", "#nowsubject"):
         n = sp.select_one(sel)
         if n and n.get_text(strip=True):
             title = n.get_text(" ", strip=True)
