@@ -1,0 +1,72 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-24-dc-review/src/25.jpg",
+   "crop": [
+    0,
+    0,
+    1,
+    0.8
+   ],
+   "fy": 0.15,
+   "title": "8천원 국밥 시켰더니\n옵션만 4,500원 ㄷㄷ",
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.05
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-24-dc-review/src/23.jpg",
+   "crop": [
+    0,
+    0,
+    1,
+    0.62
+   ],
+   "caption": "8천원이라길래 들어갔는데",
+   "bg": "white",
+   "reserve": 200
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-24-dc-review/src/25.jpg",
+   "crop": [
+    0,
+    0,
+    1,
+    0.45
+   ],
+   "caption": "조리 2,000원, 비조리도 2,000원\n안 고르면 배달 불가 ㅋㅋ",
+   "bg": "white",
+   "reserve": 200
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-24-dc-review/src/25.jpg",
+   "crop": [
+    0,
+    0.52,
+    1,
+    0.95
+   ],
+   "caption": "반찬 빼달라고 해도 900원 받음",
+   "bg": "white",
+   "reserve": 200
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-24-dc-review/src/26.jpg",
+   "caption": "보통맛도 1,000원… 최종 결제 12,500원",
+   "crop": [
+    0,
+    0.3,
+    1,
+    1
+   ],
+   "reserve": 200,
+   "bg": "white"
+  }
+ ]
+}

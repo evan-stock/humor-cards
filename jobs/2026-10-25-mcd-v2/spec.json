@@ -1,0 +1,60 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-25-test3-review/src/04.jpg",
+   "crop": [
+    0.03,
+    0.3,
+    0.97,
+    0.7
+   ],
+   "fx": 0.5,
+   "fy": 0.5,
+   "title": "서울역 맥날\n주문번호 클라스 ㄷㄷ",
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.08
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-25-test3-review/src/04.jpg",
+   "crop": [
+    0.07,
+    0.43,
+    0.4,
+    0.63
+   ],
+   "caption": "주문번호가 9999까지 찍힘",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-25-test3-review/src/04.jpg",
+   "crop": [
+    0.58,
+    0.39,
+    0.93,
+    0.61
+   ],
+   "caption": "그러고 다시 104번부터 돌아옴 ㅋㅋ",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-25-test3-review/src/04.jpg",
+   "crop": [
+    0.03,
+    0.205,
+    0.97,
+    0.8
+   ],
+   "caption": "여긴 다른 매장 에이스들이\n파견 오는 곳이라는 소문까지 ㄷㄷ",
+   "caption_size": 46,
+   "reserve": 240
+  }
+ ]
+}

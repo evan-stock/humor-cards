@@ -1,0 +1,22 @@
+{
+ "id": "2026-10-25-gukbap-v2",
+ "channel": "kksanghoe",
+ "account": "@kk.sanghoe",
+ "slot": "evening",
+ "slot_label": "저녁",
+ "status": "pending",
+ "created_at": "2026-10-25T00:55:00+09:00",
+ "publish_at": "2026-10-25T21:00:00+09:00",
+ "topic": "8천원 국밥 시켰더니 옵션만 4,500원 ㄷㄷ (새 틀 재제작)",
+ "category": "커뮤 유머",
+ "source": "",
+ "caption_full": "8천원 국밥인 줄 알았는데 12,500원 나옴 ㅋㅋㅋ\n\n비조리도 2천원\n반찬 빼도 900원\n보통맛도 1천원\n\n이 정도면 옵션이 본품 아니냐고ㅋㅋ\n이거 시킨다 vs 그냥 편의점 간다 👇\n\n#배달앱 #국밥 #배달비 #킹받네 #ㅋㅋ상회",
+ "files": [
+  "jobs/2026-10-25-gukbap-v2/out/01.jpg",
+  "jobs/2026-10-25-gukbap-v2/out/02.jpg",
+  "jobs/2026-10-25-gukbap-v2/out/03.jpg",
+  "jobs/2026-10-25-gukbap-v2/out/04.jpg",
+  "jobs/2026-10-25-gukbap-v2/out/05.jpg"
+ ],
+ "preview": "jobs/2026-10-25-gukbap-v2/out/preview.jpg"
+}
