@@ -16,6 +16,7 @@ spec.json 예시:
 - 이미지가 없거나 경로가 틀리면 회색 자리표시 이미지가 들어간다.
 - 표지에 "fit": "contain"을 주면 캡처·가로 사진을 흐린 배경 위에 원본 비율로 얹는다(contain_h, contain_top로 크기·위치).
 - 썰 카드에 "watermark": false를 주면 사진 위 채널 워터마크를 뺀다(캡처 사진용).
+- 뉴스형 틀: "news_cover"(흰 액자 + 줄별 색 제목 colors:["red","blue","black"] + 사진), "photo"(사진 크게 + caption 검정 자막, fit "contain"/"fill").
 - 슬라이드에 "crop": [x0, y0, x1, y1](0~1 비율)을 주면 사진의 그 부분만 쓴다(반전을 숨기는 부분 컷 등).
 - 글꼴: 표지 제목은 fonts/BMJUA.otf(배민 주아체, 참고 피드와 같은 글씨체)를 살짝 두껍게. 썰 카드 헤드라인·본문은 Pretendard가 fonts/에 있으면 쓰고, 없으면 Noto Sans CJK KR.
 """
@@ -218,6 +219,88 @@ def _story_body(s, img, y, X):
     return img
 
 
+# ---------- 뉴스형(이슈 카드) 틀: type "news_cover" / "photo" ----------
+# 흰 바탕 테두리 액자 + 줄마다 색이 다른 굵은 제목 + 아래 사진 / 안쪽 장은 사진 크게 + 아래 검정 한 줄 자막
+NEWS_COLORS = {"red": (226, 32, 40), "blue": (24, 52, 190), "black": (12, 12, 12)}
+
+
+def news_font(size):
+    for d in (os.path.join(HERE, "..", "fonts"), os.path.join(HERE, "fonts"), os.path.join(os.getcwd(), "fonts")):
+        p = os.path.join(d, "GmarketSansBold.otf")
+        if os.path.exists(p):
+            return ImageFont.truetype(p, size)
+    return font("headline", size)
+
+
+def render_news_cover(s, ch, base):
+    img = Image.new("RGB", (W, H), "white")
+    d = ImageDraw.Draw(img)
+    M, R, BW = 34, 22, 7                       # 바깥 여백, 모서리, 테두리 두께
+    fx0, fy0, fx1, fy1 = M, M, W - M, H - M
+    lines = s["title"].split("\n")
+    colors = s.get("colors") or ["red", "blue", "black"][-len(lines):] if len(lines) <= 3 else ["black"] * len(lines)
+    if len(colors) < len(lines):
+        colors = colors + ["black"] * (len(lines) - len(colors))
+    size = s.get("size", 92)
+    maxw = fx1 - fx0 - 60
+    while size > 50:
+        f = news_font(size)
+        if max(d.textlength(l, font=f) for l in lines) <= maxw:
+            break
+        size -= 2
+    f = news_font(size)
+    lh = round(size * 1.18)
+    y = fy0 + 46
+    for l, c in zip(lines, colors):
+        d.text((W // 2, y), l, font=f, fill=NEWS_COLORS.get(c, c), anchor="mt")
+        y += lh
+    top = y + 18
+    # 사진: 제목 아래부터 액자 바닥까지
+    pw, ph = fx1 - fx0 - 2 * BW, fy1 - top - BW
+    photo = cover_fit(slide_img(s, base), pw, ph, s.get("fx", 0.5), s.get("fy", 0.4))
+    mask = Image.new("L", (pw, ph), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, -R, pw - 1, ph - 1), radius=R - BW, fill=255)
+    img.paste(photo, (fx0 + BW, top), mask)
+    d.rounded_rectangle((fx0, fy0, fx1, fy1), radius=R, outline=(10, 10, 10), width=BW)
+    return img
+
+
+def caption_bar(img, text, size=40):
+    """사진 아래쪽 가운데 검정 자막 상자."""
+    if not text:
+        return img
+    d = ImageDraw.Draw(img)
+    f = font("bold", size)
+    lines = wrap(text, f, W - 160, d)
+    lh = round(size * 1.35)
+    tw = max(d.textlength(l, font=f) for l in lines)
+    bw, bh = tw + 56, lh * len(lines) + 30
+    x0, y1 = (W - bw) / 2, H - 70
+    y0 = y1 - bh
+    ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(ov).rounded_rectangle((x0, y0, x0 + bw, y1), radius=10, fill=(0, 0, 0, 225))
+    img = Image.alpha_composite(img.convert("RGBA"), ov).convert("RGB")
+    d = ImageDraw.Draw(img)
+    for i, l in enumerate(lines):
+        d.text((W / 2, y0 + 15 + i * lh + lh / 2), l, font=f, fill="white", anchor="mm")
+    return img
+
+
+def render_photo(s, ch, base):
+    src = slide_img(s, base)
+    if s.get("fit", "contain") == "fill":
+        img = cover_fit(src, W, H, s.get("fx", 0.5), s.get("fy", 0.4))
+    else:  # 원본 비율 그대로, 남는 곳은 같은 사진을 흐리고 어둡게
+        img = cover_fit(src, W, H).filter(ImageFilter.GaussianBlur(40))
+        img = Image.blend(img, Image.new("RGB", (W, H), (20, 20, 20)), 0.6)
+        fg = ImageOps.contain(src, (W, H - s.get("reserve", 0)), Image.LANCZOS)
+        img.paste(fg, ((W - fg.width) // 2, (H - s.get("reserve", 0) - fg.height) // 2))
+    return caption_bar(img, s.get("caption", ""), s.get("caption_size", 40))
+
+
+RENDERERS = {"cover": None, "story": None, "news_cover": render_news_cover, "photo": render_photo}
+
+
 def main(spec_path):
     spec = json.load(open(spec_path, encoding="utf-8"))
     base = os.path.dirname(os.path.abspath(spec_path))
@@ -227,7 +310,7 @@ def main(spec_path):
     ch = spec.get("channel", {})
     files = []
     for i, s in enumerate(spec["slides"], 1):
-        r = render_cover if s.get("type") == "cover" else render_story
+        r = RENDERERS.get(s.get("type")) or (render_cover if s.get("type") == "cover" else render_story)
         p = os.path.join(out, f"{i:02d}.jpg")
         r(s, ch, base).save(p, quality=93)
         files.append(p)
