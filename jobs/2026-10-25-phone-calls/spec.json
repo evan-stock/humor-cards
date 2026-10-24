@@ -3,75 +3,82 @@
  "slides": [
   {
    "type": "cover",
-   "image": "src/cover_bg.jpg",
-   "title": "인사담당자 멘붕\n요즘 신입 전화 안 받음 ㄷㄷ"
+   "image": "../2026-10-25-test3-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.1653
+   ],
+   "title": "인사담당자 멘붕\n요즘 신입 전화 안 받음 ㄷㄷ",
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.08
   },
   {
-   "type": "thread",
-   "post": {
-    "title": "인사담당잔데 요즘 지원자들 전화 진짜 안 받아?",
-    "body": "면접 일정 잡으려고 전화하면 열에 일곱은 안 받음…\n문자 남기면 그제서야 답장 옴",
-    "meta": "익명 · 조회 4.8만 · 댓글 900+"
-   },
-   "comments": [
-    {
-     "name": "익명1",
-     "text": "모르는 번호는 일단 스팸이라 안 받음 ㅋㅋ",
-     "likes": 312,
-     "time": "2시간 전"
-    },
-    {
-     "name": "글쓴이",
-     "op": true,
-     "reply": true,
-     "text": "구직 중이면 회사 번호일 수도 있잖아…",
-     "time": "2시간 전"
-    },
-    {
-     "name": "익명2",
-     "text": "문자로 'OO회사 인사팀입니다' 먼저 보내주면 바로 받음",
-     "likes": 287,
-     "time": "2시간 전"
-    }
-   ]
+   "type": "photo",
+   "image": "../2026-10-25-test3-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.1919
+   ],
+   "caption": "합격 전화를 몇 통을 걸어도 안 받음",
+   "reserve": 190,
+   "bg": "white"
   },
   {
-   "type": "thread",
-   "comments": [
-    {
-     "name": "익명3",
-     "text": "공고에 '전화 연락 갈 수 있음' 한 줄만 써줘도 받는다니까",
-     "likes": 198,
-     "time": "1시간 전"
-    },
-    {
-     "name": "익명4",
-     "text": "전화 오면 심장부터 뛰는 사람 여기 있음",
-     "likes": 421,
-     "time": "1시간 전"
-    },
-    {
-     "name": "익명5",
-     "reply": true,
-     "text": "ㄹㅇ 받기 전에 마음의 준비 3초 필요함",
-     "likes": 96,
-     "time": "1시간 전"
-    },
-    {
-     "name": "익명6",
-     "text": "저 어제 전화 놓치고 아직 콜백할 용기 모으는 중입니다",
-     "likes": 356,
-     "time": "58분 전"
-    },
-    {
-     "name": "글쓴이",
-     "op": true,
-     "bold": true,
-     "text": "...알겠어 일단 문자부터 보낼게",
-     "likes": 512,
-     "time": "40분 전"
-    }
-   ]
+   "type": "photo",
+   "image": "../2026-10-25-test3-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.4411,
+    1.0,
+    0.5198
+   ],
+   "caption": "요즘 애들 몇 살이냐는 질문에…\n\"03이더라\"",
+   "reserve": 190,
+   "bg": "white"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-25-test3-review/src/02.jpg",
+   "crop": [
+    0.0,
+    0.5437,
+    1.0,
+    0.6416
+   ],
+   "caption": "070도 다 받던 시절 사람들 분노 ㅋㅋ",
+   "reserve": 190,
+   "bg": "white"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-25-test3-review/src/02.jpg",
+   "crop": [
+    0.0,
+    0.7286,
+    1.0,
+    0.8376
+   ],
+   "caption": "카페 알바도 문자로만 답장하는 중",
+   "reserve": 190,
+   "bg": "white"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-25-test3-review/src/03.jpg",
+   "crop": [
+    0.0,
+    0.6537,
+    1.0,
+    0.7227
+   ],
+   "caption": "반대로 고정된 댓글은 이거 ㄷㄷ",
+   "reserve": 190,
+   "bg": "white"
   }
  ]
 }

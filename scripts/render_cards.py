@@ -288,7 +288,12 @@ def caption_bar(img, text, size=40):
 
 def render_photo(s, ch, base):
     src = slide_img(s, base)
-    if s.get("fit", "contain") == "fill":
+    if s.get("bg") == "white":  # 커뮤 캡처용: 흰 바탕에 캡처를 그대로(딱지·자막 자리 비움)
+        img = Image.new("RGB", (W, H), "white")
+        top, bot = 120, H - s.get("reserve", 0)
+        fg = ImageOps.contain(src, (W - 40, bot - top), Image.LANCZOS)
+        img.paste(fg, ((W - fg.width) // 2, top + (bot - top - fg.height) // 2))
+    elif s.get("fit", "contain") == "fill":
         img = cover_fit(src, W, H, s.get("fx", 0.5), s.get("fy", 0.4))
     else:  # 원본 비율 그대로, 남는 곳은 같은 사진을 흐리고 어둡게
         img = cover_fit(src, W, H).filter(ImageFilter.GaussianBlur(40))
