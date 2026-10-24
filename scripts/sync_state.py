@@ -82,7 +82,8 @@ def main():
             status = "expired"
         else:
             status = "pending"
-        slot = next((v for k, v in SLOTS.items() if f"-{k}-" in jid), ("evening", "저녁"))
+        slot = next((v for k, v in SLOTS.items() if f"-{k}-" in jid), None) or \
+            (SLOTS["noon"] if when.astimezone(KST).hour < 17 else SLOTS["night"])
         files = sorted(os.path.relpath(p, ROOT) for p in glob.glob(os.path.join(jd, "out", "[0-9][0-9].jpg")))
         new = {
             "id": jid,
