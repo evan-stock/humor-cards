@@ -1,0 +1,49 @@
+name: publish
+# 인스타 자동 게시: jobs/<id>/post.json(approved: true)을 올리면 바로 확인, 예약 건은 30분마다 확인
+on:
+  push:
+    paths: ["jobs/*/post.json"]
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check = 토큰 계정 확인만, dry = 올리지 않고 점검, run = 게시"
+        default: run
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - name: publish
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          MEDIA_BASE_URL: ${{ vars.MEDIA_BASE_URL }}
+        run: |
+          case "${{ github.event.inputs.mode }}" in
+            check) python3 scripts/publish.py --check ;;
+            dry)   python3 scripts/publish.py --dry-run ;;
+            *)     python3 scripts/publish.py ;;
+          esac
+      - name: commit
+        run: |
+          git config user.name "humor-cards-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add jobs
+          git diff --cached --quiet && exit 0
+          git commit -m "publish: $(TZ=Asia/Seoul date +%F_%H%M)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
