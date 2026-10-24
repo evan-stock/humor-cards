@@ -14,6 +14,8 @@ spec.json 예시:
   ]
 }
 - 이미지가 없거나 경로가 틀리면 회색 자리표시 이미지가 들어간다.
+- 표지에 "fit": "contain"을 주면 캡처·가로 사진을 흐린 배경 위에 원본 비율로 얹는다(contain_h, contain_top로 크기·위치).
+- 썰 카드에 "watermark": false를 주면 사진 위 채널 워터마크를 뺀다(캡처 사진용).
 - 슬라이드에 "crop": [x0, y0, x1, y1](0~1 비율)을 주면 사진의 그 부분만 쓴다(반전을 숨기는 부분 컷 등).
 - 글꼴: 표지 제목은 fonts/BMJUA.otf(배민 주아체, 참고 피드와 같은 글씨체)를 살짝 두껍게. 썰 카드 헤드라인·본문은 Pretendard가 fonts/에 있으면 쓰고, 없으면 Noto Sans CJK KR.
 """
@@ -95,7 +97,17 @@ def draw_tracked(draw, cx, cy, text, f, track, **kw):
 
 
 def render_cover(s, ch, base):
-    img = cover_fit(slide_img(s, base), W, H, s.get("fx", 0.5), s.get("fy", 0.4))
+    src_img = slide_img(s, base)
+    if s.get("fit") == "contain":
+        # 캡처·가로 사진용: 흐린 배경 위에 원본 비율 그대로 위쪽에 크게 얹는다
+        img = cover_fit(src_img, W, H).filter(ImageFilter.GaussianBlur(40))
+        img = Image.blend(img, Image.new("RGB", (W, H), (0, 0, 0)), 0.45)
+        box_h = round(H * s.get("contain_h", 0.62))
+        fg = ImageOps.contain(src_img, (W - 2 * 40, box_h), Image.LANCZOS)
+        top = round(H * s.get("contain_top", 0.06))
+        img.paste(fg, ((W - fg.width) // 2, top))
+    else:
+        img = cover_fit(src_img, W, H, s.get("fx", 0.5), s.get("fy", 0.4))
     lines = s["title"].split("\n")
     probe = ImageDraw.Draw(img)
     size = s.get("size", 140)
@@ -163,6 +175,9 @@ def render_story(s, ch, base):
     ph = cover_fit(slide_img(s, base), bw, bh, s.get("fx", 0.5), s.get("fy", 0.4))
     img.paste(ph, (X, y))
     d.rectangle((X, y, X + bw - 1, y + bh - 1), outline=(60, 60, 60), width=2)
+    if s.get("watermark", True) is False:  # 캡처처럼 글자가 꽉 찬 사진은 워터마크를 빼서 가리지 않게
+        y += bh + 22
+        return _story_body(s, img, y, X)
     wf = font("bold", 26)
     wm = ch.get("name", "채널이름")
     tw = d.textlength(wm, font=wf)
@@ -177,7 +192,11 @@ def render_story(s, ch, base):
     d.ellipse((wx - 30, wy + 7, wx - 14, wy + 23), fill=(52, 199, 89))
     d.text((wx, wy), wm, font=wf, fill="white")
     y += bh + 22
+    return _story_body(s, img, y, X)
 
+
+def _story_body(s, img, y, X):
+    d = ImageDraw.Draw(img)
     # 본문 문단
     size = s.get("body_size", 46)
     paras = s.get("paras", [])

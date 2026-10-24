@@ -1,0 +1,100 @@
+{
+ "out_dir": "out",
+ "channel": {
+  "name": "채널이름",
+  "handle": "@channel_id"
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-24-dc-review/src/23.jpg",
+   "crop": [
+    0,
+    0,
+    1,
+    0.34
+   ],
+   "fit": "contain",
+   "title": "8천원 국밥 시켰는데\n결제창 보고 멈칫함 ㄷㄷ",
+   "contain_top": 0.12
+  },
+  {
+   "type": "story",
+   "headline": "옵션부터 뭔가 이상함",
+   "image": "../2026-10-24-dc-review/src/25.jpg",
+   "crop": [
+    0,
+    0,
+    1,
+    0.45
+   ],
+   "paras": [
+    {
+     "text": "배달앱에서 국밥 세트가 8,000원으로\n할인하길래 바로 들어감"
+    },
+    {
+     "text": "근데 '조리'랑 '비조리' 중에\n하나를 필수로 골라야 함"
+    },
+    {
+     "text": "조리 2,000원, 비조리도 2,000원",
+     "bold": true
+    },
+    {
+     "text": "안 고르면 배달 불가 ㅋㅋ"
+    }
+   ],
+   "watermark": false
+  },
+  {
+   "type": "story",
+   "headline": "반찬은 빼도 돈 받음",
+   "image": "../2026-10-24-dc-review/src/25.jpg",
+   "crop": [
+    0,
+    0.52,
+    1,
+    0.95
+   ],
+   "paras": [
+    {
+     "text": "다음 필수 선택은 반찬"
+    },
+    {
+     "text": "김치·깍두기 포함하면 1,500원"
+    },
+    {
+     "text": "반찬 빼달라고 해도 900원",
+     "bold": true
+    },
+    {
+     "text": "안 받는 반찬값을 내는 신기한 경험"
+    }
+   ],
+   "watermark": false
+  },
+  {
+   "type": "story",
+   "headline": "마지막 관문은 맛 선택",
+   "image": "../2026-10-24-dc-review/src/26.jpg",
+   "crop": [
+    0,
+    0.34,
+    1,
+    0.78
+   ],
+   "paras": [
+    {
+     "text": "보통맛 1,000원, 매운맛 1,500원\n이것도 안 고르면 배달 불가"
+    },
+    {
+     "text": "최종 결제 금액 12,500원\n8천원 국밥 어디 감?",
+     "bold": true
+    },
+    {
+     "text": "너네도 배달앱 옵션 함정 당한 적 있으면 댓글 ㄱㄱ"
+    }
+   ],
+   "watermark": false
+  }
+ ]
+}
