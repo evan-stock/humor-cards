@@ -1,0 +1,27 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "src/cloth.jpg",
+   "fit": "contain",
+   "contain_h": 0.56,
+   "contain_top": 0.05,
+   "title": "몇 달 쓴 안경닦이\n자세히 보다 경악 ㄷㄷ"
+  },
+  {
+   "type": "photo",
+   "image": "src/cloth.jpg",
+   "caption": "몇 달째 아무 생각 없이 쓰던\n안경점 안경닦이",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "src/zoom.jpg",
+   "caption": "근데 이 원숭이…\n비키니 입고 있었음 ㅋㅋ",
+   "caption_size": 46,
+   "reserve": 240
+  }
+ ]
+}
