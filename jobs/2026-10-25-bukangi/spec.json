@@ -1,0 +1,50 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "src/01.jpg",
+   "crop": [
+    0.33,
+    0.1,
+    0.86,
+    1.0
+   ],
+   "fy": 0.3,
+   "title": "부산 상어 '부캉이'\n지키려고 시위까지 열림 ㄷㄷ"
+  },
+  {
+   "type": "photo",
+   "image": "src/01.jpg",
+   "crop": [
+    0.36,
+    0.14,
+    0.75,
+    0.62
+   ],
+   "caption": "부캉이 행복은 부캉이가 정한다고 함",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "src/02.jpg",
+   "crop": [
+    0.27,
+    0.48,
+    0.78,
+    0.92
+   ],
+   "caption": "외해로 보내는 거 결사반대 (진지)",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "src/03.jpg",
+   "caption": "20년 만에 내 집 마련인데 강제퇴거라니\n- 부캉이 올림 -",
+   "caption_size": 46,
+   "reserve": 240
+  }
+ ]
+}
