@@ -108,11 +108,19 @@ def main(spec_path):
         seg = os.path.join(tmp, f"seg{i}.mp4")
         speed = s.get("speed", 1.0)
         fx, fy = s.get("fx", 0.5), s.get("fy", 0.5)
-        vf = (f"[0:v]trim={s['start']}:{s['end']},setpts=(PTS-STARTPTS)/{speed},"
-              f"scale={W}:{H}:force_original_aspect_ratio=increase,"
-              f"crop={W}:{H}:(iw-{W})*{fx}:(ih-{H})*{fy},fps=30,setsar=1[v];[v][1:v]overlay=0:0,format=yuv420p[o]")
-        subprocess.run([ff, "-y", "-loglevel", "error", "-i", os.path.join(base, s["video"]), "-i", png,
-                        "-filter_complex", vf, "-map", "[o]", "-an",
+        head = f"[0:v]trim={s['start']}:{s['end']},setpts=(PTS-STARTPTS)/{speed},fps=30,setsar=1"
+        if s.get("fit") == "contain":
+            # 가로 영상: 흐린 배경 위에 원본 비율 그대로 가로 꽉 차게, 세로 위치 contain_y(중심, 0~1)
+            cy = round(H * s.get("contain_y", 0.45))
+            vf = (f"{head},split[a][b];"
+                  f"[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:3,eq=brightness=-0.15[bg];"
+                  f"[b]scale={W}:-2[fg];[bg][fg]overlay=0:{cy}-h/2[v];[v][1:v]overlay=0:0,format=yuv420p[o]")
+        else:
+            vf = (f"{head},scale={W}:{H}:force_original_aspect_ratio=increase,"
+                  f"crop={W}:{H}:(iw-{W})*{fx}:(ih-{H})*{fy}[v];[v][1:v]overlay=0:0,format=yuv420p[o]")
+        # 짧은 움짤은 반복 재생해 end까지 채운다
+        subprocess.run([ff, "-y", "-loglevel", "error", "-stream_loop", "-1", "-i", os.path.join(base, s["video"]), "-i", png,
+                        "-filter_complex", vf, "-map", "[o]", "-an", "-t", str((s["end"] - s["start"]) / speed),
                         "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", seg], check=True)
         parts.append(seg)
         if i == 0:  # 첫 장면을 커버 이미지로

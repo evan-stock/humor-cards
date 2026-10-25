@@ -1,0 +1,13 @@
+{
+  "out": "out/reel.mp4",
+  "segments": [
+    {"video": "src/v07.mp4", "start": 0, "end": 3.0, "fit": "contain", "contain_y": 0.4,
+     "title": "세계에서 제일\n정신 나간 축제 모음", "bottom": 0.74},
+    {"video": "src/v06.mp4", "start": 0, "end": 4.0, "fit": "contain", "contain_y": 0.42, "caption": "치즈 하나 잡겠다고\n언덕에서 데굴데굴 (영국)", "caption_y": 0.72},
+    {"video": "src/v12.mp4", "start": 0, "end": 2.6, "fit": "contain", "contain_y": 0.42, "caption": "오렌지로 전쟁하는\n이탈리아", "caption_y": 0.72},
+    {"video": "src/v13.mp4", "start": 0, "end": 2.6, "fit": "contain", "contain_y": 0.42, "caption": "맞으면 진짜 아픔;;", "caption_y": 0.72},
+    {"video": "src/v09.mp4", "start": 0, "end": 3.0, "fit": "contain", "contain_y": 0.42, "caption": "교회끼리 불꽃 로켓\n쏘는 그리스", "caption_y": 0.72},
+    {"video": "src/v16.mp4", "start": 0, "end": 3.85, "fit": "contain", "contain_y": 0.42, "caption": "10톤 통나무 타고\n비탈 내려오는 일본", "caption_y": 0.72},
+    {"video": "src/v19.mp4", "start": 0, "end": 5.0, "fit": "contain", "contain_y": 0.42, "caption": "이 중 하나 무조건\n참가해야 하면? 댓글 ㄱㄱ", "caption_y": 0.72}
+  ]
+}
