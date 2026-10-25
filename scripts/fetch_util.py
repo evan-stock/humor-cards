@@ -83,6 +83,10 @@ def img_urls(node, page_url):
             continue
         if u not in out:
             out.append(u)
+    for a in node.find_all("a", href=True):  # 루리웹 등: 영상이 링크로만 들어 있는 경우
+        u = urljoin(page_url, a["href"])
+        if re.search(r"\.(mp4|webm)(\?|$)", u, re.I) and u not in out:
+            out.append(u)
     return out
 
 
