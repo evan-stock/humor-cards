@@ -1,0 +1,46 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "src/collage.jpg",
+   "title": "2천 달러 폴더블 아이폰\n하루 만에 줄 쫙 ㄷㄷ",
+   "fy": 0.4
+  },
+  {
+   "type": "photo",
+   "image": "src/store809up.jpg",
+   "caption": "애플스토어 전시폰인데\n접히는 자리에 줄 쫙 ㅋㅋ",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "src/jpmusic.jpg",
+   "caption": "일본 매장 폰도 똑같은 자리",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "src/benz.jpg",
+   "caption": "중국 유저 폰도 하얀 줄 추가요",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "src/swupdate.jpg",
+   "caption": "업데이트 하라는 화면에도 줄 ㅋㅋ",
+   "caption_size": 46,
+   "reserve": 240
+  },
+  {
+   "type": "photo",
+   "image": "src/crack45.jpg",
+   "caption": "아예 반으로 쪼개진 폰까지\n(수리비만 999달러)",
+   "caption_size": 46,
+   "reserve": 240
+  }
+ ]
+}
