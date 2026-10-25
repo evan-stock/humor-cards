@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-10-25T14:50:00+09:00",
  "publish_at": "2026-10-25T16:00:00+09:00",
  "topic": "부산 북항 상어 '부캉이' 외해 이송 반대 시위 (직접 찍은 사진)",
@@ -17,5 +17,7 @@
   "jobs/2026-10-25-bukangi/out/03.jpg",
   "jobs/2026-10-25-bukangi/out/04.jpg"
  ],
- "preview": "jobs/2026-10-25-bukangi/out/preview.jpg"
+ "preview": "jobs/2026-10-25-bukangi/out/preview.jpg",
+ "decided_note": "2026-10-25 14:48 KST 운영판 앱 승인",
+ "decided_at": "2026-10-25T14:48:45.356281+09:00"
 }
