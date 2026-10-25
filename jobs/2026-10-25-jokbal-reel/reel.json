@@ -1,0 +1,11 @@
+{
+  "out": "out/reel.mp4",
+  "mute": true,
+  "segments": [
+    {"video": "src/v01.mp4", "start": 3.0, "end": 6.2, "title": "족발을 칼로 써는 게\n아니라 찢어먹는 나라"},
+    {"video": "src/v02.mp4", "start": 0.0, "end": 4.0, "caption": "그냥 꾹 눌렀을 뿐인데"},
+    {"video": "src/v02.mp4", "start": 6.0, "end": 12.5, "caption": "뼈가 알아서 퇴근함 ㅋㅋㅋㅋ"},
+    {"video": "src/v02.mp4", "start": 19.0, "end": 24.0, "caption": "여기에 소스까지 투하;;"},
+    {"video": "src/v02.mp4", "start": 24.0, "end": 28.8, "caption": "야식 족발 vs 치킨\n댓글로 ㄱㄱ", "caption_y": 0.74}
+  ]
+}
