@@ -4,7 +4,7 @@
 collect.json 형식:
   {"pages": ["원글 주소", ...], "image_urls": ["이미지 직접 주소", ...]}
 결과:
-  src/01.jpg, 02.jpg ...  (gif·webp는 첫 장면을 jpg로, 원본은 src/raw/에 보관)
+  src/01.jpg, 02.jpg ...  (영상은 src/v01.mp4 + 장면 v01_frame.jpg, gif·webp는 첫 장면을 jpg로, 원본은 src/raw/에 보관)
   src/candidates.jpg      (번호가 붙은 한눈에 보기)
   src/index.json          (번호 → 원래 주소·크기)
 collect.json 내용이 바뀌지 않았으면 다시 받지 않는다. 사용: python3 scripts/collect.py [job_id ...]
@@ -14,6 +14,7 @@ import hashlib
 import io
 import json
 import os
+import subprocess
 import sys
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
@@ -78,6 +79,21 @@ def run(job_dir):
             im.seek(0)
             rgb = im.convert("RGB")
         except Exception:
+            b = r.content
+            if b[4:8] == b"ftyp" or b[:4] == b"\x1aE\xdf\xa3":  # mp4·webm 영상
+                vn = len([x for x in index if x.get("video")]) + 1
+                ext = "mp4" if b[4:8] == b"ftyp" else "webm"
+                vname = f"v{vn:02d}.{ext}"
+                open(os.path.join(src, vname), "wb").write(b)
+                info = {"video": f"src/{vname}", "url": url, "bytes": len(b)}
+                frame = os.path.join(src, f"v{vn:02d}_frame.jpg")
+                if subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-i", os.path.join(src, vname),
+                                   "-frames:v", "1", frame]).returncode == 0 and os.path.exists(frame):
+                    saved.append(frame)
+                    info["frame"] = f"src/v{vn:02d}_frame.jpg"
+                index.append(info)
+                print(f"  {vname} 영상 {len(b)//1024}KB")
+                continue
             index.append({"url": url, "error": "이미지가 아님"})
             continue
         if min(rgb.size) < 120:  # 아이콘·이모티콘
@@ -92,6 +108,7 @@ def run(job_dir):
 
     json.dump(index, open(os.path.join(src, "index.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     open(os.path.join(src, "log.txt"), "w", encoding="utf-8").write("\n".join(fetch_util.LOG) + "\n")
+    n += len([x for x in index if x.get("video")])
     if n == 0:  # 하나도 못 받았으면 원글 HTML을 남겨 원인을 본다
         for i, page in enumerate(cfg.get("pages", [])):
             html = fetch_util.LAST_HTML.get(page)
