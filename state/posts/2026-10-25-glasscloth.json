@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-10-25T15:40:00+09:00",
  "publish_at": "2026-10-25T19:30:00+09:00",
  "topic": "몇 달 쓴 안경닦이 원숭이가 비키니 입고 있었음",
@@ -18,5 +18,8 @@
  ],
  "preview": "",
  "decided_note": "2026-10-25 15:27 KST 채팅 승인(오늘 중 게시 요청)",
- "decided_at": "2026-10-25T15:28:07.938502+09:00"
+ "decided_at": "2026-10-25T15:28:07.938502+09:00",
+ "ig_media_id": "18027832343702239",
+ "permalink": "https://www.instagram.com/p/De6f2LxkVHT/",
+ "published_at": "2026-10-25T19:31:18.986139+09:00"
 }
