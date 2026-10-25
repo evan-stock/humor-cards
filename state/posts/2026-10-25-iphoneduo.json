@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-10-25T09:58:00+09:00",
  "publish_at": "2026-10-25T18:00:00+09:00",
  "topic": "아이폰 듀오 출시 하루 만에 힌지 줄 인증샷 (오늘의쓸모 소재 ㅋㅋ상회 버전)",
@@ -19,5 +19,7 @@
   "jobs/2026-10-25-iphoneduo/out/05.jpg",
   "jobs/2026-10-25-iphoneduo/out/06.jpg"
  ],
- "preview": "jobs/2026-10-25-iphoneduo/out/preview.jpg"
+ "preview": "jobs/2026-10-25-iphoneduo/out/preview.jpg",
+ "decided_note": "2026-10-25 09:55 KST 운영판 앱 승인",
+ "decided_at": "2026-10-25T09:55:48.280234+09:00"
 }
