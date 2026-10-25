@@ -1,0 +1,20 @@
+[
+ {
+  "video": "src/v01.mp4",
+  "url": "https://i1.ruliweb.com/ori/26/10/25/1a17358b34a4ff3f6.mp4",
+  "bytes": 4670039,
+  "frame": "src/v01_frame.jpg"
+ },
+ {
+  "video": "src/v02.mp4",
+  "url": "https://i2.ruliweb.com/ori/26/10/25/1a17358b51a4ff3f6.mp4",
+  "bytes": 9029267,
+  "frame": "src/v02_frame.jpg"
+ },
+ {
+  "video": "src/v03.mp4",
+  "url": "https://i2.ruliweb.com/ori/26/10/25/1a17358b6fe4ff3f6.mp4",
+  "bytes": 5388688,
+  "frame": "src/v03_frame.jpg"
+ }
+]
