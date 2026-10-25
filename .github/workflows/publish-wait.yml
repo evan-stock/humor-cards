@@ -1,0 +1,46 @@
+name: publish-wait
+# GitHub 예약 실행(schedule)은 1~2시간씩 늦게 돌 때가 많다.
+# 승인된 게시물이 있으면 이 작업이 publish_at 까지 기다렸다가 publish 워크플로를 바로 실행한다.
+# - 승인·준비가 푸시될 때마다 새로 시작(이전 대기는 취소)하고, 한 번에 최대 약 5시간 50분 기다린다.
+# - 기다리는 동안 repo-write 잠금을 잡지 않아 scout·collect 는 그대로 돈다.
+on:
+  push:
+    paths: ["jobs/*/post.json", "state/posts/*.json"]
+  schedule:
+    - cron: "23 */3 * * *"   # 예비: 푸시 없이도 가끔 다시 잡는다
+  workflow_dispatch:
+
+concurrency:
+  group: publish-wait
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  wait:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - name: wait and trigger publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          END=$(( $(date +%s) + 350*60 ))
+          DONE=""
+          while true; do
+            git pull -q origin main || true
+            read NEXT ID <<< "$(python3 scripts/next_publish.py $DONE)"
+            [ -z "$NEXT" ] && { echo "기다릴 승인 게시물 없음"; exit 0; }
+            echo "다음: $ID"
+            DONE="$DONE $ID"
+            NOW=$(date +%s)
+            WAIT=$(( NEXT - NOW + 15 ))
+            if [ $(( NOW + WAIT )) -gt $END ]; then echo "다음 게시가 대기 한도 밖: $(date -d @$NEXT)"; exit 0; fi
+            if [ $WAIT -gt 0 ]; then echo "$(TZ=Asia/Seoul date -d @$NEXT '+%F %H:%M KST') 까지 ${WAIT}초 대기"; sleep $WAIT; fi
+            gh workflow run publish.yml --ref main -f mode=run
+            echo "publish 실행 요청함"
+            sleep 240   # 게시 반영 기다린 뒤 다음 건 확인
+          done
