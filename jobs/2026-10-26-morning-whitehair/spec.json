@@ -1,0 +1,84 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-26-morning-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.075,
+    1.0,
+    0.66
+   ],
+   "title": "흰머리 뽑는 알바\n시급 2만원이래ㅋㅋㅋㅋ",
+   "fit": "contain",
+   "contain_h": 0.54,
+   "contain_top": 0.05
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-26-morning-review/src/02.jpg",
+   "crop": [
+    0.0,
+    0.21,
+    1.0,
+    0.8
+   ],
+   "caption": "50개 넘기면 만원 추가\n족집게, 소독티슈까지 지참함 ㅋㅋ",
+   "reserve": 200,
+   "bg": "white"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-26-morning-review/src/04.jpg",
+   "crop": [
+    0.0,
+    0.235,
+    1.0,
+    1.0
+   ],
+   "caption": "지원자 첫마디가 \"희열 느껴요\" ㅋㅋㅋ",
+   "reserve": 190,
+   "bg": "white"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-26-morning-review/src/06.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.9
+   ],
+   "caption": "서로 박박 씻고 간다는데\n파자마 파티 아님?",
+   "reserve": 220,
+   "bg": "white"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-26-morning-review/src/07.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.895
+   ],
+   "caption": "근데 아는 언니까지 데려온다고?",
+   "reserve": 190,
+   "bg": "white"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-26-morning-review/src/08.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.4
+   ],
+   "caption": "경건한 마음 vs 흰머리 수북하게 준비\n이 조합 무엇 ㅋㅋㅋㅋ",
+   "reserve": 200,
+   "bg": "white"
+  }
+ ]
+}
