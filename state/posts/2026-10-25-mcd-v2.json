@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-10-25T00:55:00+09:00",
  "publish_at": "2026-10-25T12:00:00+09:00",
  "topic": "서울역 맥날 주문번호 클라스 ㄷㄷ (새 틀 재제작)",
@@ -19,5 +19,8 @@
  ],
  "preview": "jobs/2026-10-25-mcd-v2/out/preview.jpg",
  "decided_note": "2026-10-25 00:52 KST 운영판 앱 승인",
- "decided_at": "2026-10-25T00:52:33.812522+09:00"
+ "decided_at": "2026-10-25T00:52:33.812522+09:00",
+ "ig_media_id": "18117999806006869",
+ "permalink": "https://www.instagram.com/p/De5sV-xlNMN/",
+ "published_at": "2026-10-25T12:01:14.057529+09:00"
 }
