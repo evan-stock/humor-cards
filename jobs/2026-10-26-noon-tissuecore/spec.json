@@ -1,0 +1,38 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-26-noon-review/src/04.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.9
+   ],
+   "title": "휴지심 개당 100원에\n내놨더니 20개 사겠대",
+   "fy": 0.45
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-26-noon-review/src/03.jpg",
+   "caption": "다 쓴 휴지심 버리지 말고\n이렇게 모아두는 거임",
+   "reserve": 235,
+   "caption_size": 46
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-26-noon-review/src/02b.jpg",
+   "caption": "가격 제안 불가 100원짜리에\n20개 사겠다는 사람 등장 ㅋㅋㅋ",
+   "reserve": 200,
+   "bg": "white"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-26-noon-review/src/04.jpg",
+   "caption": "애들 만들기 교구, 반려동물 장난감용\n은근 수요 있대 ㄹㅇ 창조경제",
+   "reserve": 240,
+   "caption_size": 44
+  }
+ ]
+}
