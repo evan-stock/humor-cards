@@ -1,0 +1,72 @@
+[
+ {
+  "no": 1,
+  "file": "src/01.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/26/7/f/8/7f82f5c89587a3e27d067bbb91c2a371",
+  "size": [
+   966,
+   4630
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 2,
+  "file": "src/02.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/26/a/d/7/ad759f860d7197e1265ff2e7691a66f8",
+  "size": [
+   571,
+   3909
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 3,
+  "file": "src/03.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/26/c/d/0/cd01afbbb748ef17d6c6f3dcc83eee8a",
+  "size": [
+   599,
+   880
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 4,
+  "file": "src/04.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/26/4/e/d/4ed3754e44b1af0fdb4aa1193e6fca3b",
+  "size": [
+   599,
+   538
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 5,
+  "file": "src/05.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/26/6/d/a/6da198d52ae5ad6243c1f69ce9fc4e58",
+  "size": [
+   641,
+   1338
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 6,
+  "file": "src/06.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/26/c/f/9/cf91c007911fa69c7b685828233fd9b9",
+  "size": [
+   310,
+   439
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 7,
+  "file": "src/07.jpg",
+  "url": "https://cdn.instiz.net/data/cached_img/upload/2026/10/26/18/45fe410d630418f6a2cadde87200f0e2.jpg",
+  "size": [
+   800,
+   1046
+  ],
+  "format": "webp"
+ }
+]
