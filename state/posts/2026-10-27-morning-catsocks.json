@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "morning",
  "slot_label": "아침",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-10-27T07:44:37+09:00",
  "publish_at": "2026-10-27T09:00:00+09:00",
  "topic": "천원짜리 어른 발목 수면양말, 아기가 신으면 고양이 다리 됨 (원글 사진)",
@@ -19,5 +19,7 @@
   "jobs/2026-10-27-morning-catsocks/out/05.jpg",
   "jobs/2026-10-27-morning-catsocks/out/06.jpg"
  ],
- "preview": "jobs/2026-10-27-morning-catsocks/out/preview.jpg"
+ "preview": "jobs/2026-10-27-morning-catsocks/out/preview.jpg",
+ "decided_note": "2026-10-27 07:54 KST 운영판 앱 승인",
+ "decided_at": "2026-10-27T07:54:19.819585+09:00"
 }
