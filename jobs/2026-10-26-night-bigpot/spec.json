@@ -1,0 +1,17 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {"type": "cover", "image": "../2026-10-26-night-review/src/03.jpg",
+   "crop": [0.03, 0.13, 0.97, 0.985],
+   "title": "울 엄마 요리하면\n양이 군대급ㅋㅋㅋㅋㅋ", "fy": 0.45},
+  {"type": "photo", "image": "../2026-10-26-night-review/src/04.jpg",
+   "crop": [0.03, 0.2, 0.97, 0.985],
+   "caption": "만두국 끓였다는데\n국물이 어디 있는지 모르겠음", "reserve": 235, "caption_size": 46},
+  {"type": "photo", "image": "../2026-10-26-night-review/src/05.jpg",
+   "crop": [0.115, 0.15, 0.88, 0.513],
+   "caption": "떡볶이 했대서 봤는데\n여기까진 평범해 보이지?", "reserve": 235, "caption_size": 46},
+  {"type": "photo", "image": "../2026-10-26-night-review/src/05.jpg",
+   "crop": [0.0, 0.545, 1.0, 1.0],
+   "caption": "근데 냄비가 이거임\n참고로 가게 안 함 ㅋㅋㅋ", "reserve": 235, "caption_size": 46}
+ ]
+}
