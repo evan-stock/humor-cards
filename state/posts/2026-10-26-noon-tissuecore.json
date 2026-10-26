@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-10-26T10:43:36+09:00",
  "publish_at": "2026-10-26T12:00:00+09:00",
  "topic": "다 쓴 휴지심 개당 100원에 당근, 20개 사겠다는 구매자 등장 (당근 채팅 캡처)",
@@ -19,5 +19,8 @@
  ],
  "preview": "jobs/2026-10-26-noon-tissuecore/out/preview.jpg",
  "decided_note": "2026-10-26 11:25 KST 운영판 앱 승인",
- "decided_at": "2026-10-26T11:25:30.301271+09:00"
+ "decided_at": "2026-10-26T11:25:30.301271+09:00",
+ "ig_media_id": "17879479278632694",
+ "permalink": "https://www.instagram.com/p/De8RJ3IFC1B/",
+ "published_at": "2026-10-26T12:01:22.808749+09:00"
 }
