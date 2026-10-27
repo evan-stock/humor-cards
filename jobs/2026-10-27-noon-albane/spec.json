@@ -1,0 +1,58 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-27-noon-review/src/01.jpg",
+   "crop": [
+    0.03,
+    0.283,
+    0.96,
+    0.676
+   ],
+   "fit": "contain",
+   "contain_h": 0.53,
+   "contain_top": 0.05,
+   "title": "알바 합격 문자에\n'네' 했다가 잘림 ㄷㄷ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-27-noon-review/src/01.jpg",
+   "crop": [
+    0.03,
+    0.285,
+    0.96,
+    0.547
+   ],
+   "bg": "white",
+   "reserve": 200,
+   "caption": "알바 합격하고 받은 문자\n근무 조건 친절하게 쫙 옴"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-27-noon-review/src/01.jpg",
+   "crop": [
+    0.03,
+    0.554,
+    0.96,
+    0.674
+   ],
+   "bg": "white",
+   "reserve": 200,
+   "caption": "수습 1개월에 급여 90%\n여기까진 평범했음"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-27-noon-review/src/01.jpg",
+   "crop": [
+    0.03,
+    0.682,
+    0.96,
+    0.85
+   ],
+   "bg": "white",
+   "reserve": 200,
+   "caption": "공손하게 '네' 보냈더니\n바로 잘림ㅋㅋㅋㅋ"
+  }
+ ]
+}
