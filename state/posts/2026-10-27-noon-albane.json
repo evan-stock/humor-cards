@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-10-27T10:44:02+09:00",
  "publish_at": "2026-10-27T12:00:00+09:00",
  "topic": "알바 합격 문자에 '네' 한마디 보냈다가 잘린 문자 캡처",
@@ -17,5 +17,10 @@
   "jobs/2026-10-27-noon-albane/out/03.jpg",
   "jobs/2026-10-27-noon-albane/out/04.jpg"
  ],
- "preview": "jobs/2026-10-27-noon-albane/out/preview.jpg"
+ "preview": "jobs/2026-10-27-noon-albane/out/preview.jpg",
+ "decided_note": "2026-10-27 12:49 KST 운영판 앱 승인",
+ "decided_at": "2026-10-27T12:50:12.853382+09:00",
+ "ig_media_id": "18021703106727855",
+ "permalink": "https://www.instagram.com/p/De-7omYkUNg/",
+ "published_at": "2026-10-27T12:51:04.734476+09:00"
 }
