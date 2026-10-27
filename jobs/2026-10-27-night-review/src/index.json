@@ -1,0 +1,92 @@
+[
+ {
+  "no": 1,
+  "file": "src/01.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/3/8/7/3873bcb3a99e5ee865bc536bae38305e",
+  "size": [
+   1080,
+   1281
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 2,
+  "file": "src/02.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/2/8/f/28f4794580b66fa2cb0e0472db0918f2",
+  "size": [
+   1080,
+   999
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 3,
+  "file": "src/03.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/9/f/3/9f30a65e0aa1668a079336d0e411cd79",
+  "size": [
+   888,
+   1327
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 4,
+  "file": "src/04.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/4/4/2/442fbe8445ad42b7b0d86481f468439b",
+  "size": [
+   640,
+   886
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 5,
+  "file": "src/05.jpg",
+  "url": "https://img-cdn.theqoo.net/mkroyM.jpg",
+  "size": [
+   1290,
+   1760
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 6,
+  "file": "src/06.jpg",
+  "url": "https://img-cdn.theqoo.net/CnPJwx.jpg",
+  "size": [
+   1290,
+   2218
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 7,
+  "file": "src/07.jpg",
+  "url": "https://img-cdn.theqoo.net/Xfasnh.jpg",
+  "size": [
+   1290,
+   2156
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 8,
+  "file": "src/08.jpg",
+  "url": "https://img-cdn.theqoo.net/wvZJrq.jpg",
+  "size": [
+   1290,
+   1635
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 9,
+  "file": "src/09.jpg",
+  "url": "https://i3.ruliweb.com/img/26/10/27/1a17ce886f75886ed.webp",
+  "size": [
+   900,
+   507
+  ],
+  "format": "webp"
+ }
+]
