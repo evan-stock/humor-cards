@@ -1,0 +1,84 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-27-night-review/src/12.jpg",
+   "crop": [
+    0.0,
+    0.267,
+    1.0,
+    0.95
+   ],
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.06,
+   "title": "로맨스스캠 이름이\n대정밍스래ㅋㅋㅋㅋㅋ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-27-night-review/src/11.jpg",
+   "crop": [
+    0.045,
+    0.12,
+    0.955,
+    0.7
+   ],
+   "reserve": 235,
+   "caption_size": 46,
+   "caption": "새벽 1시에 갑자기 온 DM\n이름이 대_정_밍스래"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-27-night-review/src/11.jpg",
+   "crop": [
+    0.045,
+    0.69,
+    0.94,
+    0.952
+   ],
+   "reserve": 235,
+   "caption_size": 46,
+   "caption": "당연히 물어봄\n대정밍스가 뭔데;;"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-27-night-review/src/12.jpg",
+   "crop": [
+    0.0,
+    0.11,
+    1.0,
+    0.58
+   ],
+   "reserve": 235,
+   "caption_size": 46,
+   "caption": "근데 한국에서 왔대\n아 그러세요?ㅋㅋ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-27-night-review/src/13.jpg",
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    0.43
+   ],
+   "reserve": 235,
+   "caption_size": 46,
+   "caption": "한국 이름 맞다고 우김\n뜻까지 준비해옴ㅋㅋㅋ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-27-night-review/src/13.jpg",
+   "crop": [
+    0.0,
+    0.49,
+    1.0,
+    0.935
+   ],
+   "reserve": 235,
+   "caption_size": 46,
+   "caption": "밍키망키라고 했더니\n이름 너무 아름답대ㅋㅋㅋㅋ"
+  }
+ ]
+}
