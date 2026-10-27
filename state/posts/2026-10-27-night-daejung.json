@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-10-27T19:45:57+09:00",
  "publish_at": "2026-10-27T21:00:00+09:00",
  "topic": "로맨스스캠 DM, 한국인이라면서 이름이 '대정밍스' (DM 캡처)",
@@ -21,5 +21,8 @@
  ],
  "preview": "jobs/2026-10-27-night-daejung/out/preview.jpg",
  "decided_note": "2026-10-27 19:52 KST 운영판 앱 승인",
- "decided_at": "2026-10-27T19:52:46.735310+09:00"
+ "decided_at": "2026-10-27T19:52:46.735310+09:00",
+ "ig_media_id": "18140039209532393",
+ "permalink": "https://www.instagram.com/p/De_zxNsnDw4/",
+ "published_at": "2026-10-27T21:01:14.671102+09:00"
 }
