@@ -1,0 +1,82 @@
+[
+ {
+  "no": 1,
+  "file": "src/01.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/c/5/a/c5a9746a67408e45f4dc79b11eb6abae",
+  "size": [
+   1080,
+   2049
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 2,
+  "file": "src/02.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/c/b/1/cb159cfb13472ce5c0b43070d9aee923",
+  "size": [
+   800,
+   1047
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 3,
+  "file": "src/03.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/3/2/2/322bb5a36232d3a20b2474ed569c9e86",
+  "size": [
+   900,
+   657
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 4,
+  "file": "src/04.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/6/f/0/6f09109174a692137293cef568c41c6b",
+  "size": [
+   900,
+   510
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 5,
+  "file": "src/05.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/e/9/3/e93695c71d98148087de8505993f45ce",
+  "size": [
+   900,
+   659
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 6,
+  "file": "src/06.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/0/0/3/003ca71678f2dcb239fd802340a21ad3",
+  "size": [
+   900,
+   563
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 7,
+  "file": "src/07.jpg",
+  "url": "https://i2.ruliweb.com/img/26/10/27/1a17af9564650897e.webp",
+  "size": [
+   720,
+   7667
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 8,
+  "file": "src/08.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/27/c/0/f/c0f777f3959f09eff0190f6f6a19fd17",
+  "size": [
+   1024,
+   936
+  ],
+  "format": "webp"
+ }
+]
