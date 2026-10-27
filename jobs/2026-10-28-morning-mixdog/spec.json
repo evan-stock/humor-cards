@@ -1,0 +1,97 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-28-morning-review/src/05.jpg",
+   "crop": [
+    0.025,
+    0.33,
+    0.975,
+    0.97
+   ],
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.07,
+   "title": "견종 물어보면\n대답 못 하는 댕댕이들"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-morning-review/src/05.jpg",
+   "crop": [
+    0.025,
+    0.33,
+    0.975,
+    0.97
+   ],
+   "caption": "같은 엄마 아빠한테 나온 삼남매\n근데 셋 다 딴 개임",
+   "reserve": 235,
+   "caption_size": 46
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-morning-review/src/03.jpg",
+   "crop": [
+    0.03,
+    0.165,
+    0.91,
+    0.995
+   ],
+   "caption": "진돗개냐고? 몰라\n그냥 '우리 개'임",
+   "reserve": 235,
+   "caption_size": 46
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-morning-review/src/18.jpg",
+   "crop": [
+    0.0,
+    0.285,
+    1.0,
+    0.985
+   ],
+   "caption": "다리는 코기, 얼굴은 골댕이\n귀 펴면 진도 나옴",
+   "reserve": 235,
+   "caption_size": 46
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-morning-review/src/26.jpg",
+   "crop": [
+    0.0,
+    0.275,
+    1.0,
+    0.99
+   ],
+   "caption": "코기+시바+사냥개 3종 콤보\n배 까는 건 순종급",
+   "reserve": 235,
+   "caption_size": 46
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-morning-review/src/28.jpg",
+   "crop": [
+    0.0,
+    0.295,
+    0.485,
+    1.0
+   ],
+   "caption": "보호소 최강 유니크상\n이 얼굴 어디서 옴?",
+   "reserve": 235,
+   "caption_size": 46
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-morning-review/src/25.jpg",
+   "crop": [
+    0.03,
+    0.315,
+    0.97,
+    0.975
+   ],
+   "caption": "엄마는 잡종인데 아빠가...\n길냥이였다고?ㅋㅋㅋ",
+   "reserve": 235,
+   "caption_size": 46
+  }
+ ]
+}
