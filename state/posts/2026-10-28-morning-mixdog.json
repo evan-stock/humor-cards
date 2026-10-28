@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "morning",
  "slot_label": "아침",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-10-28T07:45:30+09:00",
  "publish_at": "2026-10-28T09:00:00+09:00",
  "topic": "너무 섞여서 견종 모르는 잡종견 사진 모음 (삼남매 다 다르게 생김·아빠가 길냥이?)",
@@ -22,5 +22,8 @@
  ],
  "preview": "jobs/2026-10-28-morning-mixdog/out/preview.jpg",
  "decided_note": "2026-10-28 08:13 KST 운영판 앱 승인",
- "decided_at": "2026-10-28T08:13:35.521258+09:00"
+ "decided_at": "2026-10-28T08:13:35.521258+09:00",
+ "ig_media_id": "18101870210370660",
+ "permalink": "https://www.instagram.com/p/DfBGLIQj0SC/",
+ "published_at": "2026-10-28T09:01:39.616092+09:00"
 }
