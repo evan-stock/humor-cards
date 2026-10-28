@@ -1,0 +1,97 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-28-noon-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.0213,
+    1.0,
+    0.1566
+   ],
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.07,
+   "title": "내가 쏜다던 팀장님\n막내 카드로 42만원;;"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-noon-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.0213,
+    1.0,
+    0.1566
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "'오늘은 내가 쏜다!' 하더니\n결제는 막내 카드로 42만원"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-noon-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.1612,
+    1.0,
+    0.3427
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "월요일에 준다던 돈은 안 오고\n영수증 원본부터 내놓으라 함"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-noon-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.349,
+    1.0,
+    0.4376
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "떼먹겠냐며 버럭하길래\n막내가 총무팀에 직접 물어봄"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-noon-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.5521,
+    1.0,
+    0.6627
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "근데 팀장이 이미 같은 금액을\n자기 이름으로 신청해 둠 ㄷㄷ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-noon-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.7495,
+    1.0,
+    0.8848
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "막내의 메신저 선빵\n'번거로우실까봐요^^' 킹받네"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-noon-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.8901,
+    1.0,
+    0.9787
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "내가 쏜다던 팀장님\n결국 서류에 승인만 해줌ㅋㅋㅋ"
+  }
+ ]
+}
