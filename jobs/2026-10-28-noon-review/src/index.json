@@ -1,0 +1,42 @@
+[
+ {
+  "no": 1,
+  "file": "src/01.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/28/6/f/2/6f217aef99edd45d99db6f8ff224f132",
+  "size": [
+   587,
+   2822
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 2,
+  "file": "src/02.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/28/9/c/a/9ca234b11ea9d37513a57485f8d1a2bf",
+  "size": [
+   1206,
+   1444
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 3,
+  "file": "src/03.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/28/7/b/9/7b94ab9dae76891178150095e2d692c8",
+  "size": [
+   1024,
+   1091
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 4,
+  "file": "src/04.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/28/9/b/c/9bc5e40b6a5e7609b84ee773ab68272f",
+  "size": [
+   810,
+   1237
+  ],
+  "format": "webp"
+ }
+]
