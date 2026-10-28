@@ -1,0 +1,18 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {"type": "cover", "image": "../2026-10-29-morning-review2/src/04.jpg", "crop": [0.0, 0.16, 1.0, 0.39],
+   "fit": "contain", "contain_h": 0.6, "contain_top": 0.07,
+   "title": "면접 갔더니 90분 내내\n대표 자기 자랑만 ㅋㅋㅋ"},
+  {"type": "photo", "image": "../2026-10-29-morning-review2/src/04.jpg", "crop": [0.0, 0.16, 1.0, 0.36],
+   "bg": "white", "reserve": 195, "caption": "11년차 경력직, 직원 3명 회사 면접\n일찍 가서 얌전히 기다림"},
+  {"type": "photo", "image": "../2026-10-29-morning-review2/src/04.jpg", "crop": [0.0, 0.36, 1.0, 0.578],
+   "bg": "white", "reserve": 195, "caption": "질문은 1도 없고\n대표님 젊은 시절 썰 + 자식 자랑 풀코스"},
+  {"type": "photo", "image": "../2026-10-29-morning-review2/src/04.jpg", "crop": [0.0, 0.578, 1.0, 0.68],
+   "bg": "white", "reserve": 195, "caption": "희망 연봉 말했더니 돌아온 답\n'알바하면서 프리랜서 어때?'"},
+  {"type": "photo", "image": "../2026-10-29-morning-review2/src/04.jpg", "crop": [0.0, 0.68, 1.0, 0.915],
+   "bg": "white", "reserve": 195, "caption": "월요일에 연락 준다더니\n연락도 프리랜서처럼 자유로움"},
+  {"type": "photo", "image": "../2026-10-29-morning-review2/src/05.jpg", "crop": [0.0, 0.227, 1.0, 0.376],
+   "bg": "white", "reserve": 195, "caption": "3명 회사인 줄 몰랐대\n기업정보엔 15명이었다고ㅋㅋㅋㅋ"}
+ ]
+}
