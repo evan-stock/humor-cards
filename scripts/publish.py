@@ -6,6 +6,7 @@ jobs/<id>/post.json 형식:
    "publish_at": "2026-10-24T22:40:00+09:00",  # 이 시각이 지나면 게시("now"면 바로)
    "files": ["out/01.jpg", ...],           # 없으면 out/*.jpg 전부(이름순)
    "caption": "본문 전체"}
+릴스: {"approved": true, "publish_at": "now", "video": "out/reel.mp4", "cover": "out/cover.jpg"(선택), "caption": "..."}
 결과: jobs/<id>/published.json (media_id, permalink, published_at). 있으면 다시 올리지 않는다.
 이미지 주소: MEDIA_BASE_URL(없으면 이 저장소 raw 주소)/jobs/<id>/<파일>. 인스타가 직접 받아가므로 공개 주소여야 한다.
 사용: python3 scripts/publish.py [--dry-run] [--check]
@@ -68,9 +69,13 @@ def main():
         if not due(post, now):
             print(f"{jid}: 아직 아님(approved={post.get('approved')}, publish_at={post.get('publish_at')})")
             continue
-        files = post.get("files") or sorted(os.path.relpath(p, jd) for p in glob.glob(os.path.join(jd, "out", "[0-9][0-9].jpg")))
+        video = post.get("video")
+        if video:
+            files = [video] + ([post["cover"]] if post.get("cover") else [])
+        else:
+            files = post.get("files") or sorted(os.path.relpath(p, jd) for p in glob.glob(os.path.join(jd, "out", "[0-9][0-9].jpg")))
         urls = [f"{base_url()}/jobs/{jid}/{f}" for f in files]
-        print(f"{jid}: {len(urls)}장 게시 → {urls[0]} …")
+        print(f"{jid}: {'릴스' if video else f'{len(urls)}장'} 게시 → {urls[0]} …")
         bad = [u for u in urls if requests.head(u, timeout=20).status_code != 200]
         if bad:  # 인스타가 못 받아가는 주소면 바로 멈춘다(비공개 저장소 등)
             result = {"status": "failed", "error": f"이미지 주소를 열 수 없음(공개 주소인지 확인): {bad[0]}", "at": now.isoformat()}
@@ -81,7 +86,10 @@ def main():
         if a.dry_run:
             continue
         try:
-            mid, link = instagram.publish_carousel(urls, post["caption"])
+            if video:
+                mid, link = instagram.publish_reel(urls[0], post["caption"], urls[1] if len(urls) > 1 else None)
+            else:
+                mid, link = instagram.publish_carousel(urls, post["caption"])
         except Exception as e:
             json.dump({"status": "failed", "error": str(e)[:800], "at": now.isoformat()},
                       open(os.path.join(jd, "publish_error.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -1,4 +1,4 @@
-"""인스타그램 API(Instagram 로그인 방식, graph.instagram.com)로 캐러셀 게시.
+"""인스타그램 API(Instagram 로그인 방식, graph.instagram.com)로 캐러셀·릴스 게시.
 오늘의쓸모(evan-stock/cardnews)의 instagram.py를 바탕으로 했다(중복 게시 방지 확인 포함).
 필요한 저장소 Secrets: IG_ACCESS_TOKEN, IG_USER_ID (ㅋㅋ상회 계정)."""
 import os
@@ -99,6 +99,21 @@ def publish_carousel(image_urls, caption):
     _wait_ready(car)
     time.sleep(5)
     mid = _publish(car, caption)
+    return mid, _permalink(mid)
+
+
+def publish_reel(video_url, caption, cover_url=None):
+    """릴스 게시(피드에도 노출). 영상 처리에 몇 분 걸릴 수 있어 최대 약 15분 기다린다.
+    API로 올린 릴스는 나중에 인스타 음악을 넣을 수 없다(원본 소리를 넣어 렌더할 것)."""
+    ig = env("IG_USER_ID")
+    caption = caption[:2200]
+    params = {"media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": True}
+    if cover_url:
+        params["cover_url"] = cover_url
+    cid = _req("POST", f"{ig}/media", **params)["id"]
+    _wait_ready(cid, tries=45)
+    time.sleep(5)
+    mid = _publish(cid, caption)
     return mid, _permalink(mid)
 
 
