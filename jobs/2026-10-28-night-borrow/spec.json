@@ -1,0 +1,84 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-28-night-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.066,
+    1.0,
+    0.319
+   ],
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.07,
+   "title": "빌려달라 할 때마다\n거짓말하는 친구 ㄷㄷ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-night-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.205,
+    1.0,
+    0.32
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "캐리어 고장 나서 없다더니\n본가 가보니 두 개나 있음"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-night-review/src/01.jpg",
+   "crop": [
+    0.0,
+    0.34,
+    1.0,
+    0.45
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "외투는 야근이라 못 준다더니\n집에서 넷플 보고 있었음"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-night-review/src/02.jpg",
+   "crop": [
+    0.0,
+    0.055,
+    1.0,
+    0.265
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "12년 찐친 맞냐고 하소연했는데\n댓글 반응이 좀 이상함"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-night-review/src/03.jpg",
+   "crop": [
+    0.0,
+    0.295,
+    1.0,
+    0.432
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "흠집 나서 물어내라 하면\n그날로 또 글 쓸 각이라고ㅋㅋ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-28-night-review/src/04.jpg",
+   "crop": [
+    0.0,
+    0.046,
+    1.0,
+    0.655
+   ],
+   "bg": "white",
+   "reserve": 235,
+   "caption": "최종 판결: 거짓말 아니고 거절\n그리고 '야 이 거지야'ㅋㅋㅋㅋ"
+  }
+ ]
+}
