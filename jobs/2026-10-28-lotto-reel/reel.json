@@ -1,0 +1,12 @@
+{
+  "out": "out/reel.mp4",
+  "mute": false,
+  "segments": [
+    {"video": "src/v01.mp4", "start": 0.0, "end": 4.6, "fit": "contain", "contain_y": 0.4,
+     "title": "방송 켜고 긁은 복권이\n1등 20억 실화냐", "bottom": 0.74},
+    {"video": "src/v01.mp4", "start": 4.6, "end": 8.0, "fit": "contain", "contain_y": 0.42, "caption": "숫자 확인하자마자\n손부터 덜덜덜", "caption_y": 0.72},
+    {"video": "src/v01.mp4", "start": 8.0, "end": 12.0, "fit": "contain", "contain_y": 0.42, "caption": "스피또2000 1등\n당첨금 무려 20억", "caption_y": 0.72},
+    {"video": "src/v01.mp4", "start": 12.0, "end": 16.5, "fit": "contain", "contain_y": 0.42, "caption": "근데 최근 꾼 꿈이\n은지원이 데이트 신청한 꿈", "caption_y": 0.72},
+    {"video": "src/v01.mp4", "start": 16.5, "end": 22.8, "fit": "contain", "contain_y": 0.42, "caption": "오늘 밤 꿈에 연예인 나오면\n복권 산다 vs 안 산다 ㄱㄱ", "caption_y": 0.72}
+  ]
+}

@@ -5,7 +5,7 @@
 reel.json:
 {
   "out": "out/reel.mp4",
-  "mute": true,                     # 원본 소리 빼기(무음 트랙을 넣음)
+  "mute": true,                     # 원본 소리 빼기(무음 트랙을 넣음). false면 구간별 원본 소리를 살린다
   "segments": [
     {"video": "src/v01.mp4", "start": 3.0, "end": 6.0,
      "title": "첫 줄\\n둘째 줄"},     # title = 표지형 큰 제목(마지막 줄이 화면 높이 bottom 위치)
@@ -96,6 +96,7 @@ def main(spec_path):
     ff = ffmpeg()
     tmp = tempfile.mkdtemp()
     tag = tag_layer(base)
+    keep_audio = spec.get("mute", True) is False
     parts = []
     for i, s in enumerate(spec["segments"]):
         ov = tag.copy()
@@ -118,9 +119,15 @@ def main(spec_path):
         else:
             vf = (f"{head},scale={W}:{H}:force_original_aspect_ratio=increase,"
                   f"crop={W}:{H}:(iw-{W})*{fx}:(ih-{H})*{fy}[v];[v][1:v]overlay=0:0,format=yuv420p[o]")
+        if keep_audio:
+            vf += (f";[0:a]atrim={s['start']}:{s['end']},asetpts=PTS-STARTPTS,atempo={speed},"
+                   f"aresample=44100,aformat=channel_layouts=stereo[ao]")
+            amap = ["-map", "[ao]", "-c:a", "aac", "-b:a", "128k"]
+        else:
+            amap = ["-an"]
         # 짧은 움짤은 반복 재생해 end까지 채운다
         subprocess.run([ff, "-y", "-loglevel", "error", "-stream_loop", "-1", "-i", os.path.join(base, s["video"]), "-i", png,
-                        "-filter_complex", vf, "-map", "[o]", "-an", "-t", str((s["end"] - s["start"]) / speed),
+                        "-filter_complex", vf, "-map", "[o]", *amap, "-t", str((s["end"] - s["start"]) / speed),
                         "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", seg], check=True)
         parts.append(seg)
         if i == 0:  # 첫 장면을 커버 이미지로
@@ -128,7 +135,11 @@ def main(spec_path):
                             os.path.join(os.path.dirname(out), "cover.jpg")], check=True)
     lst = os.path.join(tmp, "list.txt")
     open(lst, "w").write("".join(f"file '{p}'\n" for p in parts))
-    subprocess.run([ff, "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst,
+    if keep_audio:
+        subprocess.run([ff, "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst,
+                        "-c", "copy", "-movflags", "+faststart", out], check=True)
+    else:
+        subprocess.run([ff, "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst,
                     "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-shortest",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", out], check=True)
     shutil.rmtree(tmp)
