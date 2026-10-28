@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-10-28T10:46:10+09:00",
  "publish_at": "2026-10-28T12:00:00+09:00",
  "topic": "'내가 쏜다'던 팀장, 막내 카드로 42만원 긁고 정산은 자기 이름으로 신청 (원글 캡처)",
@@ -20,5 +20,10 @@
   "jobs/2026-10-28-noon-teamjang/out/06.jpg",
   "jobs/2026-10-28-noon-teamjang/out/07.jpg"
  ],
- "preview": "jobs/2026-10-28-noon-teamjang/out/preview.jpg"
+ "preview": "jobs/2026-10-28-noon-teamjang/out/preview.jpg",
+ "decided_note": "2026-10-28 19:20 KST 운영판 앱 승인",
+ "decided_at": "2026-10-28T19:20:51.478226+09:00",
+ "ig_media_id": "18638791300041368",
+ "permalink": "https://www.instagram.com/p/DfCNJ71Ft1V/",
+ "published_at": "2026-10-28T19:22:06.829748+09:00"
 }
