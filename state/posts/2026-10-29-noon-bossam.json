@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-10-29T10:45:01+09:00",
  "publish_at": "2026-10-29T12:00:00+09:00",
  "topic": "애랑 보쌈 먼저 먹고 남편 몫 남겨놨더니 한숨 쉬고 라면 끓인 남편 (원글 캡처·사진)",
@@ -18,5 +18,10 @@
   "jobs/2026-10-29-noon-bossam/out/04.jpg",
   "jobs/2026-10-29-noon-bossam/out/05.jpg"
  ],
- "preview": "jobs/2026-10-29-noon-bossam/out/preview.jpg"
+ "preview": "jobs/2026-10-29-noon-bossam/out/preview.jpg",
+ "decided_note": "2026-10-29 11:04 KST 운영판 앱 승인",
+ "decided_at": "2026-10-29T12:00:37.786524+09:00",
+ "ig_media_id": "17877064572637946",
+ "permalink": "https://www.instagram.com/p/DfD_jzgkZX7/",
+ "published_at": "2026-10-29T12:01:28.438840+09:00"
 }
