@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "morning",
  "slot_label": "아침",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-10-29T07:44:50+09:00",
  "publish_at": "2026-10-29T09:00:00+09:00",
  "topic": "11년차 이직 면접, 70대 대표가 90분 자기 자랑 후 '알바하면서 프리랜서 어때?' (잡플래닛 후기·댓글 캡처)",
@@ -19,5 +19,10 @@
   "jobs/2026-10-29-morning-interview/out/05.jpg",
   "jobs/2026-10-29-morning-interview/out/06.jpg"
  ],
- "preview": "jobs/2026-10-29-morning-interview/out/preview.jpg"
+ "preview": "jobs/2026-10-29-morning-interview/out/preview.jpg",
+ "decided_note": "2026-10-29 11:04 KST 운영판 앱 승인",
+ "decided_at": "2026-10-29T11:04:47.140559+09:00",
+ "ig_media_id": "17997612504020522",
+ "permalink": "https://www.instagram.com/p/DfD5LLfjrFh/",
+ "published_at": "2026-10-29T11:06:16.584643+09:00"
 }
