@@ -1,0 +1,182 @@
+[
+ {
+  "no": 1,
+  "file": "src/01.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/29/f/1/d/f1d392d3be728533a5da76bf6f381e41",
+  "size": [
+   800,
+   1061
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 2,
+  "file": "src/02.jpg",
+  "url": "https://i1.ruliweb.com/img/26/10/29/1a184d4bc7c3cb1ac.webp",
+  "size": [
+   826,
+   807
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 3,
+  "file": "src/03.jpg",
+  "url": "https://i3.ruliweb.com/img/26/10/29/1a184d4bd6e3cb1ac.webp",
+  "size": [
+   812,
+   621
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 4,
+  "file": "src/04.jpg",
+  "url": "https://i3.ruliweb.com/img/26/10/29/1a184d4bd6d3cb1ac.webp",
+  "size": [
+   823,
+   268
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 5,
+  "file": "src/05.jpg",
+  "url": "https://i3.ruliweb.com/img/26/10/29/1a1854b2ca850897e.webp",
+  "size": [
+   800,
+   1385
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 6,
+  "file": "src/06.jpg",
+  "url": "https://i1.ruliweb.com/img/26/10/29/1a1854b6a0950897e.webp",
+  "size": [
+   354,
+   1217
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 7,
+  "file": "src/07.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680796",
+  "size": [
+   715,
+   842
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 8,
+  "file": "src/08.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680797",
+  "size": [
+   710,
+   817
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 9,
+  "file": "src/09.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680798",
+  "size": [
+   676,
+   832
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 10,
+  "file": "src/10.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680821",
+  "size": [
+   650,
+   836
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 11,
+  "file": "src/11.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680822",
+  "size": [
+   678,
+   826
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 12,
+  "file": "src/12.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680801",
+  "size": [
+   715,
+   822
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 13,
+  "file": "src/13.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680802",
+  "size": [
+   677,
+   825
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 14,
+  "file": "src/14.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680803",
+  "size": [
+   686,
+   833
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 15,
+  "file": "src/15.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680804",
+  "size": [
+   625,
+   826
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 16,
+  "file": "src/16.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680805",
+  "size": [
+   708,
+   828
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 17,
+  "file": "src/17.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680806",
+  "size": [
+   705,
+   897
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 18,
+  "file": "src/18.jpg",
+  "url": "https://fimg6.pann.com/new/download.jsp?FileID=69680823",
+  "size": [
+   717,
+   811
+  ],
+  "format": "jpeg"
+ }
+]
