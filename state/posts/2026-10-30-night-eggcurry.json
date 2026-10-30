@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-10-30T19:44:32+09:00",
  "publish_at": "2026-10-30T21:00:00+09:00",
  "topic": "계란 껍질째 닭도리탕·카레에 넣는 사람들, DM 100개 받고 해명 (원글 캡처·사진)",
@@ -19,5 +19,8 @@
  ],
  "preview": "jobs/2026-10-30-night-eggcurry/out/preview.jpg",
  "decided_note": "2026-10-30 20:17 KST 운영판 앱 승인",
- "decided_at": "2026-10-30T20:18:03.638392+09:00"
+ "decided_at": "2026-10-30T20:18:03.638392+09:00",
+ "ig_media_id": "18399221017160085",
+ "permalink": "https://www.instagram.com/p/DfHiJ1Wkcz7/",
+ "published_at": "2026-10-30T21:01:49.128253+09:00"
 }
