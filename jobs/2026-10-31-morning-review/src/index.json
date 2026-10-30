@@ -1,0 +1,62 @@
+[
+ {
+  "no": 1,
+  "file": "src/01.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/30/5/0/0/500888edb0c8b5b027e0071a339c0e52",
+  "size": [
+   1206,
+   1461
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 2,
+  "file": "src/02.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/31/e/4/6/e46c9a5f506d70c0f5976b8b2956874e",
+  "size": [
+   900,
+   1026
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 3,
+  "file": "src/03.jpg",
+  "url": "https://cdn.instiz.net/file3/2026/10/31/c/7/1/c71f1dbadcde9ef89459d4b434317fb4",
+  "size": [
+   900,
+   720
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 4,
+  "file": "src/04.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=3eb4de21e9d73ab360b8dab04785736f&no=24b0d769e1d32ca73de782fa11d028315b16038a51180b889cf1820a1ba16b03f292723dd2e2ebf98e548aa308162f61ae19abdedb94bbcbf98027cac2be3e136230b0a5c901e43cc44b290e5295d6013551423443519e7541044fe4aef0f6c9b33da38f4108fd16a458c7d13e20e7b27d",
+  "size": [
+   666,
+   32767
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 5,
+  "file": "src/05.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=3eb4de21e9d73ab360b8dab04785736f&no=24b0d769e1d32ca73de782fa11d028315b16038a51180b889cf1820a1ba16b03f292723dd2e2ebf98e548aa308162f61ae19abdedb9fb8c5f9852bcbc2b93b132bcd6686ee419a1bd2ef6a848233e8debb13a8b32c8530e4c48ff10624d361a87d3add31d5c790a55b2a15ce94935fee71",
+  "size": [
+   622,
+   32767
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 6,
+  "file": "src/06.jpg",
+  "url": "https://i1.ruliweb.com/img/26/10/31/1a18eec27e71f8c61.webp",
+  "size": [
+   480,
+   600
+  ],
+  "format": "webp"
+ }
+]
