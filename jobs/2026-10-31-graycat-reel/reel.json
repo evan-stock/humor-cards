@@ -1,0 +1,12 @@
+{
+  "out": "out/reel.mp4",
+  "segments": [
+    {"video": "src/v01.mp4", "start": 0.0, "end": 4.5, "fit": "contain", "contain_y": 0.4,
+     "title": "반가워서 달려오다가\n들킬까 봐 그루밍함 ㅋㅋㅋㅋ", "bottom": 0.74},
+    {"video": "src/v01.mp4", "start": 4.5, "end": 9.0, "fit": "contain", "contain_y": 0.42, "caption": "저 멀리서 나 발견하고\n쪼르르 달려오는 중", "caption_y": 0.72},
+    {"video": "src/v01.mp4", "start": 9.0, "end": 16.0, "fit": "contain", "contain_y": 0.42, "caption": "가까워지니까\n속도 슬쩍 줄이기", "caption_y": 0.72},
+    {"video": "src/v01.mp4", "start": 16.0, "end": 21.0, "fit": "contain", "contain_y": 0.42, "caption": "도착하자마자\n...아 맞다 체통", "caption_y": 0.72},
+    {"video": "src/v01.mp4", "start": 21.0, "end": 26.5, "fit": "contain", "contain_y": 0.42, "caption": "갑자기 안 반가운 척\n급 그루밍 시작", "caption_y": 0.72},
+    {"video": "src/v01.mp4", "start": 26.5, "end": 31.4, "fit": "contain", "contain_y": 0.42, "caption": "그래 놓고 결국\n쳐다보면서 냐옹 ㅋㅋㅋ", "caption_y": 0.72}
+  ]
+}
