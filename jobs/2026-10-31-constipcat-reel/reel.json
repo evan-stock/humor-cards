@@ -1,0 +1,10 @@
+{
+  "out": "out/reel.mp4",
+  "mute": false,
+  "segments": [
+    {"video": "src/v01.mp4", "start": 0.0, "end": 3.0, "fit": "contain", "contain_y": 0.4,
+     "title": "변비 고양이가 응가할 때\n내는 소리 ㅋㅋㅋㅋㅋ", "bottom": 0.78},
+    {"video": "src/v01.mp4", "start": 3.0, "end": 6.4, "fit": "contain", "contain_y": 0.4, "caption": "끄으응…\n이거 사람 아니냐고", "caption_y": 0.78},
+    {"video": "src/v01.mp4", "start": 6.4, "end": 9.2, "fit": "contain", "contain_y": 0.4, "caption": "다 끝나고 해탈한 표정 ㅋㅋㅋ\n(소리 켜고 다시 보셈)", "caption_y": 0.78}
+  ]
+}
