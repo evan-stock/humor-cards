@@ -1,0 +1,17 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {"type": "cover", "image": "../2026-10-31-morning-review/src/07.jpg", "crop": [0.0, 0.085, 1.0, 0.845],
+   "fit": "contain", "contain_h": 0.6, "contain_top": 0.06,
+   "title": "커플 디데이 앱인데\n기념일이 다 식재료임 ㅋㅋㅋㅋ"},
+  {"type": "photo", "image": "../2026-10-31-morning-review/src/07.jpg", "crop": [0.0, 0.085, 1.0, 0.483],
+   "bg": "white", "reserve": 195,
+   "caption": "100일, 1주년 있을 줄 알았는데\n첫 줄부터 진간장 D-682"},
+  {"type": "photo", "image": "../2026-10-31-morning-review/src/07.jpg", "crop": [0.0, 0.489, 1.0, 0.726],
+   "bg": "white", "reserve": 195,
+   "caption": "두부 D-3, 요거트 D-4\n이번 주 안에 못 보면 헤어짐 ㄷㄷ"},
+  {"type": "photo", "image": "../2026-10-31-morning-review/src/07.jpg", "crop": [0.0, 0.085, 1.0, 0.845],
+   "bg": "white", "reserve": 195,
+   "caption": "알고 보니 냉장고 유통기한 관리용 ㅋㅋㅋ\n이거 천재 vs 앱한테 미안함 ㄱㄱ"}
+ ]
+}
