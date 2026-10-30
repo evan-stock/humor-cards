@@ -1,0 +1,58 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-10-30-night-review/src/04.jpg",
+   "crop": [
+    0.0,
+    0.2286,
+    1.0,
+    0.4985
+   ],
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.05,
+   "title": "계란 카레 만들었다가\nDM 100개 받은 사람 ㄷㄷ"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-30-night-review/src/04.jpg",
+   "crop": [
+    0.0,
+    0.0223,
+    1.0,
+    0.1736
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "친구가 계란 사리 넣어준다길래 ㅇㅋ 했는데\n날계란을 껍질째 냄비에 퐁당함"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-30-night-review/src/04.jpg",
+   "crop": [
+    0.0,
+    0.2286,
+    1.0,
+    0.4985
+   ],
+   "reserve": 235,
+   "caption_size": 46,
+   "caption": "근데 이런 사람이 또 있었음\n껍질째 통으로 들어간 계란 카레"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-10-30-night-review/src/04.jpg",
+   "crop": [
+    0.15,
+    0.7116,
+    0.85,
+    0.7838
+   ],
+   "bg": "white",
+   "reserve": 195,
+   "caption": "DM 100개 폭격 맞고 올린 해명 ㅋㅋㅋ\n껍질째 ㄱㅊ vs 절대 불가 ㄱㄱ"
+  }
+ ]
+}
