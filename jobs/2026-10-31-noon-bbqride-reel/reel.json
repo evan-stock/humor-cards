@@ -1,0 +1,12 @@
+{
+  "out": "out/reel.mp4",
+  "segments": [
+    {"video": "src/v02a_loop.mp4", "start": 0.0, "end": 3.6, "fit": "contain", "contain_y": 0.4,
+     "title": "축제 갔는데 대관람차에\n고기가 타고 있음", "bottom": 0.77},
+    {"video": "src/v01_loop.mp4", "start": 0.0, "end": 3.2, "fit": "contain", "contain_y": 0.4, "caption": "옆에는 열기구 바비큐\n(위험 화기주의)", "caption_y": 0.72},
+    {"video": "src/v02b_loop.mp4", "start": 0.0, "end": 3.0, "fit": "contain", "contain_y": 0.4, "caption": "미니 관람차 버전도 있음 ㅋㅋㅋ", "caption_y": 0.72},
+    {"video": "src/v07_loop.mp4", "start": 0.0, "end": 3.0, "fit": "contain", "contain_y": 0.4, "caption": "자이로스윙 타는 고기", "caption_y": 0.72},
+    {"video": "src/v06_loop.mp4", "start": 0.0, "end": 3.0, "fit": "contain", "contain_y": 0.4, "caption": "통돌이 세탁기 아님 주의", "caption_y": 0.72},
+    {"video": "src/v04_loop.mp4", "start": 0.0, "end": 3.8, "fit": "contain", "contain_y": 0.4, "caption": "이렇게 빙빙 돌려 구운 맛 후기:\n\"적당히 평범했음\" ㅋㅋ…", "caption_y": 0.72}
+  ]
+}
