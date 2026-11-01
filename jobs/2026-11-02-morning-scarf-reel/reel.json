@@ -1,0 +1,56 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {
+   "video": "../2026-11-01-more-xreview/src/v02.mp4",
+   "start": 0.0,
+   "end": 3.5,
+   "fit": "contain",
+   "contain_y": 0.78,
+   "title": "남대문 스카프 아저씨\n솔직히 좀 오바 아님?;;",
+   "size": 92,
+   "bottom": 0.18
+  },
+  {
+   "video": "../2026-11-01-more-xreview/src/v02.mp4",
+   "start": 3.5,
+   "end": 8.0,
+   "fit": "contain",
+   "contain_y": 0.78,
+   "caption": "스카프 하나 사려고\n골목이 통째로 마비됨",
+   "size": 70,
+   "caption_y": 0.17
+  },
+  {
+   "video": "../2026-11-01-more-xreview/src/v02.mp4",
+   "start": 8.0,
+   "end": 13.0,
+   "fit": "contain",
+   "contain_y": 0.78,
+   "caption": "봉지 던지면 손 뻗고 받는 중\n이게 시장이냐 콘서트냐 ㅋㅋㅋ",
+   "size": 70,
+   "caption_y": 0.17
+  },
+  {
+   "video": "../2026-11-01-more-xreview/src/v02.mp4",
+   "start": 13.0,
+   "end": 18.5,
+   "fit": "contain",
+   "contain_y": 0.78,
+   "caption": "솔직히 난 이 줄 못 섬\n스카프는 동네에서도 팖;;",
+   "size": 70,
+   "caption_y": 0.17
+  },
+  {
+   "video": "../2026-11-01-more-xreview/src/v02.mp4",
+   "start": 18.5,
+   "end": 23.5,
+   "fit": "contain",
+   "contain_y": 0.78,
+   "caption": "이 정도로 열광할 일 맞음?\n나만 이해 안 되냐 ㅋㅋ…",
+   "size": 70,
+   "caption_y": 0.17
+  }
+ ]
+}
