@@ -1,0 +1,46 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {
+   "video": "../2026-11-02-halloween-review/src/v01.mp4",
+   "start": 0,
+   "end": 3.0,
+   "title": "올해 이태원 할로윈\n승자 둘 중 누구임?ㅋㅋㅋ",
+   "size": 80,
+   "bottom": 0.84,
+   "fit": "contain",
+   "contain_y": 0.5
+  },
+  {
+   "video": "../2026-11-02-halloween-review/src/v01.mp4",
+   "start": 3.0,
+   "end": 6.7,
+   "caption": "1번 오디세이 코스\n세이렌한테 안 넘어가려고 묶임",
+   "size": 72,
+   "caption_y": 0.74,
+   "fit": "contain",
+   "contain_y": 0.5
+  },
+  {
+   "video": "../2026-11-02-halloween-review/src/v02.mp4",
+   "start": 0,
+   "end": 2.7,
+   "caption": "2번 라바콘 코스\n경찰 옆에서 같이 통제 중ㅋㅋ",
+   "size": 72,
+   "caption_y": 0.74,
+   "fit": "contain",
+   "contain_y": 0.5
+  },
+  {
+   "video": "../2026-11-02-halloween-review/src/v02.mp4",
+   "start": 2.7,
+   "end": 5.3,
+   "caption": "솔직히 난 2번 압승\n1 vs 2 댓글로 ㄱㄱ",
+   "size": 72,
+   "caption_y": 0.74,
+   "fit": "contain",
+   "contain_y": 0.5
+  }
+ ]
+}
