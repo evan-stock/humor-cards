@@ -1,0 +1,11 @@
+{
+  "out": "out/reel.mp4",
+  "segments": [
+    {"video": "../2026-11-01-mars-review/src/v01.mp4", "start": 0.0, "end": 4.0,
+     "title": "149만 명이 본\nNASA 화성 밤하늘 영상", "bottom": 0.76},
+    {"video": "../2026-11-01-mars-review/src/v01.mp4", "start": 8.0, "end": 11.5, "caption": "화성에선 별이\n이렇게 빽빽하게 보인다고?", "caption_y": 0.78},
+    {"video": "../2026-11-01-mars-review/src/v01.mp4", "start": 20.0, "end": 23.0, "caption": "근데 이거…\nNASA 영상 아님", "caption_y": 0.78},
+    {"video": "../2026-11-01-mars-review/src/v01.mp4", "start": 44.5, "end": 48.5, "caption": "땅은 진짜 화성 탐사차 사진\n하늘은 별 사진 합성한 거", "caption_y": 0.5},
+    {"video": "../2026-11-01-mars-review/src/v01.mp4", "start": 55.0, "end": 60.0, "caption": "진짜 화성 밤하늘은\n먼지 껴서 뿌옇다고 함 ㅋㅋ…", "caption_y": 0.5}
+  ]
+}
