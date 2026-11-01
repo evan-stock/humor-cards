@@ -1,0 +1,14 @@
+[
+ {
+  "video": "src/v01.mp4",
+  "url": "https://video.twimg.com/amplify_video/2116435569266069504/vid/avc1/720x1280/qFvN51rkAxLjon3b.mp4",
+  "bytes": 1449027,
+  "frame": "src/v01_frame.jpg"
+ },
+ {
+  "video": "src/v02.mp4",
+  "url": "https://video.twimg.com/amplify_video/2116503216615731200/vid/avc1/1206x1924/4PMTcv5X_GbOosvl.mp4",
+  "bytes": 3867539,
+  "frame": "src/v02_frame.jpg"
+ }
+]
