@@ -2,11 +2,11 @@
  "id": "2026-11-01-ggulalba-carousel",
  "channel": "kksanghoe",
  "account": "@kk.sanghoe",
- "slot": "morning",
- "slot_label": "아침",
- "status": "pending",
+ "slot": "evening",
+ "slot_label": "저녁",
+ "status": "approved",
  "created_at": "2026-11-01T21:10:00+09:00",
- "publish_at": "2026-11-02T09:00:00+09:00",
+ "publish_at": "2026-11-01T21:06:00.540040+09:00",
  "topic": "넷플 꿀알바 vs 일본 만화 우라바이트, 이건 좀 닮긴 했다",
  "category": "커뮤 유머",
  "source": "https://gall.dcinside.com/board/view/?id=dcbest&no=474772",
@@ -23,5 +23,7 @@
   "jobs/2026-11-01-ggulalba-carousel/out/09.jpg"
  ],
  "preview": "jobs/2026-11-01-ggulalba-carousel/out/preview.jpg",
- "format": "carousel"
+ "format": "carousel",
+ "decided_note": "2026-11-01 21:05 KST 채팅 '지금올령'",
+ "decided_at": "2026-11-01T21:06:00.540040+09:00"
 }
