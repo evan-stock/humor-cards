@@ -1,0 +1,77 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-11-01-incubator-review/src/07.jpg",
+   "crop": [
+    0.05,
+    0.08,
+    0.95,
+    0.78
+   ],
+   "fy": 0.3,
+   "title": "미숙아를 통에 넣고\n입장료 받던 남자의 정체"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-incubator-review/src/05.jpg",
+   "reserve": 240,
+   "caption_size": 46,
+   "caption": "1900년대 미국 놀이공원 인기 코너\n'살아있는 아기 전시관'"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-incubator-review/src/01.jpg",
+   "crop": [
+    0.03,
+    0.03,
+    0.97,
+    0.97
+   ],
+   "reserve": 240,
+   "caption_size": 46,
+   "caption": "유리통 안엔 일찍 태어난\n손바닥만 한 아기들"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-incubator-review/src/02.jpg",
+   "reserve": 240,
+   "caption_size": 46,
+   "caption": "사람들은 돈 내고 줄 서서 구경\n'아기 가지고 장사하냐' 비난 폭발"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-incubator-review/src/04.jpg",
+   "reserve": 240,
+   "caption_size": 46,
+   "caption": "근데 반전… 그 통은 인큐베이터\n병원도 포기한 아기들 살리는 곳이었음"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-incubator-review/src/09.jpg",
+   "crop": [
+    0,
+    0.05,
+    1,
+    0.95
+   ],
+   "reserve": 240,
+   "caption_size": 46,
+   "caption": "부모한텐 치료비 한 푼 안 받고\n입장료로 간호사, 유모 월급 줌"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-incubator-review/src/08.jpg",
+   "crop": [
+    0.05,
+    0.08,
+    0.95,
+    0.92
+   ],
+   "reserve": 300,
+   "caption_size": 44,
+   "caption": "40년간 살린 아기 약 6,500명\n정작 본인은 의사 아니었단 설 ㄷㄷ"
+  }
+ ]
+}
