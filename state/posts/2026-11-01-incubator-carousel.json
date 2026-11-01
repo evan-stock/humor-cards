@@ -4,9 +4,9 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-11-01T19:10:00+09:00",
- "publish_at": "2026-11-01T19:00:20.827437+09:00",
+ "publish_at": "2026-11-01T19:04:50.372816+09:00",
  "topic": "미숙아 전시해 입장료 받던 남자의 정체 (마틴 쿠니)",
  "category": "커뮤 유머",
  "source": "https://gall.dcinside.com/board/view/?id=dcbest&no=474675",
@@ -20,5 +20,10 @@
   "jobs/2026-11-01-incubator-carousel/out/06.jpg",
   "jobs/2026-11-01-incubator-carousel/out/07.jpg"
  ],
- "preview": "jobs/2026-11-01-incubator-carousel/out/preview.jpg"
+ "preview": "jobs/2026-11-01-incubator-carousel/out/preview.jpg",
+ "decided_note": "2026-11-01 19:03 KST 운영판 앱 승인",
+ "decided_at": "2026-11-01T19:03:35.473815+09:00",
+ "ig_media_id": "18017153276985335",
+ "permalink": "https://www.instagram.com/p/DfMeW6JnPVr/",
+ "published_at": "2026-11-01T19:04:50.372816+09:00"
 }
