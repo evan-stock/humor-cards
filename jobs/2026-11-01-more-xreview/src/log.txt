@@ -1,0 +1,8 @@
+403 5894B https://www.dogdrip.net/dogdrip/731191455
+403 5894B https://www.dogdrip.net/dogdrip/731191455
+403 5894B https://www.dogdrip.net/dogdrip/731191455
+200 1565209B https://video.twimg.com/amplify_video/2116570788115685376/vid/avc1/1180x626/vzMQnIeSVNvxdZnu.mp4
+200 6437618B https://video.twimg.com/amplify_video/2116031733216980992/vid/avc1/720x926/S7Wrer5fZC2GAOyv.mp4
+200 3668301B https://video.twimg.com/amplify_video/2112993352492736513/vid/avc1/1080x1350/yvA8VqQLFMq-sIZZ.mp4
+200 483755B https://video.twimg.com/amplify_video/2116711400420646912/vid/avc1/1036x720/uO80RivD3CFnWRaK.mp4
+200 173610B https://video.twimg.com/amplify_video/1934857480288522240/vid/avc1/736x590/nOfIf0t8Yy-6Sj04.mp4
