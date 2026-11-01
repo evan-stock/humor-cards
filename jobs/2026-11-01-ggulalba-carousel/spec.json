@@ -1,0 +1,95 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "../2026-11-01-ggulalba-review/src/07.jpg",
+   "crop": [
+    0.245,
+    0,
+    0.775,
+    1
+   ],
+   "fy": 0.25,
+   "title": "넷플 꿀알바 표절설\n솔직히 오바 아님?;;"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-ggulalba-review/src/11.jpg",
+   "crop": [
+    0.245,
+    0,
+    0.775,
+    1
+   ],
+   "reserve": 260,
+   "caption_size": 46,
+   "caption": "지난 30일 공개된 넷플 신작 '꿀알바'\n커뮤에서 일본 만화 표절이란 말 나옴"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-ggulalba-review/src/04.jpg",
+   "crop": [
+    0.245,
+    0,
+    0.775,
+    1
+   ],
+   "reserve": 260,
+   "caption_size": 46,
+   "caption": "비교 대상은 일본 만화 '우라바이트'\n(국내판 제목 '비밀알바 도망금지')"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-ggulalba-review/src/03.jpg",
+   "crop": [
+    0.245,
+    0,
+    0.775,
+    1
+   ],
+   "reserve": 260,
+   "caption_size": 46,
+   "caption": "근거는 이거\n귀신 나오는 곳 알바 + 위험수당\n수상한 사장 + 여주 둘 나오는 구도"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-ggulalba-review/src/01.jpg",
+   "crop": [
+    0.245,
+    0,
+    0.775,
+    1
+   ],
+   "reserve": 260,
+   "caption_size": 46,
+   "caption": "근데 넷플 공식 소개는\n원작 없는 오리지널 시리즈\n작가 2명이 처음부터 쓴 작품"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-ggulalba-review/src/06.jpg",
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "reserve": 260,
+   "caption_size": 46,
+   "caption": "솔직히 '목숨 건 고액 알바'는\n괴담 호러 단골 설정 아님?\n이걸로 표절은 좀 오바 같음;;"
+  },
+  {
+   "type": "photo",
+   "image": "../2026-11-01-ggulalba-review/src/14.jpg",
+   "crop": [
+    0.245,
+    0,
+    0.775,
+    1
+   ],
+   "reserve": 260,
+   "caption_size": 46,
+   "caption": "표절 맞다 vs 흔한 설정\n둘 다 본 사람 댓글로 판정 ㄱㄱ"
+  }
+ ]
+}
