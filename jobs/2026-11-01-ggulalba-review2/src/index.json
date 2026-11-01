@@ -1,0 +1,172 @@
+[
+ {
+  "no": 1,
+  "file": "src/01.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d34639b4c5e284cee3bd09fcab3174a868676c6f6392c641f260ec089e49a",
+  "size": [
+   700,
+   2362
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 2,
+  "file": "src/02.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d3463d91a0e2f20eb3a022d5f63be4b228a4cac1f6a1416f4e34a",
+  "size": [
+   800,
+   1230
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 3,
+  "file": "src/03.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d34639b4c5e4526e8383fd52835700cd22bf5aa27eb018c98d7f8756f6f",
+  "size": [
+   850,
+   566
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 4,
+  "file": "src/04.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d34639b4c5e4524ed38f647c06d247b6f7c6f6225909fe15afb98c49b7b",
+  "size": [
+   850,
+   566
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 5,
+  "file": "src/05.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d3463df100d292bed383ba3a800b4edc6875a1eaa84e8ec52db79",
+  "size": [
+   800,
+   539
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 6,
+  "file": "src/06.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d3463d419082a23ea3f9e81ea2388dd44168023139824ad888fa2",
+  "size": [
+   800,
+   498
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 7,
+  "file": "src/07.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d3463df180c2f25e33bafee312701cc481824861b432fc9f0584c",
+  "size": [
+   840,
+   1200
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 8,
+  "file": "src/08.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d34639b4c5e284cef3da6257876174fcf7fef2d158f59643eb058a3e883cf",
+  "size": [
+   320,
+   454
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 9,
+  "file": "src/09.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d3463da1b0b2d26eb38bf38a447d55722b43c350fe8e0957854c1",
+  "size": [
+   750,
+   469
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 10,
+  "file": "src/10.jpg",
+  "url": "https://dcimg6.dcinside.co.kr/viewimage.php?id=7fed8273b58768fe&no=24b0d769e1d32ca73fe782fa1bd62531a13348e18cc3373747ac8a2a2efa8fe330fe6512e49a8d3463db1b0d2d2bed3454f8e668951da0e8a510b806cf62f37bc1",
+  "size": [
+   836,
+   1185
+  ],
+  "format": "webp"
+ },
+ {
+  "no": 11,
+  "file": "src/11.jpg",
+  "url": "https://mangapedia.com/img/kyujinbox/kyujinbox_logo.png",
+  "size": [
+   1200,
+   300
+  ],
+  "format": "png"
+ },
+ {
+  "no": 12,
+  "file": "src/12.jpg",
+  "url": "https://mangapedia.com/img/facebook.png",
+  "size": [
+   160,
+   160
+  ],
+  "format": "png"
+ },
+ {
+  "no": 13,
+  "file": "src/13.jpg",
+  "url": "https://mangapedia.com/img/twitter.png",
+  "size": [
+   160,
+   160
+  ],
+  "format": "png"
+ },
+ {
+  "no": 14,
+  "file": "src/14.jpg",
+  "url": "https://mangapedia.com/img/amazon_160x160.png",
+  "size": [
+   160,
+   160
+  ],
+  "format": "png"
+ },
+ {
+  "no": 15,
+  "file": "src/15.jpg",
+  "url": "https://webmedia-resource.kgl-systems.io/wp-content/uploads/sites/4/2026/10/dee2aa9b8d8c5bc581c98f7392b899ce10d7db52a336526c16.jpg",
+  "size": [
+   230,
+   230
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 16,
+  "file": "src/16.jpg",
+  "url": "https://webmedia-resource.kgl-systems.io/wp-content/uploads/sites/4/2025/11/367aee5198ef9aab4bc80f5fd4995771cb267d5a5d49308241.jpg",
+  "size": [
+   300,
+   300
+  ],
+  "format": "jpeg"
+ },
+ {
+  "no": 17,
+  "file": "src/17.jpg",
+  "url": "https://webmedia-resource.kgl-systems.io/wp-content/uploads/sites/4/2025/11/17806156e75e9c13037043c59206c0839a667cb8170dc833dd.jpg",
+  "size": [
+   300,
+   300
+  ],
+  "format": "jpeg"
+ }
+]
