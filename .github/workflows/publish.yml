@@ -44,6 +44,9 @@ jobs:
             cat state/publish_check.txt
             exit 0
           fi
+          # 2026-11-01 중복 게시 방지: 앞 실행이 끝나길 기다린 실행은 이벤트 시점의 옛 코드를 보고 있어
+          # 방금 올라간 게시물의 published.json 을 모른다 → 최신 main 으로 맞춘 뒤 판단한다.
+          git fetch -q origin main && git reset -q --hard origin/main
           python3 scripts/sync_state.py   # 운영판 승인·거절 → post.json
           case "${{ github.event.inputs.mode }}" in
             check) python3 scripts/publish.py --check ;;
