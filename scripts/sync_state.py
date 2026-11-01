@@ -101,6 +101,17 @@ def main():
             "files": files,
             "preview": f"jobs/{jid}/out/preview.jpg" if os.path.exists(os.path.join(jd, "out", "preview.jpg")) else "",
         }
+        # 릴스: 운영판(오늘의쓸모와 같은 형식)이 영상을 띄우도록 format·files(mp4)·cover 를 넘긴다 (2026-11-01)
+        if post.get("video") or post.get("format") == "reel":
+            new["format"] = "reel"
+            vid = os.path.join(jd, post.get("video") or "out/reel.mp4")
+            if os.path.exists(vid):
+                new["files"] = [os.path.relpath(vid, ROOT)]
+            cov = os.path.join(jd, post.get("cover") or "out/cover.jpg")
+            if os.path.exists(cov):
+                new["cover"] = os.path.relpath(cov, ROOT)
+        elif files:
+            new["format"] = "carousel"
         if post.get("approved_note") or post.get("rejected_note"):
             new["decided_note"] = post.get("approved_note") or post.get("rejected_note")
             new["decided_at"] = st.get("decided_at") or now.isoformat()
