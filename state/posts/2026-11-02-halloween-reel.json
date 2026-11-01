@@ -4,9 +4,9 @@
  "account": "@kk.sanghoe",
  "slot": "morning",
  "slot_label": "아침",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-11-02T01:05:00+09:00",
- "publish_at": "2026-11-02T09:00:00+09:00",
+ "publish_at": "2026-11-02T01:04:35.416160+09:00",
  "topic": "올해 이태원 할로윈 승자: 오디세이 vs 라바콘",
  "category": "커뮤 유머",
  "source": "https://x.com/lkitaek79/status/2116435595405021337 , https://x.com/ceolmh3/status/2116503254129693118",
@@ -16,5 +16,7 @@
  ],
  "preview": "jobs/2026-11-02-halloween-reel/out/preview.jpg",
  "format": "reel",
- "cover": "jobs/2026-11-02-halloween-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-02-halloween-reel/out/cover.jpg",
+ "decided_note": "2026-11-02 01:04 KST 채팅 '걍지금올려'",
+ "decided_at": "2026-11-02T01:04:35.416160+09:00"
 }
