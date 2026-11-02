@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-11-02T14:19:33.320715+09:00",
  "publish_at": "2026-11-02T21:00:00+09:00",
  "topic": "일본 대지진 징조 새떼, 이건 진짜 좀 무섭다",
@@ -16,5 +16,7 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-02-birds-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-02-birds-reel/out/cover.jpg",
+ "decided_note": "2026-11-02 14:38 KST 운영판 앱 승인",
+ "decided_at": "2026-11-02T14:39:09.108482+09:00"
 }
