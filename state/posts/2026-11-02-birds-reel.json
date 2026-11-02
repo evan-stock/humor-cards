@@ -2,11 +2,11 @@
  "id": "2026-11-02-birds-reel",
  "channel": "kksanghoe",
  "account": "@kk.sanghoe",
- "slot": "evening",
- "slot_label": "저녁",
- "status": "approved",
+ "slot": "lunch",
+ "slot_label": "점심",
+ "status": "published",
  "created_at": "2026-11-02T14:19:33.320715+09:00",
- "publish_at": "2026-11-02T21:00:00+09:00",
+ "publish_at": "2026-11-02T16:11:22.973768+09:00",
  "topic": "일본 대지진 징조 새떼, 이건 진짜 좀 무섭다",
  "category": "커뮤 유머",
  "source": "https://x.com/antnote22/status/2116556486487035948",
@@ -17,6 +17,9 @@
  "preview": "",
  "format": "reel",
  "cover": "jobs/2026-11-02-birds-reel/out/cover.jpg",
- "decided_note": "2026-11-02 14:38 KST 운영판 앱 승인",
- "decided_at": "2026-11-02T14:39:09.108482+09:00"
+ "decided_note": "사용자 채팅 \"올려\" 2026-11-02 16:09",
+ "decided_at": "2026-11-02T14:39:09.108482+09:00",
+ "ig_media_id": "17915370567507200",
+ "permalink": "https://www.instagram.com/reel/DfOvS4aATgE/",
+ "published_at": "2026-11-02T16:11:22.973768+09:00"
 }
