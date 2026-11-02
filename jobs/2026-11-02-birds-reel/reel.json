@@ -2,13 +2,45 @@
  "out": "out/reel.mp4",
  "mute": false,
  "segments": [
-  {"video": "../2026-11-02-birds-review/src/v01.mp4", "start": 0.0, "end": 3.0, "fit": "contain", "contain_y": 0.5,
-   "title": "일본 대지진 징조라는데\n솔직히 그냥 철새 아님?;;", "size": 80, "bottom": 0.25},
-  {"video": "../2026-11-02-birds-review/src/v01.mp4", "start": 3.0, "end": 6.5, "fit": "contain", "contain_y": 0.5,
-   "caption": "홋카이도 하늘이\n새로 꽉 찼다고 난리남", "size": 72, "caption_y": 0.74},
-  {"video": "../2026-11-02-birds-review/src/v01.mp4", "start": 6.5, "end": 10.0, "fit": "contain", "contain_y": 0.5,
-   "caption": "근데 가을 저녁에 새떼는\n원래 이맘때 모이지 않음?", "size": 72, "caption_y": 0.74},
-  {"video": "../2026-11-02-birds-review/src/v01.mp4", "start": 10.0, "end": 12.9, "fit": "contain", "contain_y": 0.5,
-   "caption": "징조다 vs 오바다\n댓글로 싸워주셈 ㅋㅋㅋ", "size": 72, "caption_y": 0.74}
+  {
+   "video": "../2026-11-02-birds-review/src/v01.mp4",
+   "start": 0.0,
+   "end": 3.0,
+   "fit": "contain",
+   "contain_y": 0.5,
+   "title": "일본 대지진 징조라는데\n이건 진짜 좀 무섭다 ㄷㄷ",
+   "size": 80,
+   "bottom": 0.25
+  },
+  {
+   "video": "../2026-11-02-birds-review/src/v01.mp4",
+   "start": 3.0,
+   "end": 6.5,
+   "fit": "contain",
+   "contain_y": 0.5,
+   "caption": "홋카이도 하늘이\n새로 꽉 찼다고 난리남",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-02-birds-review/src/v01.mp4",
+   "start": 6.5,
+   "end": 10.0,
+   "fit": "contain",
+   "contain_y": 0.5,
+   "caption": "그냥 철새라고 넘기기엔\n솔직히 너무 많지 않음?",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-02-birds-review/src/v01.mp4",
+   "start": 10.0,
+   "end": 12.9,
+   "fit": "contain",
+   "contain_y": 0.5,
+   "caption": "징조다 vs 오바다\n난 솔직히 소름 돋음",
+   "size": 72,
+   "caption_y": 0.74
+  }
  ]
 }
