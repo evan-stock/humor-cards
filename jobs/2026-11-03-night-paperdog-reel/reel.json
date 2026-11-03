@@ -1,0 +1,42 @@
+{
+ "out": "out/reel.mp4",
+ "mute": true,
+ "segments": [
+  {
+   "video": "../2026-11-03-night-paperdog-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "start": 0.0,
+   "end": 4.5,
+   "title": "엄마가 허락해준\n유일한 강아지ㅋㅋㅋ",
+   "size": 80,
+   "bottom": 0.25
+  },
+  {
+   "video": "../2026-11-03-night-paperdog-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "start": 4.5,
+   "end": 9.0,
+   "caption": "털 안 빠지고 안 짖고\n산책은 꼬박꼬박 함",
+   "size": 72,
+   "caption_y": 0.24
+  },
+  {
+   "video": "../2026-11-03-night-paperdog-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "start": 9.0,
+   "end": 13.2,
+   "caption": "솔직히 이건 인정 ㅋㅋㅋ\n찐 반려견 vs 이게 뭐냐",
+   "size": 72,
+   "caption_y": 0.24
+  }
+ ],
+ "cover": {
+  "segment": 0,
+  "t": 4.0,
+  "title": "엄마가 허락한\n유일한 강아지ㅋㅋㅋ",
+  "bottom": 0.3
+ }
+}
