@@ -4,9 +4,9 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-11-03T09:25:57.726448+09:00",
- "publish_at": "2026-11-03T21:00:00+09:00",
+ "publish_at": "2026-11-03T09:31:35.763940+09:00",
  "topic": "꾹꾹이로 심폐소생술하는 강아지, 솔직히 상 줘야 함",
  "category": "커뮤 유머",
  "source": "https://x.com/halosunny21/status/2117093440286773394",
@@ -16,5 +16,10 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-03-night-cprdog-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-03-night-cprdog-reel/out/cover.jpg",
+ "decided_note": "2026-11-03 09:28 KST 운영판 앱 승인",
+ "decided_at": "2026-11-03T09:30:36.387216+09:00",
+ "ig_media_id": "18035988233896372",
+ "permalink": "https://www.instagram.com/reel/DfQmVReiKmr/",
+ "published_at": "2026-11-03T09:31:35.763940+09:00"
 }
