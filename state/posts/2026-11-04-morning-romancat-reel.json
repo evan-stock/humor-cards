@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "morning",
  "slot_label": "아침",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-11-03T09:48:15.513293+09:00",
  "publish_at": "2026-11-03T13:00:00+09:00",
  "topic": "길냥이 모델 시켰더니 협조력 이게 맞냐 (낭만 고양이 TV)",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-04-morning-romancat-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-04-morning-romancat-reel/out/cover.jpg",
+ "ig_media_id": "18290257660289674",
+ "permalink": "https://www.instagram.com/reel/DfQ-cZTiCwK/",
+ "published_at": "2026-11-03T13:02:14.334938+09:00"
 }
