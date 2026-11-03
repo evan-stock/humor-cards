@@ -1,0 +1,56 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {
+   "video": "../2026-11-04-romancat-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "start": 15.5,
+   "end": 21.5,
+   "title": "길냥이 모델 시켰더니\n협조력 이게 맞냐",
+   "size": 80,
+   "bottom": 0.25
+  },
+  {
+   "video": "../2026-11-04-romancat-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "start": 28.75,
+   "end": 34.25,
+   "caption": "눈 좀 더 감아 달라니까\n진짜 감아 줌",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-04-romancat-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "start": 38.75,
+   "end": 44.5,
+   "caption": "주머니 츄르 훔쳐 달랬더니\n찐으로 털어 감 ㅋㅋㅋㅋ",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-04-romancat-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "start": 63.0,
+   "end": 68.5,
+   "caption": "마지막 미션\n뒤돌아보는 화보 포즈",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-04-romancat-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "start": 68.5,
+   "end": 70.2,
+   "caption": "솔직히 나보다 사진 잘 받음\n연기다 vs 우연이다",
+   "size": 72,
+   "caption_y": 0.74
+  }
+ ]
+}
