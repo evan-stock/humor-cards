@@ -13,7 +13,10 @@ reel.json:
   ]
 }
 선택: 구간별 "fx"/"fy"(세로 영상이 아닐 때 자를 위치), "bottom"(제목 위치 0~1, 기본 0.72),
-      "caption_y"(자막 중심 0~1, 기본 0.78), "size"(제목 130, 자막 84), "speed"(1.0).
+      "caption_y"(자막 중심 0~1, 기본 0.78), "size"(제목 130, 자막 84), "speed"(1.0),
+      "crop"([x0,y0,x1,y1] 0~1), "delogo"([[x,y,w,h]] 원본 픽셀, 방송 로고 지우기).
+커버: 최상위 "cover": {"segment": 0, "t": 0.5, "title": "...", "size": 150, "bottom": 0.30}
+      → out/cover.jpg = 그 구간의 깨끗한 장면 + 큰 표지 제목(영상 속 작은 제목 없이). 생략하면 첫 구간·첫 제목으로 만든다.
 """
 import json
 import os
@@ -98,6 +101,9 @@ def main(spec_path):
     tag = tag_layer(base)
     keep_audio = spec.get("mute", True) is False
     parts = []
+    # cover: {"segment": 0, "t": 0.5(구간 안 초), "title": 기본=첫 title, "size": 150, "bottom": 0.30}
+    cv = spec.get("cover", {})
+    ctitle = cv.get("title") or next((x["title"] for x in spec["segments"] if x.get("title")), "")
     for i, s in enumerate(spec["segments"]):
         ov = tag.copy()
         if s.get("title"):
@@ -136,9 +142,15 @@ def main(spec_path):
                         "-filter_complex", vf, "-map", "[o]", *amap, "-t", str((s["end"] - s["start"]) / speed),
                         "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", seg], check=True)
         parts.append(seg)
-        if i == 0:  # 첫 장면을 커버 이미지로
-            subprocess.run([ff, "-y", "-loglevel", "error", "-ss", "0.5", "-i", seg, "-frames:v", "1",
-                            os.path.join(os.path.dirname(out), "cover.jpg")], check=True)
+        if i == cv.get("segment", 0):  # 커버(격자 썸네일): 깨끗한 장면 + 큰 표지 제목 (2026-11-03 사용자: 커버 글씨는 크게)
+            cov = tag.copy()
+            if ctitle:
+                cov = Image.alpha_composite(cov, text_layer(ctitle.split("\n"), cv.get("size", 150), round(H * cv.get("bottom", 0.30))))
+            cpng = os.path.join(tmp, "cover.png")
+            cov.save(cpng)
+            subprocess.run([ff, "-y", "-loglevel", "error", "-i", os.path.join(base, s["video"]), "-i", cpng,
+                            "-filter_complex", vf.split(";[0:a]")[0], "-map", "[o]", "-ss", str(cv.get("t", 0.5)),
+                            "-frames:v", "1", "-q:v", "2", os.path.join(os.path.dirname(out), "cover.jpg")], check=True)
     lst = os.path.join(tmp, "list.txt")
     open(lst, "w").write("".join(f"file '{p}'\n" for p in parts))
     if keep_audio:

@@ -52,5 +52,9 @@
    "size": 72,
    "caption_y": 0.74
   }
- ]
+ ],
+ "cover": {
+  "segment": 0,
+  "t": 5.4
+ }
 }
