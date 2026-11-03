@@ -1,0 +1,70 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {
+   "video": "../2026-11-03-ganadi-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.05,
+    0.8,
+    0.85
+   ],
+   "start": 4.0,
+   "end": 8.0,
+   "title": "작은 발로 심폐소생술\n하는 강아지 실화냐",
+   "size": 80,
+   "bottom": 0.25
+  },
+  {
+   "video": "../2026-11-03-ganadi-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.05,
+    0.8,
+    0.85
+   ],
+   "start": 9.0,
+   "end": 15.0,
+   "caption": "앞발로 가슴을 꾹꾹\n표정이 너무 진지함",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-03-ganadi-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.05,
+    0.8,
+    0.85
+   ],
+   "start": 20.0,
+   "end": 26.0,
+   "caption": "솔직히 이건 상 줘야 함\n구경꾼들도 숨죽이고 봄",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-03-ganadi-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.15,
+    0.8,
+    1.0
+   ],
+   "start": 28.0,
+   "end": 35.0,
+   "caption": "결국 벌떡 살려냄 ㅋㅋㅋㅋ\n구조견 인정 vs 그냥 개인기",
+   "size": 72,
+   "caption_y": 0.74
+  }
+ ]
+}
