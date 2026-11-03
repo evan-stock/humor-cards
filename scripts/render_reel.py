@@ -110,6 +110,12 @@ def main(spec_path):
         speed = s.get("speed", 1.0)
         fx, fy = s.get("fx", 0.5), s.get("fy", 0.5)
         head = f"[0:v]trim={s['start']}:{s['end']},setpts=(PTS-STARTPTS)/{speed},fps=30,setsar=1"
+        # 방송 로고 지우기: delogo [[x,y,w,h], ...] (원본 픽셀), 자르기: crop [x0,y0,x1,y1] (0~1)
+        for x, y, w, h in s.get("delogo", []):
+            head += f",delogo=x={x}:y={y}:w={w}:h={h}"
+        if s.get("crop"):
+            x0, y0, x1, y1 = s["crop"]
+            head += f",crop=trunc(iw*{x1 - x0}/2)*2:trunc(ih*{y1 - y0}/2)*2:iw*{x0}:ih*{y0}"
         if s.get("fit") == "contain":
             # 가로 영상: 흐린 배경 위에 원본 비율 그대로 가로 꽉 차게, 세로 위치 contain_y(중심, 0~1)
             cy = round(H * s.get("contain_y", 0.45))

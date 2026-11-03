@@ -1,0 +1,126 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {
+   "video": "../2026-11-03-noon-bowl-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.15,
+    1,
+    1
+   ],
+   "delogo": [
+    [
+     30,
+     480,
+     92,
+     110
+    ]
+   ],
+   "start": 4.0,
+   "end": 6.6,
+   "title": "남대문 그릇 사장님이\n말하는 요즘 젊은이들ㅋㅋㅋ",
+   "size": 80,
+   "bottom": 0.25
+  },
+  {
+   "video": "../2026-11-03-noon-bowl-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.15,
+    1,
+    1
+   ],
+   "delogo": [
+    [
+     30,
+     480,
+     92,
+     110
+    ]
+   ],
+   "start": 6.6,
+   "end": 11.6,
+   "caption": "달걀도 그냥 깨 먹는 게 아니라\n전용 그릇에 담아 먹는다고",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-03-noon-bowl-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.15,
+    1,
+    1
+   ],
+   "delogo": [
+    [
+     30,
+     480,
+     92,
+     110
+    ]
+   ],
+   "start": 16.6,
+   "end": 22.6,
+   "caption": "김 꽂는 그릇까지 따로 있음\n한 번 먹을 만큼만 딱",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-03-noon-bowl-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.15,
+    1,
+    1
+   ],
+   "delogo": [
+    [
+     30,
+     480,
+     92,
+     110
+    ]
+   ],
+   "start": 23.4,
+   "end": 31.4,
+   "caption": "깨도 절구에 직접 빻아 먹음\n사장님 땐 그냥 뿌리면 끝 ㅋㅋㅋㅋ",
+   "size": 72,
+   "caption_y": 0.74
+  },
+  {
+   "video": "../2026-11-03-noon-bowl-review/src/v01.mp4",
+   "fit": "contain",
+   "contain_y": 0.5,
+   "crop": [
+    0,
+    0.15,
+    1,
+    1
+   ],
+   "delogo": [
+    [
+     30,
+     480,
+     92,
+     110
+    ]
+   ],
+   "start": 34.2,
+   "end": 37.2,
+   "caption": "솔직히 사장님 말 다 맞음\n사장님 편 vs 요즘 애들 편",
+   "size": 72,
+   "caption_y": 0.74
+  }
+ ]
+}
