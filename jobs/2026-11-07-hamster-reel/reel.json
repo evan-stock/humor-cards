@@ -1,0 +1,13 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {"video": "../2026-11-07-hamster-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 0.0, "end": 4.5,
+   "title": "군고구마 받은 햄스터\n산적 돼버림ㅋㅋㅋ", "size": 80, "bottom": 0.25},
+  {"video": "../2026-11-07-hamster-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 4.5, "end": 8.6,
+   "caption": "자기 몸만 한 고구마를\n절대 안 놓음", "size": 72, "caption_y": 0.74},
+  {"video": "../2026-11-07-hamster-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 8.6, "end": 12.6,
+   "caption": "솔직히 이 얼굴 실화냐\n귀엽다 vs 무섭다", "size": 72, "caption_y": 0.74}
+ ],
+ "cover": {"segment": 0, "t": 1.2, "title": "고구마 든\n햄스터 산적ㅋㅋㅋ", "bottom": 0.30}
+}
