@@ -125,7 +125,12 @@ def main(spec_path):
         if s.get("fit") == "contain":
             # 가로 영상: 흐린 배경 위에 원본 비율 그대로 가로 꽉 차게, 세로 위치 contain_y(중심, 0~1)
             cy = round(H * s.get("contain_y", 0.45))
-            vf = (f"{head},split[a][b];"
+            if s.get("bg", spec.get("bg", "black")) == "black":
+                # 상하단 검정 띠가 기본(2026-11-08 사용자). 예전 흐린 배경은 "bg": "blur"
+                vf = (f"{head},scale={W}:-2,pad={W}:{H}:0:{cy}-ih/2:black[v];"
+                      f"[v][1:v]overlay=0:0,format=yuv420p[o]")
+            else:
+                vf = (f"{head},split[a][b];"
                   f"[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:3,eq=brightness=-0.15[bg];"
                   f"[b]scale={W}:-2[fg];[bg][fg]overlay=0:{cy}-h/2[v];[v][1:v]overlay=0:0,format=yuv420p[o]")
         else:
