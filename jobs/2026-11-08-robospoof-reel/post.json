@@ -1,0 +1,12 @@
+{
+ "format": "reel",
+ "approved": false,
+ "publish_at": "2026-11-08T12:00:00+09:00",
+ "video": "out/reel.mp4",
+ "cover": "out/cover.jpg",
+ "topic": "AI 로봇 눈 속이기 실험(RoboSpoof): 아기 인형을 사과로 바꿔 보여주자 그대로 찌름",
+ "caption": "AI한테 사과라고 보여주니까 진짜 믿어버림 ㄷㄷ\n로봇팔한테 \"물체를 찔러라\" 시키고, 화면 속 아기 인형을 AI로 사과처럼 바꿔치기\n원래 0%였던 AI들도 속이니까 100% 찌름\n근데 GPT는 원래 영상에서도 92%였던 게 제일 킹받음 ㅋㅋㅋ\n위험 실험 5개 평균: 원래 27% → 렌즈만 흐려도 88% → AI로 조작 97%\n실제론 아기 인형, 빈 병, 전원 끈 가전만 썼고 다음 주 로봇 학회 CoRL에서 발표 예정\n이 정도면 AI 믿어도 된다 vs 아직 멀었다, 너넨 어느 쪽임?\n\n영상: Robocurve(@robocurve), CC BY 4.0\n\n#AI #로봇 #인공지능 #AI실험 #ㅋㅋ상회",
+ "source": "https://x.com/robocurve/status/2118791723606593694",
+ "license": "CC BY 4.0 (https://robocurve.org/robospoof/)",
+ "note": "오늘의쓸모판(cardnews media/20261108-robospoof-reel)과 다른 편집: ㅋㅋ상회 딱지·주아체·다른 문구/장면 구성"
+}

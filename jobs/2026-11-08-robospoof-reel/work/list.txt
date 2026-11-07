@@ -1,0 +1,3 @@
+file '/home/claude/humor-cards/jobs/2026-11-08-robospoof-reel/work/sA.mp4'
+file '/home/claude/humor-cards/jobs/2026-11-08-robospoof-reel/work/sB.mp4'
+file '/home/claude/humor-cards/jobs/2026-11-08-robospoof-reel/work/sC.mp4'
