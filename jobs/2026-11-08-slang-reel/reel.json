@@ -1,0 +1,15 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {"video": "../2026-11-08-slang-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 0.0, "end": 6.0,
+   "title": "초4가 알려준 신조어에\n단체로 털림ㅋㅋㅋ", "size": 80, "bottom": 0.30},
+  {"video": "../2026-11-08-slang-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 6.0, "end": 14.0,
+   "caption": "어른들 아무도\n못 맞힘", "size": 72, "caption_y": 0.78},
+  {"video": "../2026-11-08-slang-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 14.0, "end": 21.5,
+   "caption": "빼난지원금은\n국가 사업 해야 됨", "size": 72, "caption_y": 0.78},
+  {"video": "../2026-11-08-slang-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 21.5, "end": 25.7,
+   "caption": "너넨 몇 개 알았음?", "size": 72, "caption_y": 0.78}
+ ],
+ "cover": {"segment": 1, "t": 4.0, "title": "초4 신조어에\n단체로 털림ㅋㅋㅋ", "bottom": 0.30}
+}
