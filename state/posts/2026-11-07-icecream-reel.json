@@ -2,11 +2,11 @@
  "id": "2026-11-07-icecream-reel",
  "channel": "kksanghoe",
  "account": "@kk.sanghoe",
- "slot": "evening",
- "slot_label": "저녁",
- "status": "pending",
+ "slot": "lunch",
+ "slot_label": "점심",
+ "status": "published",
  "created_at": "2026-11-07T14:09:46.627579+09:00",
- "publish_at": "2026-11-07T18:00:00+09:00",
+ "publish_at": "2026-11-07T14:13:43.190035+09:00",
  "topic": "인도 길거리 철판 아이스크림(쿨피), 철판 보고 식겁함",
  "category": "커뮤 유머",
  "source": "https://bbs.ruliweb.com/best/board/300143/read/77294955",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-07-icecream-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-07-icecream-reel/out/cover.jpg",
+ "ig_media_id": "18038319923891684",
+ "permalink": "https://www.instagram.com/reel/DfbZzkmEtN7/",
+ "published_at": "2026-11-07T14:13:43.190035+09:00"
 }
