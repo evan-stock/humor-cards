@@ -1,0 +1,13 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {"video": "../2026-11-07-icecream-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 16.0, "end": 28.0,
+   "title": "인도 아이스크림\n철판 보고 식겁함 ㄷㄷ", "size": 80, "bottom": 0.25},
+  {"video": "../2026-11-07-icecream-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 58.0, "end": 72.0,
+   "caption": "근데 나오는 건\n진짜 맛있어 보임", "size": 72, "caption_y": 0.74},
+  {"video": "../2026-11-07-icecream-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 84.0, "end": 86.6,
+   "caption": "먹는다 vs\n절대 못 먹는다", "size": 72, "caption_y": 0.74}
+ ],
+ "cover": {"segment": 0, "t": 3.0, "title": "인도 아이스크림\n철판 실화냐 ㄷㄷ", "bottom": 0.30}
+}
