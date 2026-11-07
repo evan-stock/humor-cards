@@ -1,7 +1,7 @@
 {
  "format": "reel",
- "approved": false,
- "publish_at": "2026-11-07T18:00:00+09:00",
+ "approved": true,
+ "publish_at": "now",
  "video": "out/reel.mp4",
  "cover": "out/cover.jpg",
  "topic": "인도 길거리 철판 아이스크림(쿨피), 철판 보고 식겁함",
