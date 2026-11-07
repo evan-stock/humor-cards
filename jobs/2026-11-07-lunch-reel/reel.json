@@ -1,0 +1,13 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {"video": "../2026-11-07-lunch-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 0.0, "end": 6.0,
+   "title": "점심시간에 이거 되면\n회사 평생 다님", "size": 80, "bottom": 0.28},
+  {"video": "../2026-11-07-lunch-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 6.0, "end": 10.5,
+   "caption": "이거 깔아 주면\n야근도 함 솔직히", "size": 72, "caption_y": 0.77},
+  {"video": "../2026-11-07-lunch-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 10.5, "end": 15.0,
+   "caption": "사내 복지 1순위 vs\n회사에서 이건 좀", "size": 72, "caption_y": 0.77}
+ ],
+ "cover": {"segment": 0, "t": 5.5, "title": "점심시간에\n이거 되면 평생 다님", "bottom": 0.28}
+}
