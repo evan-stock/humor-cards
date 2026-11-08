@@ -1,0 +1,13 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {"video": "../2026-11-08-tzuyang-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 9.75, "end": 20.0,
+   "title": "쯔양 먹는 거 보고\n부산 이모님 반응ㅋㅋㅋㅋ", "size": 80, "bottom": 0.30},
+  {"video": "../2026-11-08-tzuyang-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 20.0, "end": 30.5,
+   "caption": "옆집 이모님한테\n바로 자랑하는 사장님", "size": 72, "caption_y": 0.78},
+  {"video": "../2026-11-08-tzuyang-review/src/v01.mp4", "fit": "contain", "contain_y": 0.5, "start": 30.5, "end": 38.1,
+   "caption": "솔직히 이모님 말이\n정상임", "size": 72, "caption_y": 0.78}
+ ],
+ "cover": {"segment": 2, "t": 4.5, "title": "쯔양 보고 놀란\n부산 이모님ㅋㅋㅋ", "bottom": 0.30}
+}
