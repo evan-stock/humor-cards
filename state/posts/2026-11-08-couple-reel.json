@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-11-08T11:19:45.562047+09:00",
  "publish_at": "2026-11-08T15:00:00+09:00",
  "topic": "직장인들 사내커플 안 믿는 직원들",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-08-couple-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-08-couple-reel/out/cover.jpg",
+ "ig_media_id": "18118052315594680",
+ "permalink": "https://www.instagram.com/reel/DfeEJfnkdeV/",
+ "published_at": "2026-11-08T15:02:15.546641+09:00"
 }
