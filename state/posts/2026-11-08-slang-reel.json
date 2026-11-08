@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "morning",
  "slot_label": "아침",
- "status": "approved",
+ "status": "published",
  "created_at": "2026-11-08T00:44:32.747625+09:00",
  "publish_at": "2026-11-08T09:00:00+09:00",
  "topic": "초4가 알려준 요즘 신조어(오디세이·빼난지원금)에 단체로 털림",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-08-slang-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-08-slang-reel/out/cover.jpg",
+ "ig_media_id": "18473950765142081",
+ "permalink": "https://www.instagram.com/reel/Dfda6w6iA4r/",
+ "published_at": "2026-11-08T09:02:00.910999+09:00"
 }
