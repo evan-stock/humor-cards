@@ -1,0 +1,13 @@
+{
+ "out": "out/reel.mp4",
+ "mute": false,
+ "segments": [
+  {"video": "../2026-11-08-couple-review/src/v01.mp4", "start": 6.5, "end": 14.0, "fit": "contain", "contain_y": 0.5,
+   "title": "결혼한다니까\n증명해 보라는 회사;;", "size": 80, "bottom": 0.25},
+  {"video": "../2026-11-08-couple-review/src/v01.mp4", "start": 14.0, "end": 24.5, "fit": "contain", "contain_y": 0.5,
+   "caption": "뽀뽀로는 못 믿겠다고\n수위가 점점 올라감ㅋㅋㅋ", "size": 72, "caption_y": 0.74},
+  {"video": "../2026-11-08-couple-review/src/v01.mp4", "start": 27.5, "end": 32.35, "fit": "contain", "contain_y": 0.5,
+   "caption": "이 회사 다닌다 vs\n당장 퇴사한다", "size": 72, "caption_y": 0.74}
+ ],
+ "cover": {"segment": 1, "t": 4.5, "title": "사내커플\n아무도 안 믿음", "bottom": 0.30}
+}
