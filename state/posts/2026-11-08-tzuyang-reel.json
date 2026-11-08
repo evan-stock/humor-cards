@@ -4,7 +4,7 @@
  "account": "@kk.sanghoe",
  "slot": "lunch",
  "slot_label": "점심",
- "status": "pending",
+ "status": "approved",
  "created_at": "2026-11-08T09:55:54.357733+09:00",
  "publish_at": "2026-11-08T12:00:00+09:00",
  "topic": "쯔양 부산 먹방, 옆집 이모님 '뽈락 3마리면 난 배가 이빠인데'",
@@ -16,5 +16,7 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-08-tzuyang-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-08-tzuyang-reel/out/cover.jpg",
+ "decided_note": "2026-11-08 09:59 KST 운영판 앱 승인",
+ "decided_at": "2026-11-08T10:00:09.592441+09:00"
 }
