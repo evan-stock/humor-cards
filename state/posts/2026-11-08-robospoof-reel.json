@@ -2,11 +2,11 @@
  "id": "2026-11-08-robospoof-reel",
  "channel": "kksanghoe",
  "account": "@kk.sanghoe",
- "slot": "morning",
- "slot_label": "아침",
- "status": "pending",
+ "slot": "lunch",
+ "slot_label": "점심",
+ "status": "published",
  "created_at": "2026-11-08T03:19:14.464807+09:00",
- "publish_at": "2026-11-08T10:00:10.072027+09:00",
+ "publish_at": "2026-11-08T11:19:45.838129+09:00",
  "topic": "AI 로봇 눈 속이기 실험(RoboSpoof): 아기 인형을 사과로 바꿔 보여주자 그대로 찌름",
  "category": "커뮤 유머",
  "source": "https://x.com/robocurve/status/2118791723606593694",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-08-robospoof-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-08-robospoof-reel/out/cover.jpg",
+ "ig_media_id": null,
+ "permalink": null,
+ "published_at": null
 }
