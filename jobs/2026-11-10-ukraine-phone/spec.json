@@ -1,0 +1,41 @@
+{
+ "out_dir": "out",
+ "slides": [
+  {
+   "type": "cover",
+   "image": "src/01.jpg",
+   "fit": "contain",
+   "contain_h": 0.6,
+   "contain_top": 0.06,
+   "title": "전사한 우크라 군인 폰에\n남아있던 검색기록…"
+  },
+  {
+   "type": "photo",
+   "image": "src/01.jpg",
+   "crop": [
+    0.68,
+    0.08,
+    1,
+    0.7
+   ],
+   "fit": "contain",
+   "caption": "트럼프 협상 언제, 전쟁 언제 끝나냐\n계속 이런 것만 찾아봤음",
+   "caption_size": 44,
+   "reserve": 260
+  },
+  {
+   "type": "photo",
+   "image": "src/01.jpg",
+   "crop": [
+    0.68,
+    0.6,
+    1,
+    0.9
+   ],
+   "fit": "contain",
+   "caption": "마지막엔 자두 품종이랑 달러 환율\n끝나면 하고 싶은 게 있었나 봄…",
+   "caption_size": 44,
+   "reserve": 260
+  }
+ ]
+}
