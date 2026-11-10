@@ -1,0 +1,10 @@
+{
+  "out_dir": "out",
+  "slides": [
+    {"type": "cover", "image": "src/01.jpg", "crop": [0.1, 0.42, 0.995, 0.905], "fit": "contain", "contain_h": 0.6, "contain_top": 0.06,
+     "title": "요즘 유행한다는\n첩코어 정체?!"},
+    {"type": "photo", "image": "src/02.jpg", "crop": [0, 0, 1, 0.78], "caption": "이분이 젠슨 황이 지난 8일\n불륜 인정한 상대 앨리스 황", "caption_size": 44},
+    {"type": "photo", "image": "src/03.jpg", "crop": [0, 0.02, 1, 0.62], "caption": "근데 미국 정보당국은\n중국 스파이로 의심 중 ㄷㄷ", "caption_size": 44},
+    {"type": "photo", "image": "src/04.jpg", "crop": [0.03, 0.27, 1, 0.86], "caption": "그 와중에 국내 반응\n관상 칭찬 중 ㅋㅋ…", "caption_size": 44}
+  ]
+}
