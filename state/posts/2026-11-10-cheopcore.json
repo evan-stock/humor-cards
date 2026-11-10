@@ -4,9 +4,9 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-11-10T20:24:22.067950+09:00",
- "publish_at": "2026-11-10T20:24:22.262333+09:00",
+ "publish_at": "2026-11-10T20:27:31.760567+09:00",
  "topic": "요즘 유행한다는 첩코어 정체?!",
  "category": "커뮤 유머",
  "source": "https://x.com/Argent_wave/status/2119924485164081435",
@@ -18,5 +18,8 @@
   "jobs/2026-11-10-cheopcore/out/04.jpg"
  ],
  "preview": "",
- "format": "carousel"
+ "format": "carousel",
+ "ig_media_id": "18128168194866738",
+ "permalink": "https://www.instagram.com/p/DfjzAO7EWBs/",
+ "published_at": "2026-11-10T20:27:31.760567+09:00"
 }
