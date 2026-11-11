@@ -18,7 +18,14 @@
   "thumb": null,
   "cover": null,
   "publish_at": null,
-  "status": "queued",
-  "attempts": 0,
-  "created_at": "2026-11-11T17:19:18.377Z"
+  "status": "done",
+  "attempts": 1,
+  "created_at": "2026-11-11T17:19:18.377Z",
+  "result": {
+    "id": "18120093853792846",
+    "url": "https://www.instagram.com/p/DfnAN5tnCX9/"
+  },
+  "error": null,
+  "done_at": "2026-11-11T17:20:56.069Z",
+  "updated_at": "2026-11-11T17:20:56.069Z"
 }
