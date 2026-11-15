@@ -130,14 +130,20 @@ subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i
 
 # 3) 위 띠(제목 + 딱지), 장면별 자막
 top = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ImageDraw.Draw(top).rectangle((0, 0, W, BAND), fill=(8, 8, 10, 255))
-jua_lines(top, TITLE, 100, 300, lh=122, maxw=W - 90, shadow=False); tag(top); top.save(f'{T}/top.png')
+tl = Image.new('RGBA', (W, H), (0, 0, 0, 0))  # 제목: 강조색 없이 흰색, 기울임(cheat-tts-reel과 같게)
+jua_lines(tl, [x.replace('[', '').replace(']', '') for x in TITLE], 104, 285, lh=124, maxw=W - 90, shadow=False)
+yc = 285 + 124 / 2 - 104 * 0.35; SH = 0.2
+top.alpha_composite(tl.transform((W, H), Image.AFFINE, (1, SH, -SH * yc, 0, 1, 0), Image.BICUBIC)); tag(top); top.save(f'{T}/top.png')
 caps = []
 for i, (rows, n, _) in enumerate(SC):
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     src = "사진: X @kingwest0219 / 유튜브 '공부의신 강성태'"
     d.text((W - 40, BAND + 40), src, font=ImageFont.truetype(PB, 26), fill=(225, 225, 225, 255), anchor='rs', stroke_width=2, stroke_fill=(0, 0, 0, 255))
-    lh = 112; y = 1560 - lh * (len(rows) - 1) / 2 + 30
-    jua_lines(im, rows, 90, y, lh=lh, maxw=W - 90, shadow=True)
+    lh = 118; y = 1560 - lh * (len(rows) - 1) / 2 + 32  # 자막: 흰색만, 기울임(cheat-tts-reel과 같게)
+    cl = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    jua_lines(cl, [x.replace('[', '').replace(']', '') for x in rows], 94, y, lh=lh, maxw=W - 90, shadow=True)
+    yc = y + lh * (len(rows) - 1) / 2 - 94 * 0.35
+    im.alpha_composite(cl.transform((W, H), Image.AFFINE, (1, 0.2, -0.2 * yc, 0, 1, 0), Image.BICUBIC))
     p = f'{T}/cap{i}.png'; im.save(p); caps.append(p)
 
 inputs = ['-i', f'{T}/body.mp4', '-i', f'{T}/top.png'] + sum((['-i', p] for p in caps), [])
@@ -146,7 +152,7 @@ last = 's1'
 for i in range(len(SC)):
     a = 0 if i == 0 else starts[i] - 0.02; b = ends[i] - 0.02
     fc += f";[{last}][{i + 2}:v]overlay=0:0:enable='between(t,{a:.3f},{b:.3f})'[c{i}]"; last = f'c{i}'
-fc += f";[{last}]format=yuv420p[vout]"
+fc += f";[{last}]scale=w='2*trunc(540*max(1,1+0.18*exp(-t*8)*cos(t*20)))':h=-2:eval=frame,crop={W}:{H},setsar=1,format=yuv420p[vout]"
 n0 = 2 + len(SC); N = len(SC)
 ains = sum((['-i', p] for p in pieces), [])
 fc += ';' + ';'.join(f'[{n0 + i}:a]adelay={int(starts[i] * 1000)}|{int(starts[i] * 1000)}[a{i}]' for i in range(N))
@@ -159,7 +165,9 @@ subprocess.run(['ffmpeg', '-v', 'error', '-y', *inputs, *ains, '-filter_complex'
 cv = Image.new('RGBA', (W, H), (8, 8, 10, 255))
 im = photo(5); s = W / im.width; im = im.resize((W, round(im.height * s)), Image.LANCZOS).convert('RGBA')
 cv.alpha_composite(im, (0, 820))
-jua_lines(cv, COVER, 150, 470, lh=185, maxw=W - 110); tag(cv)
+cl = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+jua_lines(cl, [x.replace('[', '').replace(']', '') for x in COVER], 150, 470, lh=185, maxw=W - 110)
+cv.alpha_composite(cl.transform((W, H), Image.AFFINE, (1, 0.2, -0.2 * (470 + 92 - 150 * 0.35), 0, 1, 0), Image.BICUBIC)); tag(cv)
 cv.convert('RGB').save(os.path.join(HERE, 'out', 'cover.jpg'), quality=92)
 json.dump({'total': round(TOTAL, 2), 'starts': [round(x, 2) for x in starts]}, open(os.path.join(HERE, 'out', 'timing.json'), 'w'))
 print('ok', round(TOTAL, 2))
