@@ -24,8 +24,8 @@ SC = [
     (["\"강버지...", "[이제야 깨달았습니다]\""], 4, [0, 0, 1, 0.93]),
     (["[선견지명] vs [그냥 운]", "댓글로 ㄱㄱ"], 1, [0, 0, 1, 1]),
 ]
-TITLE = ["사이비 소리 듣던 강성태", "[재평가] 받는 중ㄷㄷ"]
-COVER = ["사이비 소리 듣던", "강성태 [재평가]ㄷㄷ"]
+TITLE = ["2년 전 다들 비웃던", "강성태 영상 [실화냐]"]
+COVER = ["다들 비웃던", "강성태 영상 [실화냐]"]
 # 4번 사진(댓글)에서 일반인 닉네임·프로필 사진 가리기(원본 픽셀)
 BLUR4 = [(5, 268, 75, 330), (78, 272, 275, 302), (5, 398, 75, 460), (78, 402, 255, 430), (5, 528, 75, 592), (78, 532, 245, 560)]
 
@@ -90,13 +90,14 @@ subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', NARR, '-ac', '1', '-ar', '4
 # 한 번에 읽은 내레이션이라 문장 사이 무음이 짧다 → 50ms 에너지로 찾은 틈(-32dB 아래) 중 글자 수 비율에 맞는 7곳을 경계로(눈으로 확인)
 TOT_A = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav], capture_output=True, text=True).stdout)
 bounds = [0.0, 6.97, 11.1, 15.3, 18.82, 23.52, 29.25, 33.85, TOT_A]
-GAP = 0.12
+GAP = 0.1  # 문장 간격(사용자 11-15: 0.1초)
+SPEED = 2.0  # 목소리 2배속(사용자 11-15)
 pieces, starts, t = [], [], INTRO
 for i in range(len(SC)):
     a, b = bounds[i], bounds[i + 1]
     p = f'{T}/p{i}.wav'
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{a:.3f}', '-to', f'{b:.3f}', '-i', wav, '-af',
-                    'silenceremove=start_periods=1:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse', p], check=True)
+                    f'silenceremove=start_periods=1:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse,atempo={SPEED}', p], check=True)
     d_ = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', p], capture_output=True, text=True).stdout)
     pieces.append(p); starts.append(t); t += d_ + GAP
 TOTAL = t + 0.6; ends = starts[1:] + [TOTAL]
