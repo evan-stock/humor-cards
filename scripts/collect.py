@@ -94,6 +94,13 @@ def run(job_dir):
                 index.append(info)
                 print(f"  {vname} 영상 {len(b)//1024}KB")
                 continue
+            if b[:3] == b"ID3" or b[:2] in (b"\xff\xfb", b"\xff\xf3", b"\xff\xf2") or b[:4] == b"RIFF":  # mp3·wav 음성(TTS 등)
+                an = len([x for x in index if x.get("audio")]) + 1
+                aname = f"a{an:02d}." + ("wav" if b[:4] == b"RIFF" else "mp3")
+                open(os.path.join(src, aname), "wb").write(b)
+                index.append({"audio": f"src/{aname}", "url": url, "bytes": len(b)})
+                print(f"  {aname} 음성 {len(b)//1024}KB")
+                continue
             index.append({"url": url, "error": "이미지가 아님"})
             continue
         if min(rgb.size) < 120:  # 아이콘·이모티콘
