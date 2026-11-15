@@ -1,0 +1,10 @@
+{
+ "approved": true,
+ "publish_at": "now",
+ "format": "reel",
+ "video": "out/reel.mp4",
+ "cover": "out/cover.jpg",
+ "length_sec": 38.0,
+ "caption": "세무사 시험 수석이 결국 자수했는데 그 방법이 펨코 댓글이랑 똑같음ㄷㄷ\n셔츠 단추에 초소형 카메라 → AI가 풀고 → 이어폰으로 정답\n3분 뒤 삭제한다던 그 댓글, 다들 구라라고 넘겼는데 진짜였음;;\n솔직히 지금 시험장 검사로는 이거 못 잡는다 봄\n전자기기 검사 더 빡세게 해야 된다 vs 오바다, 댓글로 ㄱㄱ\n(브로커 얘기는 커뮤니티 주장이에요)\n🎥 유튜브 이돈호 변호사 / 📺 MBN / 📮 출처: 에펨코리아\n\n#세무사시험 #부정행위 #AI부정행위 #펨코 #ㅋㅋ상회",
+ "source": "더피드(@thefeed.kr) 20261115-feed-cheat 릴스를 ㅋㅋ상회 디자인으로 다시 렌더(build_kk.py). 영상: 유튜브 이돈호 변호사(cardnews media/20261115-brk/video/v1.mp4), 내레이션: Gemini TTS Fenrir(politea media/20261115-feed-cheat/tts4), 댓글 캡처·참고 이미지 3장: 게시된 더피드 릴스에서 장면 캡처"
+}
