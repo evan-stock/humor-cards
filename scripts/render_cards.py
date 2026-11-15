@@ -416,7 +416,45 @@ def render_thread(s, ch, base):
     return channel_tag(img, ch, base) if s.get("tag", True) else img
 
 
-RENDERERS = {"cover": None, "story": None, "news_cover": render_news_cover, "photo": render_photo, "thread": render_thread}
+# ---------- 마지막 장 인터넷 반응: type "reactions" (2026.11.15) ----------
+# 검정 바탕에 흰 상자 + 빨간 테두리, 굵은 검정 글씨로 반응을 세로로 쌓는다. 닉네임 없음.
+def render_reactions(s, ch, base):
+    img = Image.new("RGB", (W, H), s.get("bg_color", (0, 0, 0)))
+    d = ImageDraw.Draw(img)
+    X, BW, PX, PY, GAP = 30, 9, 40, 34, 44      # 바깥 여백, 테두리, 안쪽 좌우·위아래, 상자 간격
+    red = tuple(s.get("border_color", (226, 38, 32)))
+    items = [r if isinstance(r, dict) else {"text": r} for r in s.get("reactions", [])]
+    head = s.get("headline")
+    top_min, bot_max = (210 if head else 120), H - 90
+    size = s.get("size", 52)
+    while True:
+        f = font("bold", size)
+        lh = round(size * 1.42)
+        blocks = [wrap(it["text"], f, W - 2 * X - 2 * BW - 2 * PX, d) for it in items]
+        hs = [len(b) * lh + 2 * PY + 2 * BW for b in blocks]
+        total = sum(hs) + GAP * (len(hs) - 1)
+        if total <= bot_max - top_min or size <= 34:
+            break
+        size -= 2
+    if total > bot_max - top_min:
+        print("  ! 반응이 넘침: 반응 수나 길이를 줄이세요")
+    if head:
+        d.text((W / 2, 130), head, font=font("title", s.get("headline_size", 64)), fill="white", anchor="mm",
+               stroke_width=6, stroke_fill="black")
+    y = top_min + (bot_max - top_min - total) // 2
+    for it, lines, h in zip(items, blocks, hs):
+        d.rectangle((X, y, W - X, y + h), fill=red)
+        d.rectangle((X + BW, y + BW, W - X - BW, y + h - BW), fill="white")
+        yy = y + BW + PY
+        for l in lines:
+            d.text((X + BW + PX, yy + lh / 2), l, font=f, fill=(20, 20, 20), anchor="lm")
+            yy += lh
+        y += h + GAP
+    return channel_tag(img, ch, base) if s.get("tag", True) else img
+
+
+RENDERERS = {"cover": None, "story": None, "news_cover": render_news_cover, "photo": render_photo,
+             "thread": render_thread, "reactions": render_reactions}
 
 
 def main(spec_path):
