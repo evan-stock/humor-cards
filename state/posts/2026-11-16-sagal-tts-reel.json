@@ -2,11 +2,11 @@
  "id": "2026-11-16-sagal-tts-reel",
  "channel": "kksanghoe",
  "account": "@kk.sanghoe",
- "slot": "evening",
- "slot_label": "저녁",
- "status": "pending",
+ "slot": "morning",
+ "slot_label": "아침",
+ "status": "published",
  "created_at": "2026-11-16T19:50:23.721802+09:00",
- "publish_at": "2026-11-16T19:50:23.851837+09:00",
+ "publish_at": "2026-11-17T01:08:54.495017+09:00",
  "topic": "다들 신입들 허수라고 정신승리할 때 진짜 이유는 따로 있었음;;",
  "category": "커뮤 유머",
  "source": "더피드 politea media/20261116-feed-sagal(build.py=feed-cheat/build2.py 복사본)을 같은 장면 순서·길이·내레이션(Gemini Fenrir tts/l01~l10)·효과음 타이밍으로 다시 렌더, 디자인·자막만 ㅋㅋ상회 틀(build_kk.py). 영상 cardnews media/20261115-brk/video/v1.mp4(이돈호 변호사), 캡처 cardnews media/20261116-zzalcat(X @zzal_cat).",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-16-sagal-tts-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-16-sagal-tts-reel/out/cover.jpg",
+ "ig_media_id": "17897929131426810",
+ "permalink": "https://www.instagram.com/reel/Dfzv8LSoV7-/",
+ "published_at": "2026-11-17T01:08:54.495017+09:00"
 }
