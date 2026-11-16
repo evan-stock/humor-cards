@@ -4,9 +4,9 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-11-16T19:03:40.860193+09:00",
- "publish_at": "2026-11-16T19:03:41.126270+09:00",
+ "publish_at": "2026-11-16T19:05:28.874960+09:00",
  "topic": "모르는 단어는 항상 종이사전으로 찾았다는데 변호사님 반응이 더 웃김 ㅋㅋㅋ",
  "category": "커뮤 유머",
  "source": "lime.now 인스타 https://www.instagram.com/p/Dfy1ObSk82b/ 2번째 장(영상 41.6초)을 cardnews fetch-video(yt-dlp)로 받음 → 원본 영상 부분만 crop(lime.now 출처·자막 제거), 'enter' 워터마크 delogo, 14.6~39.0초 사용. 원 출처: 유튜브 DreamSchool 이윤규. 부정행위는 기사상 미확인 → 단정 표현 없이 반응·투표로만(사용자 '원본 그대로 조롱형' 선택, 위험 감수).",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-16-leet-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-16-leet-reel/out/cover.jpg",
+ "ig_media_id": "17953237470056708",
+ "permalink": "https://www.instagram.com/reel/DfzGWD9CNHk/",
+ "published_at": "2026-11-16T19:05:28.874960+09:00"
 }
