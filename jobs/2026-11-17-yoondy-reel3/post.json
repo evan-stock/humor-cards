@@ -1,0 +1,10 @@
+{
+ "approved": false,
+ "publish_at": "",
+ "format": "reel",
+ "video": "out/reel.mp4",
+ "cover": "out/cover.jpg",
+ "length_sec": 20.7,
+ "caption": "과학 일타강사가 AI 부정행위를 기댓값으로 계산해봤는데 결론이 무섭다 ㄷㄷ\n성공하면 의대 가서 평생 보장, 걸려도 처벌은 솜방망이\n도덕적 기준 없는 사람한테는 시도 안 할 이유가 없다는 것\n정부가 응시 제한 10년까지 꺼냈는데, 이걸로 막을 수 있을까?\n🎥 유튜브 윤도영통합과학시스템\n\n#수능 #AI부정행위 #윤도영 #일타강사 #ㅋㅋ상회",
+ "source": "유튜브 윤도영통합과학시스템 'AI 부정행위에 대해'(2026-11-16, https://youtu.be/HZ52MLhZIbA) 80.7~101.4초. cardnews 맥북 도우미(yt_queue 20261117-yoondy2, 720p)로 받음. 원본 소리 사용, 대사는 cardnews transcribe(faster-whisper) 단어 시각. 효과음 bell·smack·huh·dudung(assets/sfx). 정치(대통령 언급) 구간은 쓰지 않음. reel3: 움직임 효과 없음, 제목·커버 ㄷㄷ 어투, 효과음 dudung만."
+}
