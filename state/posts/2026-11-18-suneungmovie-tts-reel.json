@@ -2,11 +2,11 @@
  "id": "2026-11-18-suneungmovie-tts-reel",
  "channel": "kksanghoe",
  "account": "@kk.sanghoe",
- "slot": "lunch",
- "slot_label": "점심",
- "status": "pending",
+ "slot": "morning",
+ "slot_label": "아침",
+ "status": "published",
  "created_at": "2026-11-18T07:39:04.233860+09:00",
- "publish_at": "2026-11-18T12:00:00+09:00",
+ "publish_at": "2026-11-18T07:52:52.423445+09:00",
  "topic": "AI 부정행위 사태를 누가 벌써 영화로 만들어놨음ㅋㅋㅋ",
  "category": "커뮤 유머",
  "source": "X @thsozvi 2122570361015583151(2026-11-17, 커뮤니티 글 '2028 영화 <수능> 떴다' 캡처 7장) - cardnews media/20261117-thsozvi/video 로 받음. 내레이션 Gemini Fenrir(cardnews state/tts_test/gemini_Fenrir_kkcast_0.mp3, 1.35배속). 효과음 bell(시작)·dudung(임시완 장면). 움직임 효과 없음(컷만). 글쓴이 닉네임 흐림. 영화 장면 속 대사는 원 글쓴이가 지어낸 가상 설정.",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-18-suneungmovie-tts-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-18-suneungmovie-tts-reel/out/cover.jpg",
+ "ig_media_id": "18120388126814580",
+ "permalink": "https://www.instagram.com/reel/Df3C9r-CPym/",
+ "published_at": "2026-11-18T07:52:52.423445+09:00"
 }
