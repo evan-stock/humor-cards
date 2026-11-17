@@ -1,6 +1,6 @@
 {
- "approved": false,
- "publish_at": "",
+ "approved": true,
+ "publish_at": "now",
  "format": "reel",
  "video": "out/reel.mp4",
  "cover": "out/cover.jpg",
