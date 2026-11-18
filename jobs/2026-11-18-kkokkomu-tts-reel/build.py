@@ -110,9 +110,9 @@ for i, (_, n, cr) in enumerate(SC):
     bg = Image.new('RGB', (W, VH), (14, 14, 16))
     # 흐린 배경 + 가운데 사진(폭 1000, 위아래는 자막 자리 남김)
     # 2026-11-18 사용자: 사진 위아래 흐린 배경 없이 단색
-    box_w, box_h = 1000, 860; s = min(box_w / im.width, box_h / im.height)
+    box_w, box_h = W, 860; s = min(box_w / im.width, box_h / im.height)  # 2026-11-18 사용자 '띠형 규칙': 사진은 가로 꽉 찬 띠
     ph = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
-    m = Image.new('L', ph.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, ph.width - 1, ph.height - 1), 22, fill=255)
+    m = Image.new('L', ph.size, 255)  # 둥근 모서리 없음
     px, py = (W - ph.width) // 2, 60 + (box_h - ph.height) // 2
     bg.paste(ph, (px, py), m)
     img = f'{T}/i{i}.png'; bg.save(img)
