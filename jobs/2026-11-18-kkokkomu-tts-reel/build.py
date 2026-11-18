@@ -96,12 +96,12 @@ def photo(n):
 
 # 1) 내레이션을 무음으로 8문장으로 나누기
 NARR = f'{S}/a02.mp3'
-BOUNDS = None  # 채움
+BOUNDS = None  # 아래에서 받아쓰기(transcribe) 단어 시각으로 정함
 wav = f'{T}/n.wav'
 subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', NARR, '-ac', '1', '-ar', '44100', wav], check=True)
 # 한 번에 읽은 내레이션이라 문장 사이 무음이 짧다 → 50ms 에너지로 찾은 틈(-32dB 아래) 중 글자 수 비율에 맞는 7곳을 경계로(눈으로 확인)
 TOT_A = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', wav], capture_output=True, text=True).stdout)
-bounds = BOUNDS
+bounds = [0.0, 2.96, 8.75, 13.52, 20.45, 24.09, 25.6, 28.57, 31.13, 35.26, 36.6, 39.24, 44.95, 47.48, 54.92, 57.04, 59.12, 65.02, 68.07, 71.68, 76.85, 79.62, 80.6, 85.26, TOT_A]  # 받아쓰기 단어 시각 + 무음(웃음 '하하하'는 조커 장면으로)
 GAP = 0.1  # 문장 간격(사용자 11-15: 0.1초)
 SPEED = 2.0  # 목소리 2배속(사용자 11-15)
 pieces, starts, t = [], [], INTRO
