@@ -28,7 +28,7 @@ SC = [
 ]
 TITLE = ["꼬꼬무 이O우 사건 편", "가상 미리보기ㅋㅋㅋ"]
 COVER = ["꼬꼬무", "이O우 사건 편ㅋㅋㅋ"]
-SFXS = [('chills', 0, -10), ('dudung', 3, -9), ('huh', 5, -9), ('explosion', 6, -10), ('chills', 8, -9), ('bell', 9, -10)]  # (효과음, 장면, dB)
+SFXS = [('chills', 0, -10), ('swoosh_short', 1, -13), ('swoosh_short', 2, -13), ('dudung', 3, -9), ('swoosh_short', 4, -13), ('huh', 5, -9), ('explosion', 6, -10), ('swoosh_short', 7, -13), ('chills', 8, -9), ('bell', 9, -10)]  # 장면마다 하나(전환은 swoosh_short)  # (효과음, 장면, dB)
 
 
 def runs(line):
@@ -101,7 +101,7 @@ TOTAL = t + 0.6; ends = starts[1:] + [TOTAL]
 print('길이', round(TOTAL, 2), [round(x, 2) for x in starts])
 
 # 2) 장면(사진 + 천천히 확대 + 펀치 인)
-PUNCH = "scale={W}:{VH},setsar=1"  # 움직임 없음
+PUNCH = "scale=w='2*trunc(540*max(1,1+0.06*exp(-t*14)))':h=-2:eval=frame,crop={W}:{VH},setsar=1"  # 2026-11-18 사용자: 장면 넘어갈 때 효과 → 펀치 인(허용된 전환)
 ENC = ['-c:v', 'libx264', '-crf', '18', '-preset', 'veryfast', '-pix_fmt', 'yuv420p', '-r', '30', '-an']
 clips = []
 for i, (_, n, cr) in enumerate(SC):
@@ -109,8 +109,7 @@ for i, (_, n, cr) in enumerate(SC):
     im = im.crop((round(x0 * im.width), round(y0 * im.height), round(x1 * im.width), round(y1 * im.height)))
     bg = Image.new('RGB', (W, VH), (14, 14, 16))
     # 흐린 배경 + 가운데 사진(폭 1000, 위아래는 자막 자리 남김)
-    blur = im.resize((W, VH)).filter(ImageFilter.GaussianBlur(40)); bg.paste(blur, (0, 0))
-    bg = Image.blend(bg, Image.new('RGB', (W, VH), (0, 0, 0)), 0.55)
+    # 2026-11-18 사용자: 사진 위아래 흐린 배경 없이 단색
     box_w, box_h = 1000, 860; s = min(box_w / im.width, box_h / im.height)
     ph = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
     m = Image.new('L', ph.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, ph.width - 1, ph.height - 1), 22, fill=255)
@@ -118,7 +117,7 @@ for i, (_, n, cr) in enumerate(SC):
     bg.paste(ph, (px, py), m)
     img = f'{T}/i{i}.png'; bg.save(img)
     b0 = 0 if i == 0 else starts[i]; nf = round(ends[i] * 30) - round(b0 * 30)
-    vf = f"scale={W}:{VH},fps=30,setsar=1"  # 천천히 확대 없음
+    vf = f"scale={W}:{VH},fps=30,{PUNCH.format(W=W, VH=VH)}"  # 천천히 확대는 없음, 장면 시작 펀치만
     out = f'{T}/s{i:02d}.mp4'
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-framerate', '30', '-t', f'{nf / 30 + 0.2:.3f}', '-i', img, '-vf', vf, '-frames:v', str(nf), *ENC, out], check=True)
     clips.append(out)
