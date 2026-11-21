@@ -119,11 +119,11 @@ for i in range(len(SC)):
 fc += f";[{last}]setsar=1,format=yuv420p[vout]"
 ains = sum((['-i', f'{SFX}/{n}.mp3'] for n, _ in SFXS), [])
 k0 = 2 + len(caps)
-fc += ';[0:a]loudnorm=I=-15:TP=-1.5[orig]'
+fc += ';[0:a]loudnorm=I=-15:TP=-1.5,aresample=44100,aformat=channel_layouts=stereo,apad[orig]'
 mix = ['[orig]']
 for j, (_, t0) in enumerate(SFXS):
     fc += f';[{k0 + j}:a]aresample=44100,aformat=channel_layouts=stereo,volume=-8dB,adelay={int(t0 * 1000)}|{int(t0 * 1000)}[x{j}]'; mix.append(f'[x{j}]')
-fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=first:normalize=0,atrim=0:{TOTAL:.3f}[aout]"
+fc += f";{''.join(mix)}amix=inputs={len(mix)}:duration=longest:normalize=0,atrim=0:{TOTAL:.3f}[aout]"
 out = os.path.join(HERE, 'out', 'reel.mp4')
 subprocess.run(['ffmpeg', '-v', 'error', '-y', *inputs, *ains, '-filter_complex', fc, '-map', '[vout]', '-map', '[aout]', '-t', f'{TOTAL:.3f}',
                 '-c:v', 'libx264', '-crf', '20', '-preset', 'veryfast', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', out], check=True)
