@@ -1,7 +1,7 @@
 {
  "approved": false,
- "publish_at": null,
  "format": "photo",
  "caption": "혼자 버티는 게 익숙했던 작은 펭귄에게 처음으로 바람막이가 생긴 이야기\n옆에 있어 준 사람한테 보내세요\n\n🎨 ㅋㅋ상회 제작 (AI 그림)\n\n#ㅋㅋ상회 #펭귄 #사랑 #감성 #공감짤",
- "source": "Gemini 이미지 생성(gemini-2.5-flash-image, 글씨 없이) + 글씨는 직접 얹음. jobs/2026-11-22-ai-soomi-batch/build.py. 벤치마크 @soominiverse 양식."
+ "source": "Gemini 이미지 생성(gemini-2.5-flash-image, 글씨 없이) + 글씨는 직접 얹음. jobs/2026-11-22-ai-soomi-batch/build.py. 벤치마크 @soominiverse 양식.",
+ "published_via": "manual"
 }
