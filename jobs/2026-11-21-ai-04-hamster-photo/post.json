@@ -1,0 +1,9 @@
+{
+ "format": "photo_reel",
+ "approved": false,
+ "published_via": "manual",
+ "image": "out/photo.jpg",
+ "length_sec": 7,
+ "caption": "과자 나눠 먹자 해놓고 이러는 애 꼭 있음\n이거 너잖아 하고 보내셈\n\n🎨 ㅋㅋ상회 제작 (AI 그림)\n\n#ㅋㅋ상회 #햄스터 #친구공감 #공감짤 #웃긴짤",
+ "source": "Gemini 이미지 생성(cardnews gemini-image, 2026-11-21). 벤치마크 @soominiverse 공감짤 형식 참고, 그림·글 직접 제작."
+}

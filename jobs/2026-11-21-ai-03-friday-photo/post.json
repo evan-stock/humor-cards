@@ -1,0 +1,9 @@
+{
+ "format": "photo_reel",
+ "approved": false,
+ "published_via": "manual",
+ "image": "out/photo.jpg",
+ "length_sec": 7,
+ "caption": "일주일 버틴 이유 = 이 순간\n주말만 기다리는 친구 태그 ㄱㄱ\n\n🎨 ㅋㅋ상회 제작 (AI 그림)\n\n#ㅋㅋ상회 #불금 #주말 #직장인공감 #공감짤",
+ "source": "Gemini 이미지 생성(cardnews gemini-image, 2026-11-21). 벤치마크 @soominiverse 공감짤 형식 참고, 그림·글 직접 제작."
+}
