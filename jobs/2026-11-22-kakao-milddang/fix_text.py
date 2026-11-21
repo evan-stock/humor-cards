@@ -121,3 +121,31 @@ fm = cv2.GaussianBlur(fm, (0, 0), 1.2)[..., None]
 o[sy0 + dy:sy1 + dy, sx0 + dx:sx1 + dx] = dst * (1 - fm) + src * fm
 Image.fromarray(np.clip(o, 0, 255).astype(np.uint8)).save(os.path.join(HERE, "out/01_photo.jpg"), quality=93)
 Image.fromarray(np.clip(o, 0, 255).astype(np.uint8)).crop((560, 700, 720, 800)).resize((640, 400)).save("/tmp/t.png")
+
+# 상단 '단톡방' 지우고 이름 자리를 빨간 낙서로 가림(말풍선 위 이름 가림과 같은 낙서 복사)
+o = np.array(Image.open(os.path.join(HERE, "out/01_photo.jpg"))).astype(np.float32)
+x0, y0, x1, y1 = 420, 176, 492, 210
+reg = o[y0:y1, x0:x1]
+g = reg.mean(2)
+txt = cv2.dilate((g < 170).astype(np.uint8), np.ones((5, 5), np.uint8)) > 0
+yy, xx = np.mgrid[0:y1 - y0, 0:x1 - x0].astype(np.float32)
+A = np.stack([np.ones_like(xx), xx, yy, xx * yy], -1)
+bg = np.zeros_like(reg)
+for c in range(3):
+    coef, *_ = np.linalg.lstsq(A[~txt], reg[..., c][~txt], rcond=None)
+    bg[..., c] = A @ coef
+sd = float(np.std((reg - bg)[~txt]))
+m = cv2.GaussianBlur(txt.astype(np.float32), (0, 0), 1.5)[..., None].clip(0, 1)
+o[y0:y1, x0:x1] = reg * (1 - m) + (bg + rng.normal(0, sd, bg.shape)) * m
+sx0, sy0, sx1, sy1 = 262, 598, 344, 636
+sc = o[sy0:sy1, sx0:sx1].copy()  # 원래 낙서(복사본 기준은 바뀌기 전 값)
+src0 = np.array(Image.open(os.path.join(HERE, "out/01_photo.jpg"))).astype(np.float32)[sy0:sy1, sx0:sx1]
+red = ((src0[..., 0] - src0[..., 1:].mean(2)) / 120.0).clip(0, 1)
+red = cv2.GaussianBlur(red, (0, 0), 0.7)[..., None]
+hh, ww = red.shape[:2]
+cx, cy = 456, 193
+tx, ty = cx - ww // 2, cy - hh // 2
+dst = o[ty:ty + hh, tx:tx + ww]
+o[ty:ty + hh, tx:tx + ww] = dst * (1 - red) + src0 * red
+Image.fromarray(np.clip(o, 0, 255).astype(np.uint8)).save(os.path.join(HERE, "out/01_photo.jpg"), quality=93)
+Image.fromarray(np.clip(o, 0, 255).astype(np.uint8)).crop((200, 100, 728, 300)).resize((1056, 400)).save("/tmp/h.png")
