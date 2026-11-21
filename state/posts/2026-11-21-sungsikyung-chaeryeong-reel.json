@@ -2,11 +2,11 @@
  "id": "2026-11-21-sungsikyung-chaeryeong-reel",
  "channel": "kksanghoe",
  "account": "@kk.sanghoe",
- "slot": "morning",
- "slot_label": "아침",
- "status": "pending",
+ "slot": "evening",
+ "slot_label": "저녁",
+ "status": "published",
  "created_at": "2026-11-21T21:33:46.711085+09:00",
- "publish_at": "2026-11-22T09:00:00+09:00",
+ "publish_at": "2026-11-21T22:04:02.769868+09:00",
  "topic": "79년생 선배랑 01년생 후배 대화인데 댓글 반응 완전 갈림",
  "category": "커뮤 유머",
  "source": "영상: X @jutingstar9999 2124097370573193463 (2026-11-21, 좋아요 270) 영상 2개, 원 출처 유튜브 성시경 채널. v02 0~4.5초·8.0~12.5초 + v01 0.5~15.0초, 원본 소리·원본 자막 유지. 나이는 성시경 1979·채령 2001만 사용(트윗의 부모 출생연도는 미확인이라 뺌). 연예인 비하 없이 '반응 갈림' + 투표. 사용 효과음: huh(4.5초), swoosh_short(9.0초), smack(19.0초) -8dB.",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-21-sungsikyung-chaeryeong-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-21-sungsikyung-chaeryeong-reel/out/cover.jpg",
+ "ig_media_id": "18118157777625103",
+ "permalink": "https://www.instagram.com/reel/DgASwI9GEaP/",
+ "published_at": "2026-11-21T22:04:02.769868+09:00"
 }
