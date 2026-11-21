@@ -1,0 +1,24 @@
+[
+ {
+  "video": "src/v01.mp4",
+  "url": "https://video.twimg.com/amplify_video/2124097321160105984/vid/avc1/722x662/9g6q7_NLcoLjWh1Z.mp4",
+  "bytes": 1161946,
+  "frame": "src/v01_frame.jpg"
+ },
+ {
+  "video": "src/v02.mp4",
+  "url": "https://video.twimg.com/amplify_video/2124097321160015872/vid/avc1/976x658/k-SayOiQPiRcxs4Y.mp4",
+  "bytes": 1141207,
+  "frame": "src/v02_frame.jpg"
+ },
+ {
+  "no": 1,
+  "file": "src/01.jpg",
+  "url": "https://pbs.twimg.com/media/HXpPQndbUAALWRu.jpg?name=orig",
+  "size": [
+   1157,
+   2048
+  ],
+  "format": "jpeg"
+ }
+]
