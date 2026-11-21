@@ -80,16 +80,18 @@ s2 = Image.composite(Image.new('RGBA', (SW, SH), (255, 255, 255, 255)), s2, glar
 phone.paste(s2, (B, B), m)
 # 배경(어두운 책상) + 원근·기울기
 W, H = 1080, 1350
-bg = np.zeros((H, W, 3), float); bg[:] = (58, 52, 48); bg += np.random.default_rng(1).normal(0, 6, (H, W, 3))
+bg = np.zeros((H, W, 3), float); bg[:] = (92, 70, 52)
+yy0, xx0 = np.mgrid[0:H, 0:W]; grain = np.sin(yy0 * 0.045 + np.sin(xx0 * 0.004) * 6) * 9 + np.sin(yy0 * 0.21 + xx0 * 0.002) * 4
+bg += grain[..., None] * np.array([1.0, 0.8, 0.6]); bg += np.random.default_rng(1).normal(0, 5, (H, W, 3))
 canvas = Image.fromarray(np.clip(bg, 0, 255).astype('uint8')).filter(ImageFilter.GaussianBlur(3)).convert('RGBA')
 # 보이는 부분: 머리~말풍선 아래 조금(폰 위아래는 화면 밖으로 잘림)
-top_crop = 0; bot = min(PH, endy + B + 260)
+top_crop = 0; bot = PH   # 11-22 02:19 사용자: 조금 위에서 떨어져서 찍은 느낌 → 폰 전체
 ph = phone.crop((0, top_crop, PW, bot))
 # 화면이 거의 꽉 차게 → 원근 변형(위쪽이 살짝 좁게, 왼쪽으로 살짝 기울게)
-tw = 1160; s = tw / ph.width; ph = ph.resize((tw, round(ph.height * s)), Image.LANCZOS)
+tw = 860; s = tw / ph.width; ph = ph.resize((tw, round(ph.height * s)), Image.LANCZOS)
 w0, h0 = ph.size
 src = [(0, 0), (w0, 0), (w0, h0), (0, h0)]
-dst = [(40, 0), (w0 - 10, 25), (w0 + 15, h0), (-10, h0 - 15)]
+dst = [(34, 0), (w0 - 6, 18), (w0 + 14, h0), (-8, h0 - 12)]
 def coeffs(pa, pb):
     A = []
     for (x, y), (X, Y) in zip(pa, pb):
@@ -97,7 +99,10 @@ def coeffs(pa, pb):
     A = np.array(A, float); b = np.array(pa, float).reshape(8)
     return np.linalg.solve(A, b)
 ph = ph.transform((w0 + 40, h0 + 20), Image.PERSPECTIVE, coeffs(src, dst), Image.BICUBIC).rotate(-1.6, resample=Image.BICUBIC, expand=False)
-ox = (W - ph.width) // 2; oy = -40 if ph.height > H else (H - ph.height) // 2
+ox = (W - ph.width) // 2; oy = 70
+# 폰 그림자
+sh = Image.new('RGBA', canvas.size, (0, 0, 0, 0)); sh.alpha_composite(Image.new('RGBA', ph.size, (0, 0, 0, 150)), (ox + 18, oy + 26)); shm = ph.split()[3]
+shadow = Image.new('RGBA', canvas.size, (0, 0, 0, 0)); shadow.paste(Image.new('RGBA', ph.size, (0, 0, 0, 140)), (ox + 16, oy + 24), shm); canvas.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(22)))
 canvas.alpha_composite(ph, (ox, oy))
 img = canvas.convert('RGB').filter(ImageFilter.GaussianBlur(0.7))
 # 노이즈·비네팅·살짝 따뜻한 색
