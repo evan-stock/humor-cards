@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>에펨코리아 보안 시스템</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    .main_t {height: 100%; width: 100%; border: 0;}
+    .main_t td {text-align: center;}
+    .main_t td.info {font-size: 25px; height: 100%; text-align: center; vertical-align: top; padding-top: 2em;}
+    .main_t td.info b {font-size: 28px;}
+    .sign { color: #ccc; margin-top: 5em;}
+    .sign a { color: #ccc; }
+
+    /* 다크 모드 — 사이트와 같은 쿠키(아래 스크립트가 html.dark 와 --bg 를 정한다) */
+    html.dark {color-scheme: dark; background: var(--bg); color: #e6e8eb;}
+    html.dark body {background: var(--bg);}
+    html.dark a {color: #7aa7ff;}
+    html.dark .sign, html.dark .sign a {color: #555;}
+
+    @media only screen and (max-width: 768px) {
+        .main_t td.info {font-size: 20px;}
+        .main_t td.info b {font-size: 25px;}
+    }
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+    window.needPost = 0;
+    window.retriedOnce = false;
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    // 다크 모드 — 사이트와 같은 쿠키(common/js/night_mode_toggle.js): night_mode=Y 어둡게, night_auto=Y 기기 설정 따라,
+    // night_light=Y 항상 밝게(브라우저 강제 다크 막기), night_bg 배경 색(DarkColor::BG_CHOICES 의 키).
+    var fmNightAuto = getCookie('night_auto') === 'Y';
+    var fmDark = fmNightAuto
+        ? !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        : getCookie('night_mode') === 'Y';
+    if (fmDark) {
+        var fmBg = getCookie('night_bg');
+        document.documentElement.className = 'dark';
+        document.documentElement.style.setProperty('--bg', '#' + (fmBg === '1a1e1e' || fmBg === '000000' ? fmBg : '121212'));
+    } else if (!fmNightAuto && getCookie('night_light') === 'Y') {
+        var fmMeta = document.createElement('meta');
+        fmMeta.name = 'color-scheme';
+        fmMeta.content = 'only light';
+        document.head.appendChild(fmMeta);
+    }
+</script>
+</head>
+<body>
+<div style="text-align:center;">
+    <table class="main_t">
+        <tr>
+            <td class="info">
+                <form method="POST" id="adcForm">
+                    <input type="hidden" name="is_dlc" value="1">
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAACk1HozppA32-DV" data-callback="onTurnstileSuccess" data-error-callback="onTurnstileError"></div>
+                <script>(function(){var e=document.querySelector('.cf-turnstile');if(e)e.setAttribute('data-theme',fmDark?'dark':'light');})();</script>
+                </form>
+                <b>에펨코리아 보안 시스템<br>IP: 13.86.111.98<br></b>
+                사람인지 확인이 완료되면 사이트에 자동으로 접속됩니다.<br> 확인 후 자동으로 접속되지 않을 경우에만 아래 링크를 클릭하여 다시 시도해 주시기 바랍니다.<br>
+                <a href='javascript:location.reload()'>수동 접속 갱신</a><br>
+				오류가 발생하면 화면 정보와 함께 help@fmkorea.com 로 문의 바랍니다.
+
+                <p></p>
+                <div id="js_info">
+                    <p></p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="sign">
+                   <br />
+
+        <noscript>자바크스크리트를 켜시길 바랍니다.</noscript>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function cookieCheck() {
+            document.getElementById('js_info').style.display = 'none';
+            var date = new Date();
+
+            days = '7';
+            date.setTime(date.getTime() + (days * 24*60*60*1000));
+
+            var _cookie = 'lite_year' + "=" + escape('5b4576afa685e810bc4dc1172a8b7967');
+
+            document.cookie = _cookie + "; expires = " + date.toGMTString() + "; path=/";
+            document.cookie = 'g_'+_cookie + "; domain=.fmkorea.com; expires = " + date.toGMTString() + "; path=/";
+
+            setTimeout(function(){
+                if(window.needPost >= 2) {
+                    window.doPost();
+                }
+                else {
+                    window.needPost += 1;
+                }
+            }, 0);
+        }
+        const interval = setInterval(() => {
+            const targetInput = document.querySelector("input[name='cf-turnstile-response']");
+
+            // 요소가 존재하고 value가 비어있지 않다면
+            if (targetInput && targetInput.value) {
+                if(window.needPost >= 2)
+                    setTimeout(function() {
+                        window.doPost();
+                    }, 200);
+                // 작업을 완료하면 타이머 중단
+                clearInterval(interval);
+            }
+        }, 100);
+    </script>
+    <script type="module">
+        import init, { fm5 } from "/mc/mc.php";
+        async function run() {
+            // Wasm 모듈 초기화
+            await init();
+            fm5('5b4576afa685e810bc4dc1172a8b7967', 'ccf0a92cedb5c4c2bb640c0f57d905f4');
+
+            var serverTimestamp = 1795282767;
+            var browserTimestamp = Math.floor(Date.now() / 1000);
+            var timeDiff = Math.abs(browserTimestamp - serverTimestamp);
+            if (timeDiff > 3600) {
+                fetch('/debug.php/timegap/' + timeDiff, {
+                    method: 'GET',
+                    cache: 'no-cache',
+                    credentials: 'same-origin'
+                }).finally(function() {
+                    alert('브라우저 시간과 서버 시간이 1시간 이상 차이납니다. 정확한 시스템 시간 설정을 확인해 주세요.');
+                });
+            }
+            if(window.needPost >= 2) {
+                window.doPost();
+            }
+            else {
+                window.needPost += 1;
+            }
+        }
+        window.onTurnstileSuccess = function(e) {
+            if(window.needPost >= 2) {
+                window.doPost();
+            }
+            else {
+                window.needPost += 1;
+            }
+        }
+        window.onTurnstileError = function(e) {
+            // 위젯 자체 오류 → 한 번만 재시도
+            if (!window.retriedOnce && window.turnstile) {
+                window.retriedOnce = true;
+                turnstile.reset(); // 토큰/위젯 초기화 후 재실행
+            }
+        }
+        window.doPost = (function() {
+            let executed = false; // 함수 실행 여부를 추적하는 플래그
+
+            return function() {
+                if (executed) {
+                    return; // 이미 실행된 경우 함수 종료
+                }
+                executed = true; // 최초 실행 시 플래그 활성화
+
+                document.getElementById("adcForm").submit();
+            };
+        })();
+        window.cookieCheck();
+        run();
+    </script>
+</div>
+</body>
+</html>
+
+
