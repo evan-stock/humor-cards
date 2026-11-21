@@ -1,4 +1,4 @@
-403 5894B https://www.dogdrip.net/dogdrip/731191455
+403 5915B https://www.dogdrip.net/dogdrip/731191455
 403 5915B https://www.dogdrip.net/dogdrip/731191455
 403 5915B https://www.dogdrip.net/dogdrip/731191455
 200 609009B https://d8j0ntlcm91z4.cloudfront.net/user_3KYEpr25h7S1l3xma5HKVy3FVGy/hf_20261115_122612_31719971-4ca0-481e-ada7-18db1be8d369.mp3
@@ -72,6 +72,4 @@
 200 174965B https://drive.google.com/uc?export=download&id=1rW6V44g1_hg58F99OTW1NrTpTuEhPz0c
 200 28262B https://drive.google.com/uc?export=download&id=16U3dqFFdldTNEjgOgRdjTFvFA1eO6HXG
 200 360539B https://drive.google.com/uc?export=download&id=1JP-6g861FLRZZ0GiUW6S85BXs1WtGsxy
-430 7297B https://www.fmkorea.com/index.php?mid=best&document_srl=10416394299
-430 7297B https://www.fmkorea.com/index.php?mid=best&document_srl=10416394299
-430 7297B https://www.fmkorea.com/index.php?mid=best&document_srl=10416394299
+200 58878B https://image.fmkorea.com/files/attach/new5/20261006/10416394299_486616_0a09489c4b47291eac25a358e14a6802.webp
