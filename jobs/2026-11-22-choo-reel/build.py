@@ -25,7 +25,7 @@ SC = [  # (자막, 시작 초(완성본 기준), 길이)
 ]
 TITLE = ["은퇴전 끝난 추성훈 소감", "\"격투기 인생 ㅅㅂ 재밌었다\""]
 COVER = ["추성훈 마지막 소감", "ㅅㅂ 재밌었다ㅠㅠ"]
-LAST = (["추성훈다운 마무리 vs", "그래도 이기고 끝냈어야"], 16.95)
+LAST = None   # 사용자 요청(11-22 00:54): 마지막 vs 자막 뺌 → 16.95초부터는 자막 없이 소감 장면만
 SFXS = [('swoosh_short', 6.75), ('dudung', 16.95)]
 
 def runs(line):
@@ -79,7 +79,7 @@ def tag(layer):
 
 
 TOTAL = sum(b - a for a, b in PARTS)
-SC = SC + [(LAST[0], LAST[1], TOTAL - LAST[1])]
+SC = SC + ([(LAST[0], LAST[1], TOTAL - LAST[1])] if LAST else [])
 starts = [x[1] for x in SC]; ends = starts[1:] + [TOTAL]
 segs = []
 for i, (a, b) in enumerate(PARTS):
@@ -114,7 +114,7 @@ inputs = ['-i', f'{T}/body.mp4', '-i', f'{T}/top.png'] + sum((['-i', p] for p in
 fc = f'color=c=0x08080a:s={W}x{H}:r=30:d={TOTAL:.3f}[bg];[bg][0:v]overlay=0:{VY}:shortest=1[s0];[s0][1:v]overlay=0:0[s1]'
 last = 's1'
 for i in range(len(SC)):
-    a = 0 if i == 0 else starts[i] - 0.02; b = ends[i] - 0.02
+    a = 0 if i == 0 else starts[i] - 0.02; b = (starts[i] + SC[i][2]) - 0.02
     fc += f";[{last}][{i + 2}:v]overlay=0:0:enable='between(t,{a:.3f},{b:.3f})'[c{i}]"; last = f'c{i}'
 fc += f";[{last}]setsar=1,format=yuv420p[vout]"
 ains = sum((['-i', f'{SFX}/{n}.mp3'] for n, _ in SFXS), [])
