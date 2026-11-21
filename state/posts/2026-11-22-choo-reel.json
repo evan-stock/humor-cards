@@ -4,9 +4,9 @@
  "account": "@kk.sanghoe",
  "slot": "morning",
  "slot_label": "아침",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-11-22T00:47:07.316283+09:00",
- "publish_at": "2026-11-22T00:55:43.681433+09:00",
+ "publish_at": "2026-11-22T01:06:35.078708+09:00",
  "topic": "추성훈 마지막 소감 진짜 추성훈답다ㅋㅋㅋ",
  "category": "커뮤 유머",
  "source": "에펨코리아 포텐 https://www.fmkorea.com/best/10582557900 (2026-11-21, 조회 35만, 추천 757) 첨부 영상(경기장 화면 촬영본, 19.8초). 위 180px 잘라 'DAILY FASHION NEWS' 워터마크 제거, 관중석 가족 장면은 처음에 뺐다가 사용자 요청으로 다시 넣음(원본 전체 19.77초). 사실: 블랙컴뱃17 리벤에 1-2 판정패, 16년 만의 재대결(UFC 116), 22년 커리어, 소감 '격투기 인생 XX 재밌었다'(스타뉴스·일간스포츠·뉴스1). 원본 소리. 사용 효과음: swoosh_short(6.75초), dudung(16.95초) -8dB.",
@@ -16,5 +16,8 @@
  ],
  "preview": "",
  "format": "reel",
- "cover": "jobs/2026-11-22-choo-reel/out/cover.jpg"
+ "cover": "jobs/2026-11-22-choo-reel/out/cover.jpg",
+ "ig_media_id": "17975449692173367",
+ "permalink": "https://www.instagram.com/reel/DgAnpRfgSv6/",
+ "published_at": "2026-11-22T01:06:35.078708+09:00"
 }
