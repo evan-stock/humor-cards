@@ -1,0 +1,7 @@
+{
+ "approved": false,
+ "publish_at": null,
+ "format": "photo",
+ "caption": "정답은?!\n\n🎨 ㅋㅋ상회 제작 (AI 그림)\n\n#ㅋㅋ상회 #친구 #셀카 #공감짤 #웃긴짤",
+ "source": "Gemini 이미지 생성(gemini-2.5-flash-image, 글씨 없이) + 글씨는 직접 얹음. jobs/2026-11-22-ai-soomi-batch/build.py. 벤치마크 @soominiverse 양식."
+}
