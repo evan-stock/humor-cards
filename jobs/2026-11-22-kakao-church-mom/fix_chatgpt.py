@@ -6,16 +6,17 @@ SRC = "src/chatgpt_photo.png"
 im = np.array(Image.open(SRC).convert("RGB")).astype(np.float32)
 NOTO = "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
 INK = np.array([50, 38, 74], np.float32)
+INKY = np.array([45, 33, 10], np.float32)
 
 
-def erase(poly, pad=1):
+def erase(poly, pad=1, thr=188, bgthr=175):
     """다각형 안의 글씨(어두운 픽셀)를 주변 바탕으로 메움(평면 맞춤)."""
     h, w = im.shape[:2]
     m = np.zeros((h, w), np.uint8); cv2.fillPoly(m, [np.int32(poly)], 1)
     ys, xs = np.where(m > 0); y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
     reg = im[y0:y1, x0:x1]; mm = m[y0:y1, x0:x1] > 0
-    g = reg.mean(2); txt = cv2.dilate((g < 188).astype(np.uint8), np.ones((5, 5), np.uint8)) > 0
-    bgm = (~txt) & (g > 175)
+    g = reg.mean(2); txt = cv2.dilate((g < thr).astype(np.uint8), np.ones((5, 5), np.uint8)) > 0
+    bgm = (~txt) & (g > bgthr)
     yy, xx = np.mgrid[0:y1 - y0, 0:x1 - x0].astype(np.float32)
     A = np.stack([np.ones_like(xx), xx, yy], -1)
     out = reg.copy()
@@ -28,7 +29,7 @@ def erase(poly, pad=1):
     im[y0:y1, x0:x1] = reg * (1 - soft) + out * soft
 
 
-def draw(text, x, yb, width, angle, size_guess=24):
+def draw(text, x, yb, width, angle, size_guess=24, ink=None):
     """왼쪽 아래(x,yb)에서 시작해 글자 폭 width가 되게, angle(도, +는 오른쪽이 올라감)만큼 기울여 씀."""
     S = 8
     f = ImageFont.truetype(NOTO, size_guess * S, index=1)
@@ -52,12 +53,15 @@ def draw(text, x, yb, width, angle, size_guess=24):
     ox, oy = round(x - rx / S), round(yb - ry / S)
     h, w = al.shape[:2]
     reg = im[oy:oy + h, ox:ox + w]
-    im[oy:oy + h, ox:ox + w] = reg * (1 - al) + INK * al
+    im[oy:oy + h, ox:ox + w] = reg * (1 - al) + (INK if ink is None else ink) * al
 
 
 # 1) 마지막 말풍선: '조건감사해헛|지않도록.' 다시 쓰기('무'는 원본 유지)
-erase([(482, 1247), (482, 1210), (730, 1182), (730, 1218)])
-draw("조건감사해헛되지않도록.", 485, 1238, 243, 6.6)
+erase([(457, 1250), (457, 1212), (730, 1180), (730, 1218)])
+draw("무조건감사해헛되지않도록.", 461, 1240, 263, 6.6)
+# 3) '그걸로 빗 먼저 갚아'의 '갚' 다시 쓰기(노란 말풍선)
+erase([(805, 230), (805, 199), (830, 197), (830, 228)], thr=120, bgthr=140)
+draw("갚", 810, 229, 21, 7.0, ink=INKY)
 # 2) '젊' → '첨'
 erase([(519, 607), (519, 569), (543, 566), (543, 604)])
 draw("첨", 520, 600, 20, 6.0)
@@ -65,4 +69,5 @@ draw("첨", 520, 600, 20, 6.0)
 out = Image.fromarray(np.clip(im, 0, 255).astype(np.uint8))
 out.save("out/01_chatgpt_fixed.png")
 out.crop((440, 1170, 760, 1250)).resize((1280, 320), Image.LANCZOS).save("/tmp/c2.png")
+out.crop((640, 190, 870, 250)).resize((920, 240), Image.LANCZOS).save("/tmp/a1.png")
 out.crop((360, 540, 760, 640)).resize((1200, 300), Image.LANCZOS).save("/tmp/c1.png")
