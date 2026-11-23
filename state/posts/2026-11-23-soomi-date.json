@@ -1,0 +1,19 @@
+{
+ "id": "2026-11-23-soomi-date",
+ "channel": "kksanghoe",
+ "account": "@kk.sanghoe",
+ "slot": "evening",
+ "slot_label": "저녁",
+ "status": "pending",
+ "created_at": "2026-11-23T19:58:21.933282+09:00",
+ "publish_at": "2026-11-23T19:58:22.109889+09:00",
+ "topic": "",
+ "category": "커뮤 유머",
+ "source": "그림 Gemini 2.5 flash image 1장(kk_soomi_date_gen, soominiverse 27살 게시물 그림체 참고), 글씨·말풍선 직접(build.py).",
+ "caption_full": "",
+ "files": [
+  "jobs/2026-11-23-soomi-date/out/01.jpg"
+ ],
+ "preview": "",
+ "format": "carousel"
+}
