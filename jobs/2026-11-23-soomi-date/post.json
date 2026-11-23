@@ -1,1 +1,8 @@
-{"approved": false, "published_via": "manual", "format": "photo", "images": ["out/01.jpg"], "caption": "", "source": "그림 Gemini 2.5 flash image 1장(kk_soomi_date_gen, soominiverse 27살 게시물 그림체 참고), 글씨·말풍선 직접(build.py)."}
+{
+ "approved": true,
+ "publish_at": "now",
+ "format": "photo",
+ "files": ["out/01.jpg"],
+ "caption": "마주 앉아서 카톡하는 커플에게 보내세요.",
+ "source": "수민버스형 연애 세대 비교 2단. 그림·글씨 ChatGPT(사용자 생성, src/chatgpt.png) → 1080x1350. 2026-11-23 20:04 사용자 '이걸로 업로드'."
+}
