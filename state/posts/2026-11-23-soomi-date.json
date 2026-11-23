@@ -4,16 +4,19 @@
  "account": "@kk.sanghoe",
  "slot": "evening",
  "slot_label": "저녁",
- "status": "pending",
+ "status": "published",
  "created_at": "2026-11-23T19:58:21.933282+09:00",
- "publish_at": "2026-11-23T19:58:22.109889+09:00",
- "topic": "",
+ "publish_at": "2026-11-23T20:06:30.740997+09:00",
+ "topic": "마주 앉아서 카톡하는 커플에게 보내세요.",
  "category": "커뮤 유머",
- "source": "그림 Gemini 2.5 flash image 1장(kk_soomi_date_gen, soominiverse 27살 게시물 그림체 참고), 글씨·말풍선 직접(build.py).",
- "caption_full": "",
+ "source": "수민버스형 연애 세대 비교 2단. 그림·글씨 ChatGPT(사용자 생성, src/chatgpt.png) → 1080x1350. 2026-11-23 20:04 사용자 '이걸로 업로드'.",
+ "caption_full": "마주 앉아서 카톡하는 커플에게 보내세요.",
  "files": [
   "jobs/2026-11-23-soomi-date/out/01.jpg"
  ],
  "preview": "",
- "format": "carousel"
+ "format": "carousel",
+ "ig_media_id": "18030183251702972",
+ "permalink": "https://www.instagram.com/p/DgFO8vtmyxS/",
+ "published_at": "2026-11-23T20:06:30.740997+09:00"
 }
